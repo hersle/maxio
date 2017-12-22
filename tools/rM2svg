@@ -3,6 +3,7 @@ import sys
 import struct
 import os.path
 import argparse
+import cairocffi as cairo
 
 
 __prog_name__ = "rM2svg"
@@ -15,9 +16,9 @@ y_width = 1872
 
 # Mappings
 stroke_colour={
-    0 : "black",
-    1 : "grey",
-    2 : "white",
+    0 : (0,0,0),
+    1 : (128,128,128),
+    2 : (255,255,255),
 }
 '''stroke_width={
     0x3ff00000 : 2,
@@ -28,11 +29,6 @@ stroke_colour={
 
 def main():
     parser = argparse.ArgumentParser(prog=__prog_name__)
-    parser.add_argument("-1",
-                        "--singlefile",
-                        help="Enable multipage svg file",
-                        action='store_true',
-                        )
     parser.add_argument("-i",
                         "--input",
                         help=".lines input file",
@@ -55,7 +51,7 @@ def main():
     if not os.path.exists(args.input):
         parser.error('The file "{}" does not exist!'.format(args.input))
 
-    lines2svg(args.input, args.output, args.singlefile)
+    lines2cairo(args.input, args.output)
 
 
 def abort(msg):
@@ -63,14 +59,11 @@ def abort(msg):
     sys.exit(1)
 
 
-def lines2svg(input_file, output_name, singlefile):
+def lines2cairo(input_file, output_name):
     # Read the file in memory. Consider optimising by reading chunks.
     with open(input_file, 'rb') as f:
         data = f.read()
     offset = 0
-
-    if output_name.endswith(".svg") and not singlefile:
-        output_name = output_name[:-4]
 
     # Is this a reMarkable .lines file?
     expected_header=b'reMarkable lines with selections and layers'
@@ -82,32 +75,18 @@ def lines2svg(input_file, output_name, singlefile):
     if header != expected_header or npages < 1:
         abort('Not a valid reMarkable file: <header={}><npages={}>'.format(header, npages))
 
-    if singlefile:
-        output = open(output_name, 'w')
-        output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">'.format(y_width, x_width)) # BEGIN Notebook
-        output.write('''
-            <script type="application/ecmascript"> <![CDATA[
-                var visiblePage = 'p0';
-                function goToPage(page) {
-                    document.getElementById(visiblePage).setAttribute('style', 'display: none');
-                    document.getElementById(page).setAttribute('style', 'display: inline');
-                    visiblePage = page;
-                }
-            ]]> </script>
-        ''')
+    surface = cairo.PDFSurface(output_name, x_width, y_width)
 
     # Iterate through pages (There is at least one)
     for page in range(npages):
-        if singlefile:
-            output.write('<g id="p{}" style="display:{}">'.format(page, 'none' if page != 0 else 'inline')) # Opening page group, visible only for the first page.
-        else:
-            output = open("{}_{:02}.svg".format(output_name, page+1), 'w')
-            output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">\n'.format(y_width, x_width)) # BEGIN page
 
         fmt = '<BBH' # TODO might be 'I'
         nlayers, b_unk, h_unk = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
         if b_unk != 0 or h_unk != 0: # Might indicate which layers are visible.
             print('Unexpected value on page {} after nlayers'.format(page + 1))
+
+
+        context = cairo.Context(surface)
 
         # Iterate through layers on the page (There is at least one)
         for layer in range(nlayers):
@@ -144,48 +123,30 @@ def lines2svg(input_file, output_name, singlefile):
                     print('Unknown pen: {}'.format(pen))
                     opacity = 0.
 
-                #print('Stroke {}: pen={}, colour={}, width={}, nsegments={}'.format(stroke, pen, colour, width, nsegments))
-                output.write('<polyline style="fill:none;stroke:{};stroke-width:{:.3f};opacity:{}" points="'.format(stroke_colour[colour], width, opacity)) # BEGIN stroke
 
+                fmt = '<fffff'
+                fmtsz = struct.calcsize(fmt)
+                segments = []
                 # Iterate through the segments to form a polyline
                 for segment in range(nsegments):
-                    fmt = '<fffff'
-                    xpos, ypos, pressure, tilt, i_unk2 = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+                    segments.append(struct.unpack_from(fmt, data, offset))
+                    offset += fmtsz
+
+                context.new_path()
+                for xpos, ypos, pressure, tilt, i_unk2 in segments:
                     if pen == 0:
-                        if 0 == segment % 8:
-                            segment_width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
-                            #print('    width={}'.format(segment_width))
-                            output.write('" /><polyline style="fill:none;stroke:{};stroke-width:{:.3f}" points="'.format(
-                                        stroke_colour[colour], segment_width)) # UPDATE stroke
-                            if last_x != -1.:
-                                output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
-                            last_x = xpos; last_y = ypos
+                        width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
                     elif pen == 1:
-                        if 0 == segment % 8:
-                            segment_width = (10. * tilt -2) * (8. * width - 14)
-                            segment_opacity = (pressure - .2) * (pressure - .2)
-                            #print('    width={}, opacity={}'.format(segment_width, segment_opacity))
-                            output.write('" /><polyline style="fill:none;stroke:{};stroke-width:{:.3f};opacity:{:.3f}" points="'.format(
-                                        stroke_colour[colour], segment_width, segment_opacity)) # UPDATE stroke
-                            if last_x != -1.:
-                                output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
-                            last_x = xpos; last_y = ypos
+                        width = (10. * tilt -2) * (8. * width - 14)
+                        opacity = (pressure - .2) * (pressure - .2)
+                    context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
+                    context.set_line_width(width)
+                    context.line_to(xpos, ypos)
+                context.stroke()
 
-                    output.write('{:.3f},{:.3f} '.format(xpos, ypos)) # BEGIN and END polyline segment
+        context.show_page()
 
-                output.write('" />\n') # END stroke
-
-        if singlefile:
-            # Overlay the page with a clickable rect to flip pages
-            output.write('<rect x="0" y="0" width="{}" height="{}" fill-opacity="0" onclick="goToPage(\'p{}\')" />'.format(x_width, y_width, (page + 1) % npages))
-            output.write('</g>') # Closing page group
-        else:
-            output.write('</svg>') # END page
-            output.close()
-
-    if singlefile:
-        output.write('</svg>') # END notebook
-        output.close()
+    surface.finish()
 
 if __name__ == "__main__":
     main()
