@@ -81,12 +81,28 @@ def lines2cairo(input_file, output_name, pdf_name):
     if header != expected_header or npages < 1:
         abort('Not a valid reMarkable file: <header={}><npages={}>'.format(header, npages))
 
-    surface = cairo.PDFSurface(output_name, x_width, y_width)
 
 
     pdfdoc = poppler.document_new_from_file("file://"+os.path.realpath(pdf_name),"") if pdf_name else None
 
+    if pdfdoc:
+        pdfpage = pdfdoc.get_page(0)
+        pdfx,pdfy = pdfpage.get_size()
+        print "page %.2f %.2f" % (pdfx,pdfy)
+        xfactor = pdfx/x_width
+        yfactor = pdfy/y_width
+        xfactor = yfactor = max(xfactor, yfactor)
+    else:
+        xfactor = yfactor = 1
+
+
+    surface = cairo.PDFSurface(output_name, pdfx, pdfy)
+
+
+
     # Iterate through pages (There is at least one)
+
+
     for page in range(npages):
 
         fmt = '<BBH' # TODO might be 'I'
@@ -95,10 +111,11 @@ def lines2cairo(input_file, output_name, pdf_name):
             print('Unexpected value on page {} after nlayers'.format(page + 1))
 
 
+
         context = cairo.Context(surface)
-        if pdfdoc:
-            pdfpage = pdfdoc.get_page(page)
-            pdfpage.render_for_printing(context)
+
+
+#            pdfpage.render_for_printing(context)
 
 
         # Iterate through layers on the page (There is at least one)
@@ -153,8 +170,8 @@ def lines2cairo(input_file, output_name, pdf_name):
                         width = (10. * tilt -2) * (8. * width - 14)
                         opacity = (pressure - .2) * (pressure - .2)
                     context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
-                    context.set_line_width(width)
-                    context.line_to(xpos, ypos)
+                    context.set_line_width(width*xfactor)
+                    context.line_to(xpos*xfactor, ypos*yfactor)
                 context.stroke()
 
         context.show_page()
