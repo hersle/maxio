@@ -154,7 +154,7 @@ def lines2cairo(input_file, output_name, pdf_name):
                         opacity = (pressure - .2) * (pressure - .2)
                     context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
                     context.set_line_width(width)
-                    context.line_to(xpos, ypos+34)
+                    context.line_to(xpos, ypos)
                 context.stroke()
 
         context.show_page()
