@@ -81,13 +81,22 @@ def lines2cairo(input_file, output_name, pdf_name):
     if header != expected_header or npages < 1:
         abort('Not a valid reMarkable file: <header={}><npages={}>'.format(header, npages))
 
+    # pdfx=0
+    # pdfy=0
 
     pdfx, pdfy = subprocess.check_output('strings ' + os.path.realpath(pdf_name) +
     ' | grep -Eho -m 1 "MediaBox \[ [0-9]+ [0-9]+ [0-9]+ [0-9]+ \]"' +
-    ' | cut -d" " -f5,6', shell=True).rstrip().split(' ') if pdf_name else (None, None)
+    ' | cut -d" " -f5,6', shell=True).decode("utf-8").rstrip().split(' ') if pdf_name else (None, None)
 
+    pdfx=int(pdfx)
+    pdfy=int(pdfy)
+    
     if pdfx:
-        print "page %.2f %.2f" % (pdfx,pdfy)
+        # print "page %.2f %.2f" % (pdfx,pdfy)
+        print(pdfx)
+        print(pdfy)
+        print(type(pdfx))
+        print("asdas")
         xfactor = pdfx/x_width
         yfactor = pdfy/y_width
         xfactor = yfactor = max(xfactor, yfactor)
