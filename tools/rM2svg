@@ -5,6 +5,7 @@ import os.path
 import argparse
 import subprocess
 import cairocffi as cairo
+from PyPDF2 import PdfFileReader
 
 
 __prog_name__ = "rM2svg"
@@ -84,19 +85,13 @@ def lines2cairo(input_file, output_name, pdf_name):
     # pdfx=0
     # pdfy=0
 
-    pdfx, pdfy = subprocess.check_output('strings ' + os.path.realpath(pdf_name) +
-    ' | grep -Eho -m 1 "MediaBox \[ [0-9]+ [0-9]+ [0-9]+ [0-9]+ \]"' +
-    ' | cut -d" " -f5,6', shell=True).decode("utf-8").rstrip().split(' ') if pdf_name else (None, None)
+    input1 = PdfFileReader(open(os.path.realpath(pdf_name), 'rb'))
+    pdfsize=input1.getPage(0).mediaBox
 
-    pdfx=int(pdfx)
-    pdfy=int(pdfy)
+    pdfx=int(pdfsize[2])
+    pdfy=int(pdfsize[3])
     
     if pdfx:
-        # print "page %.2f %.2f" % (pdfx,pdfy)
-        print(pdfx)
-        print(pdfy)
-        print(type(pdfx))
-        print("asdas")
         xfactor = pdfx/x_width
         yfactor = pdfy/y_width
         xfactor = yfactor = max(xfactor, yfactor)
