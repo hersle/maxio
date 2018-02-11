@@ -10,8 +10,7 @@ from PyPDF2 import PdfFileReader
 # rM2pdf
 # toDos:
 # - add color marker option
-# - make sure it works when no original pdf is given
-# 
+# - cairo doesnt allow for dynamically changing width. Figure out how to implement this...
 __prog_name__ = "rM2pdf"
 __version__ = "0.0.1beta"
 
@@ -25,6 +24,8 @@ stroke_colour={
     0 : (0,0,0),
     1 : (128,128,128),
     2 : (255,255,255),
+    3 : (255,0,0),
+    4 : (0,255,0)
 }
 '''stroke_width={
     0x3ff00000 : 2,
@@ -125,10 +126,14 @@ def lines2cairo(input_file, output_name, pdf_name=False):
 
             # Iterate through the strokes in the layer (If there is any)
             for stroke in range(nstrokes):
+            # for stroke in range(0,4):
                 fmt = '<IIIfI'
-                pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+                pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); 
+                offset += struct.calcsize(fmt)
                 opacity = 1
                 last_x = -1.; last_y = -1.
+                
+
                 #if i_unk != 0: # No theory on that one
                     #print('Unexpected value at offset {}'.format(offset - 12))
                 if pen == 0 or pen == 1:
@@ -152,27 +157,29 @@ def lines2cairo(input_file, output_name, pdf_name=False):
                 else: 
                     print('Unknown pen: {}'.format(pen))
                     opacity = 0.
-
+                print("stroke: ", stroke,"nsegments:", nsegments, "width", width, "pen", pen)
 
                 fmt = '<fffff'
-                fmtsz = struct.calcsize(fmt)
-                segments = []
-                # Make a list of segments
-                for segment in range(nsegments):
-                    segments.append(struct.unpack_from(fmt, data, offset))
-                    offset += fmtsz
-
-                # draw onto context
                 context.new_path()
-                for xpos, ypos, pressure, tilt, i_unk2 in segments:
-                    if pen == 0:
-                        width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
-                    elif pen == 1:
-                        width = (10. * tilt -2) * (8. * width - 14)
-                        opacity = (pressure - .2) * (pressure - .2)
-                    context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
-                    context.set_line_width(width*xfactor)
-                    context.line_to(xpos*xfactor, ypos*yfactor)
+                fmtsz = struct.calcsize(fmt)
+                # newSeg=True
+                for segment in range(nsegments):
+                    xpos, ypos, pressure, tilt, i_unk2 = struct.unpack_from(fmt, data, offset)
+                    offset += fmtsz
+                    # Adjust dynamic widths for pens that change width
+                    # Cairo cannot actually do this
+                    # if pen==1:
+                    #     width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
+                    # elif pen==2:
+                    #     width = (10. * tilt -2) * (8. * width - 14)
+                    #     opacity = (pressure - .2) * (pressure - .2)
+
+                    if 0 == segment % 6:
+                        context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
+                        context.set_line_width(width*xfactor)
+                        context.line_to(xpos*xfactor, ypos*yfactor)
+                    # last_x = xpos; last_y = ypos
+                    # newSeg=False
                 context.stroke()
 
         context.show_page()
