@@ -7,8 +7,12 @@ import subprocess
 import cairocffi as cairo
 from PyPDF2 import PdfFileReader
 
-
-__prog_name__ = "rM2svg"
+# rM2pdf
+# toDos:
+# - add color marker option
+# - make sure it works when no original pdf is given
+# 
+__prog_name__ = "rM2pdf"
 __version__ = "0.0.1beta"
 
 
@@ -30,6 +34,7 @@ stroke_colour={
 
 
 def main():
+    # Takes input given by command line as input
     parser = argparse.ArgumentParser(prog=__prog_name__)
     parser.add_argument("-i",
                         "--input",
@@ -57,7 +62,7 @@ def main():
 
     if not os.path.exists(args.input):
         parser.error('The file "{}" does not exist!'.format(args.input))
-
+    #Call main fuction
     lines2cairo(args.input, args.output, args.pdf)
 
 
@@ -85,11 +90,17 @@ def lines2cairo(input_file, output_name, pdf_name):
     # pdfx=0
     # pdfy=0
 
-    input1 = PdfFileReader(open(os.path.realpath(pdf_name), 'rb'))
-    pdfsize=input1.getPage(0).mediaBox
+    # Find size and ratio of original pdf
+    try:
+        input1 = PdfFileReader(open(os.path.realpath(pdf_name), 'rb'))
+        pdfsize=input1.getPage(0).mediaBox
+        pdfx=int(pdfsize[2])
+        pdfy=int(pdfsize[3])
+    except NameError:
+        pdfx=x_width
+        pdfy=y_width
 
-    pdfx=int(pdfsize[2])
-    pdfy=int(pdfsize[3])
+
     
     if pdfx:
         xfactor = pdfx/x_width
@@ -98,28 +109,18 @@ def lines2cairo(input_file, output_name, pdf_name):
     else:
         xfactor = yfactor = 1
 
-
+    # make cairo surface of the correct size ?
     surface = cairo.PDFSurface(output_name, pdfx, pdfy)
 
-
-
     # Iterate through pages (There is at least one)
-
-
     for page in range(npages):
-
         fmt = '<BBH' # TODO might be 'I'
         nlayers, b_unk, h_unk = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
         if b_unk != 0 or h_unk != 0: # Might indicate which layers are visible.
             print('Unexpected value on page {} after nlayers'.format(page + 1))
 
-
-
         context = cairo.Context(surface)
-
-
 #            pdfpage.render_for_printing(context)
-
 
         # Iterate through layers on the page (There is at least one)
         for layer in range(nlayers):
@@ -160,11 +161,12 @@ def lines2cairo(input_file, output_name, pdf_name):
                 fmt = '<fffff'
                 fmtsz = struct.calcsize(fmt)
                 segments = []
-                # Iterate through the segments to form a polyline
+                # Make a list of segments
                 for segment in range(nsegments):
                     segments.append(struct.unpack_from(fmt, data, offset))
                     offset += fmtsz
 
+                # draw onto context
                 context.new_path()
                 for xpos, ypos, pressure, tilt, i_unk2 in segments:
                     if pen == 0:
