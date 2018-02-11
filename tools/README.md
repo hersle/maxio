@@ -15,7 +15,7 @@ optional arguments:
   --version                         show program's version number and exit
 
 example (Terminal):
-  ./rM2svg -i input.lines -p input.pdf -o annot.pdf
+  ./rM2pdf -i input.lines -p input.pdf -o annot.pdf
 ```
 ## Step 2: Combine with original
 This will give you a pdf with only the annotations on it. Now you can use pdftk to combine the original with the annotation-pdf to get an annotated, non-huge, OCR'd PDF like such:
