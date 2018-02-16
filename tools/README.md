@@ -2,7 +2,7 @@
 ## rM2pdf 
 This is a fork of this https://github.com/phil777/maxio which is a fork of this https://github.com/reHackable/maxio
 
-What can it do? It can transform .lines files into pdfs using the pdf generation library Cairo pretty quickly. It scales the lines to the correct format given a reference pdf (input pdf). It's well suited transform annotations. which can then be added to the original pdf (see below).
+What can it do? It can transform .lines files into pdfs using the pdf generation library Cairo pretty quickly. It scales the lines to the correct format given a reference pdf (input pdf). It's well suited transform annotations which can then be added to the original pdf (see below).
 
 What can't it do? Cairo doesn't really support pen types that change width or darkness. This script will do it's best with these pen types but they won't translate terribly well. It's not very well suited to transform intricate drawings. For those it may be best to use the rM2svg function and turn it into a pdf using pdftk.
 
