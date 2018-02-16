@@ -6,11 +6,11 @@ import argparse
 import subprocess
 import cairocffi as cairo
 from PyPDF2 import PdfFileReader
+import math
 
 # rM2pdf
 # toDos:
 # - add color marker option
-# - cairo doesnt allow for dynamically changing width. Figure out how to implement this...
 __prog_name__ = "rM2pdf"
 __version__ = "0.0.1beta"
 
@@ -21,11 +21,12 @@ y_width = 1872
 
 # Mappings
 stroke_colour={
-    0 : (0,0,0),
-    1 : (128,128,128),
-    2 : (255,255,255),
-    3 : (255,0,0),
-    4 : (0,255,0)
+    0 : (0,0,0),        # black
+    1 : (0.5,0.5,0.5),  # Grey
+    2 : (1,1,1),  # White
+    3 : (0,0,0),        # Highlighter
+    4 : (1,0,0),      # Red
+    5 : (0,1,0)       # Green
 }
 '''stroke_width={
     0x3ff00000 : 2,
@@ -56,6 +57,11 @@ def main():
                         metavar="NAME",
                         #type=argparse.FileType('w')
                         )
+    parser.add_argument("-c",
+                        "--coloured_annotations",
+                        help="Colour annotations for document markup.",
+                        action='store_true',
+                        )
     parser.add_argument('--version',
                         action='version',
                         version='%(prog)s {version}'.format(version=__version__))
@@ -64,6 +70,14 @@ def main():
     if not os.path.exists(args.input):
         parser.error('The file "{}" does not exist!'.format(args.input))
     #Call main fuction
+    if args.coloured_annotations:
+        global stroke_colour
+        stroke_colour = {
+            0: (0,0,0),        # black
+            1: (0.5,0.5,0.5),       # red
+            2: (1,1,1),   # white
+            3: (255/255,228/255,50/255)      # yellow
+        }
     lines2cairo(args.input, args.output, args.pdf)
 
 
@@ -137,6 +151,7 @@ def lines2cairo(input_file, output_name, pdf_name=False):
                 #if i_unk != 0: # No theory on that one
                     #print('Unexpected value at offset {}'.format(offset - 12))
                 if pen == 0 or pen == 1:
+                    baseWidth=width
                     pass # Dynamic width, will be truncated into several strokes
                 elif pen == 2 or pen == 4: # Pen / Fineliner
                     width = 32 * width * width - 116 * width + 107
@@ -144,8 +159,9 @@ def lines2cairo(input_file, output_name, pdf_name=False):
                     width = 64 * width - 112
                     opacity = 0.9
                 elif pen == 5: # Highlighter
+                    colour=3
                     width = 30
-                    opacity = 0.2
+                    opacity = 0.9
                 elif pen == 6: # Eraser
                     width = 1280 * width * width - 4800 * width + 4510
                     colour = 2
@@ -168,16 +184,37 @@ def lines2cairo(input_file, output_name, pdf_name=False):
                     offset += fmtsz
                     # Adjust dynamic widths for pens that change width
                     # Cairo cannot actually do this
-                    # if pen==1:
-                    #     width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
-                    # elif pen==2:
-                    #     width = (10. * tilt -2) * (8. * width - 14)
-                    #     opacity = (pressure - .2) * (pressure - .2)
+                    # We approximate by drawing circles of varying radii
 
-                    if 0 == segment % 6:
+                    if pen==0:
+                        width = (5. * tilt) * (6. * baseWidth - 10) * (1 + 2. * pressure * pressure * pressure)
+                        context.set_line_width(1)
                         context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
-                        context.set_line_width(width*xfactor)
-                        context.line_to(xpos*xfactor, ypos*yfactor)
+                        context.arc(xpos, ypos, width, 0, 2*math.pi)
+                        context.fill()
+
+                    elif pen==1:
+                        if 0 == segment % 1:
+                            width = ((10. * tilt -2) * (8. * baseWidth - 13))/2
+                            opacity = (pressure - .2) * (pressure - .2)
+                            
+                            context.set_line_width(1)
+                            context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
+                            
+                            context.arc(xpos, ypos, width, 0, 2*math.pi)
+                            context.fill()
+                    elif pen ==6:
+                        # Eraser gets smoothed some more
+                        if 0 == segment % 9:
+                            context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
+                            context.set_line_width(width*xfactor)
+                            context.line_to(xpos*xfactor, ypos*yfactor)
+
+                    else:
+                        if 0 == segment % 6:
+                            context.set_source_rgba(*stroke_colour[colour], alpha=opacity)
+                            context.set_line_width(width*xfactor)
+                            context.line_to(xpos*xfactor, ypos*yfactor)
                     # last_x = xpos; last_y = ypos
                     # newSeg=False
                 context.stroke()
