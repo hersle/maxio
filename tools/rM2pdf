@@ -161,7 +161,7 @@ def lines2cairo(input_file, output_name, pdf_name=False):
                 elif pen == 5: # Highlighter
                     colour=3
                     width = 30
-                    opacity = 0.9
+                    opacity = 0.3
                 elif pen == 6: # Eraser
                     width = 1280 * width * width - 4800 * width + 4510
                     colour = 2

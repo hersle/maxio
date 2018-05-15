@@ -167,8 +167,11 @@ def lines2svg(input_file, output_name, singlefile, coloured_annotations=False):
                 # Iterate through the segments to form a polyline
                 for segment in range(nsegments):
                     fmt = '<fffff'
-                    xpos, ypos, pressure, tilt, i_unk2 = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+                    xpos, ypos, pressure, tilt, i_unk2 = struct.unpack_from(fmt, data, offset)
+                    offset += struct.calcsize(fmt)
+                    #dynamically adjust width
                     if pen == 0:
+                        # dont use every segment to make it less jittery
                         if 0 == segment % 8:
                             segment_width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
                             #print('    width={}'.format(segment_width))
