@@ -1,5 +1,10 @@
 # Scripts
-## rM2pdf 
+These scripts are deprecated since remarkable changed the .lines format.
+Use this version:
+
+https://github.com/jmiserez/maxio/blob/ee15bcc86e4426acd5fc70e717468862dce29fb8/tmp-rm16-ericsfraga-rm2svg.py
+
+## rM2pdf
 This is a fork of this https://github.com/phil777/maxio which is a fork of this https://github.com/reHackable/maxio
 
 What can it do? It can transform .lines files into pdfs using the pdf generation library Cairo pretty quickly. It scales the lines to the correct format given a reference pdf (input pdf). It's well suited transform annotations which can then be added to the original pdf (see below).
@@ -19,7 +24,7 @@ optional arguments:
   --version                         show program's version number and exit
 ```
 
-## rM2svg 
+## rM2svg
 https://github.com/reHackable/maxio
 
 Convert a .lines file to an svg file
@@ -33,7 +38,7 @@ Convert a .lines file to an svg file
       -c COLOUR, --coloured_annotations Colour annotations for document markup
       --version                       show program's version number and exit
 
-# How to get usable annotated PDFs out of your reMarkable 
+# How to get usable annotated PDFs out of your reMarkable
 
 ## Step 1: rM2pdf
 Convert a .lines file to a pdf file
@@ -42,10 +47,10 @@ example (Terminal):
 ```
   python3 rM2pdf -i test/tools-source.lines -p input.pdf -o annot.pdf -c;
 ```
-This will give you a pdf with only the annotations on it. 
+This will give you a pdf with only the annotations on it.
 
 ## Step 2: Combine with original
 Now you can use pdftk to combine the original with the annotation-pdf to get a nice, annotated, non-huge, OCR'd PDF like such:
 ```
-pdftk input.pdf multistamp annot.pdf output final.pdf 
+pdftk input.pdf multistamp annot.pdf output final.pdf
 ```

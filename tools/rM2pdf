@@ -10,7 +10,6 @@ import math
 
 # rM2pdf
 # toDos:
-# - add color marker option
 __prog_name__ = "rM2pdf"
 __version__ = "0.0.1beta"
 
@@ -142,7 +141,7 @@ def lines2cairo(input_file, output_name, pdf_name=False):
             for stroke in range(nstrokes):
             # for stroke in range(0,4):
                 fmt = '<IIIfI'
-                pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); 
+                pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset);
                 offset += struct.calcsize(fmt)
                 opacity = 1
                 last_x = -1.; last_y = -1.
