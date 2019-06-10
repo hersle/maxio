@@ -1,27 +1,11 @@
 #!/usr/bin/env python3
 #
 # Script for converting reMarkable tablet ".rm" files to SVG image.
-# Based on rM2svg from
+# this works for the new *.rm format, where each page is a seperate file
+# credit for updating goes to
+# https://github.com/jmiserez/maxio/blob/ee15bcc86e4426acd5fc70e717468862dce29fb8/tmp-rm16-ericsfraga-rm2svg.py
 #
-#    https://github.com/lschwetlick/maxio/tree/master/tools
-#
-# Format appears to be as follows:
-#
-#  header: 'reMarkable .lines file, version=3          '
-#  4 bytes integer: number of layers
-#  for each layer: 
-#      4 bytes integer: number of strokes
-#      for each stroke:
-#          4 bytes integer: pen
-#          4 bytes integer: colour
-#          4 bytes: unknown
-#          4 bytes floating point: width
-#          4 bytes integer: number of segments
-#          for each segment:
-#              6 floating point numbers: x, y, pressure, title, unknown, unknown
-#
-#
-# Eric S Fraga
+
 import sys
 import struct
 import os.path
@@ -37,7 +21,7 @@ default_x_width = 1404
 default_y_width = 1872
 
 # Mappings
-stroke_colour={
+stroke_colour = {
     0 : "black",
     1 : "grey",
     2 : "white",
@@ -85,18 +69,19 @@ def main():
 
     if not os.path.exists(args.input):
         parser.error('The file "{}" does not exist!'.format(args.input))
-
     if args.coloured_annotations:
-        global stroke_colour
-        stroke_colour = {
-            0: "blue",
-            1: "red",
-            2: "white",
-            3: "yellow"
-        }
-
+        set_coloured_annots()
     rm2svg(args.input, args.output, args.coloured_annotations,
            args.width, args.height)
+
+def set_coloured_annots():
+    global stroke_colour
+    stroke_colour = {
+        0: "blue",
+        1: "red",
+        2: "white",
+        3: "yellow"
+    }
 
 
 def abort(msg):
@@ -107,6 +92,9 @@ def abort(msg):
 def rm2svg(input_file, output_name, coloured_annotations=False,
            x_width=default_x_width, y_width=default_y_width):
     # Read the file in memory. Consider optimising by reading chunks.
+    if coloured_annotations:
+        set_coloured_annots()
+
     with open(input_file, 'rb') as f:
         data = f.read()
     offset = 0
@@ -137,7 +125,6 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
 
     # Iterate through pages (There is at least one)
     output.write('<g id="p1" style="display:inline">')
-    
     # Iterate through layers on the page (There is at least one)
     for layer in range(nlayers):
         # print('New layer')
@@ -228,4 +215,4 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
     output.close()
 
 if __name__ == "__main__":
-main()
+    main()
