@@ -11,6 +11,6 @@ Convert a .rm file to an svg file. This will only be one page of your document.
       --version                       show program's version number and exit
 
 # Use as python import / get Annotated PDFs
-![alt text](https://github.com/lschwetlick/maxio/tree/master/tools/annot_pdf.png "Conceptual combine")
+![alt text](annot_pdf.png "Conceptual combine")
 
 ...see `convert.ipynb` in convert_procedure
