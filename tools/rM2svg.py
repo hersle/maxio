@@ -2,10 +2,8 @@
 #
 # Script for converting reMarkable tablet ".rm" files to SVG image.
 # this works for the new *.rm format, where each page is a seperate file
-# credit for updating goes to
-# https://github.com/jmiserez/maxio/blob/ee15bcc86e4426acd5fc70e717468862dce29fb8/tmp-rm16-ericsfraga-rm2svg.py
-#
-
+# credit for updating to version 5 rm files goes to
+# https://github.com/peerdavid/rmapi/blob/master/tools/rM2svg
 import sys
 import struct
 import os.path
@@ -83,15 +81,14 @@ def set_coloured_annots():
         3: "yellow"
     }
 
-
 def abort(msg):
     print(msg, file=sys.stderr)
     sys.exit(1)
 
 
 def rm2svg(input_file, output_name, coloured_annotations=False,
-           x_width=default_x_width, y_width=default_y_width):
-    # Read the file in memory. Consider optimising by reading chunks.
+              x_width=default_x_width, y_width=default_y_width):
+
     if coloured_annotations:
         set_coloured_annots()
 
@@ -100,15 +97,18 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
     offset = 0
 
     # Is this a reMarkable .lines file?
-    expected_header=b'reMarkable .lines file, version=3          '
-    if len(data) < len(expected_header) + 4:
+    expected_header_v3=b'reMarkable .lines file, version=3          '
+    expected_header_v5=b'reMarkable .lines file, version=5          '
+    if len(data) < len(expected_header_v5) + 4:
         abort('File too short to be a valid file')
 
-    fmt = '<{}sI'.format(len(expected_header))
+    fmt = '<{}sI'.format(len(expected_header_v5))
     header, nlayers = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
-    # print('header={} nlayers={}'.format(header, nlayers))
-    if header != expected_header or nlayers < 1:
-        abort('Not a valid reMarkable file: <header={}> <nlayers={}'.format(header, nlayers))
+    is_v3 = (header == expected_header_v3)
+    is_v5 = (header == expected_header_v5)
+    if (not is_v3 and not is_v5) or  nlayers < 1:
+        abort('Not a valid reMarkable file: <header={}><nlayers={}>'.format(header, nlayers))
+        return
 
     output = open(output_name, 'w')
     output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">'.format(y_width, x_width)) # BEGIN Notebook
@@ -125,56 +125,60 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
 
     # Iterate through pages (There is at least one)
     output.write('<g id="p1" style="display:inline">')
-    # Iterate through layers on the page (There is at least one)
+
     for layer in range(nlayers):
-        # print('New layer')
         fmt = '<I'
         (nstrokes,) = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
 
-        # print('nstrokes={}'.format(nstrokes))
         # Iterate through the strokes in the layer (If there is any)
         for stroke in range(nstrokes):
-            fmt = '<IIIfI'
-            pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
-            # print('pen={} colour={} i_unk={} width={} nsegments={}'.format(pen,colour,i_unk,width,nsegments))
+            if is_v3:
+                fmt = '<IIIfI'
+                pen, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+            if is_v5:
+                fmt = '<IIIffI'
+                pen, colour, i_unk, width, unknown, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+                #print('Stroke {}: pen={}, colour={}, width={}, unknown={}, nsegments={}'.format(stroke, pen, colour, width, unknown, nsegments))
+
             opacity = 1
             last_x = -1.; last_y = -1.
-            #if i_unk != 0: # No theory on that one
-                #print('Unexpected value at offset {}'.format(offset - 12))
-            if pen == 0 or pen == 1:
-                pass # Dynamic width, will be truncated into several strokes
-            elif pen == 2 or pen == 4: # Pen / Fineliner
+
+            # See also https://support.remarkable.com/hc/en-us/articles/115004558545-5-1-Tools-Overview
+            if (pen == 0 or pen == 12): # Brush
+                pass
+            elif (pen == 2 or pen == 15) or (pen == 4 or pen == 17): # BallPoint | Fineliner
                 width = 32 * width * width - 116 * width + 107
-            elif pen == 3: # Marker
+                if(x_width == default_x_width and y_width == default_y_width):
+                    width *= 1.8
+            elif (pen == 3 or pen == 16): # Marker
                 width = 64 * width - 112
                 opacity = 0.9
-            elif pen == 5: # Highlighter
+            elif (pen == 5 or pen == 18): # Highlighter
                 width = 30
                 opacity = 0.2
                 if coloured_annotations:
                     colour = 3
-            elif pen == 6: # Eraser
+            elif (pen == 6): # Eraser
                 width = 1280 * width * width - 4800 * width + 4510
                 colour = 2
-            elif pen == 7: # Pencil-Sharp
+            elif (pen == 7 or pen == 13) or (pen == 1 or pen == 14): # Sharp Pencil | Tilt Pencil
                 width = 16 * width - 27
                 opacity = 0.9
-            elif pen == 8: # Erase area
+            elif (pen == 8): # Erase area
                 opacity = 0.
-            else: 
+            else:
                 print('Unknown pen: {}'.format(pen))
                 opacity = 0.
 
             width /= 2.3 # adjust for transformation to A4
-            
+
             #print('Stroke {}: pen={}, colour={}, width={}, nsegments={}'.format(stroke, pen, colour, width, nsegments))
             output.write('<polyline style="fill:none;stroke:{};stroke-width:{:.3f};opacity:{}" points="'.format(stroke_colour[colour], width, opacity)) # BEGIN stroke
 
             # Iterate through the segments to form a polyline
             for segment in range(nsegments):
                 fmt = '<ffffff'
-                xpos, ypos, pressure, tilt, i_unk2, j_unk2 = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
-                # print('(x,y)=({},{})'.format(xpos,ypos))
+                xpos, ypos, pressure, tilt, i_unk2, _ = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
                 #xpos += 60
                 #ypos -= 20
                 ratio = (y_width/x_width)/(1872/1404)
@@ -188,7 +192,7 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                     if 0 == segment % 8:
                         segment_width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
                         #print('    width={}'.format(segment_width))
-                        output.write('" />\n<polyline style="fill:none;stroke:{};stroke-width:{:.3f}" points="'.format(
+                        output.write('" /><polyline style="fill:none;stroke:{};stroke-width:{:.3f}" points="'.format(
                                     stroke_colour[colour], segment_width)) # UPDATE stroke
                         if last_x != -1.:
                             output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment

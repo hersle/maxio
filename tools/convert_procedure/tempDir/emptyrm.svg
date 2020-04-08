@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="790" width="595">
+<svg xmlns="http://www.w3.org/2000/svg" height="792" width="612">
         <script type="application/ecmascript"> <![CDATA[
             var visiblePage = 'p1';
             function goToPage(page) {
@@ -7,4 +7,4 @@
                 visiblePage = page;
             }
         ]]> </script>
-    <g id="p1" style="display:inline"><rect x="0" y="0" width="595" height="790" fill-opacity="0"/></g></svg>
+    <g id="p1" style="display:inline"><rect x="0" y="0" width="612" height="792" fill-opacity="0"/></g></svg>
