@@ -8,5 +8,5 @@ setup(
     author='Lisa Schwetlick',
     author_email='lisa.schwetlick@uni-potsdam.de',
     packages=find_packages(),
-    install_requires=[]
+    install_requires=["PyPDF2"]
 )
