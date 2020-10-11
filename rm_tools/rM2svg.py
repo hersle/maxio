@@ -124,7 +124,7 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
     ''')
 
     # Iterate through pages (There is at least one)
-    output.write('<g id="p1" style="display:inline">')
+    output.write('<g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter>')
 
     for layer in range(nlayers):
         fmt = '<I'
@@ -197,30 +197,29 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                 if (pen == 21): #  caligraphhy
                     if 0 == segment % 2:
                         segment_width = 0.9 * (((1+pressure) * (1 * width)) - 0.3*tilt) + (0.1 * last_width)
-                        output.write('"/>\n<polyline style="fill:none; stroke:black; stroke-width:{}" points="'.format(segment_width))
+                        output.write('"/>\n<polyline style="fill:none; stroke:black; stroke-width:{}" stroke-linecap="round" points="'.format(segment_width))
                         if last_x != -1.:
                             output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
                         last_x = xpos; last_y = ypos; last_width = segment_width
-                # TODO!
-                elif (pen == 0): # brush
-                    if 0 == segment % 8:
-                        segment_width = (5. * tilt) * (6. * width - 10) * (1 + 2. * pressure * pressure * pressure)
-                        #print('    width={}'.format(segment_width))
-                        output.write('" /><polyline style="fill:none;stroke:{};stroke-width:{:.3f}" points="'.format(
-                                    stroke_colour[colour], segment_width)) # UPDATE stroke
+                elif (pen == 12): # brush
+                    if 0 == segment % 3:
+                        segment_width = 1 * (((1+(1.4*pressure)) * (1 * width)) - (0.5*tilt) - (0.5*speed/50)) #+ (0.2 * last_width)
+                        segment_opacity = pressure * pressure - 0.2 * (speed / 50)
+                        # opacity must be between 1 and 0
+                        segment_opacity = 1 if segment_opacity > 1 else segment_opacity
+                        segment_opacity = 0 if segment_opacity < 0 else segment_opacity
+                        # using segment color not opacity because the dots interfere with each other.
+                        # Color must be 255 rgb
+                        segment_color = [int(abs(segment_opacity-1)*255)]*3
+                        segment_opacity = 1
+#                        output.write('"/>\n<polyline style="fill:none;stroke:rgb({});stroke-width:{:.3f};opacity:{:.3f}" stroke-linecap="round" points="'.format(
+#                                    str(tuple(segment_color)), segment_width, segment_opacity)) # UPDATE stroke
+                        output.write('"/>\n<polyline style="fill:none; stroke:rgb{} ;stroke-width:{:.3f}" stroke-linecap="round" points="'.format(
+                                    str(tuple(segment_color)), segment_width)) # UPDATE stroke
+
                         if last_x != -1.:
                             output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
-                        last_x = xpos; last_y = ypos
-                elif pen == 1:
-                    if 0 == segment % 8:
-                        segment_width = (10. * tilt -2) * (8. * width - 14)
-                        segment_opacity = (pressure - .2) * (pressure - .2)
-                        #print('    width={}, opacity={}'.format(segment_width, segment_opacity))
-                        output.write('" /><polyline style="fill:none;stroke:{};stroke-width:{:.3f};opacity:{:.3f}" points="'.format(
-                                    stroke_colour[colour], segment_width, segment_opacity)) # UPDATE stroke
-                        if last_x != -1.:
-                            output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
-                        last_x = xpos; last_y = ypos
+                    last_x = xpos; last_y = ypos; last_width = segment_width
 
                 output.write('{:.3f},{:.3f} '.format(xpos, ypos)) # BEGIN and END polyline segment
 
