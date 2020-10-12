@@ -1,0 +1,695 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="1872" width="1404">
+        <script type="application/ecmascript"> <![CDATA[
+            var visiblePage = 'p1';
+            function goToPage(page) {
+                document.getElementById(visiblePage).setAttribute('style', 'display: none');
+                document.getElementById(page).setAttribute('style', 'display: inline');
+                visiblePage = page;
+            }
+        ]]> </script>
+    <g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter><polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.561;opacity:1" stroke-linecap="round" points="240.255,194.128 237.330,197.381 237.215,198.689 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.497;opacity:1" stroke-linecap="round" points="237.215,198.689 237.396,199.353 238.053,197.808 238.390,195.161 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.074;opacity:1" stroke-linecap="round" points="238.390,195.161 240.149,189.041 241.405,184.808 243.143,180.086 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.577;opacity:1" stroke-linecap="round" points="243.143,180.086 250.206,162.820 262.056,136.731 263.311,133.329 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.306;opacity:1" stroke-linecap="round" points="263.311,133.329 264.572,124.495 264.700,119.841 265.433,116.693 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.640;opacity:1" stroke-linecap="round" points="265.433,116.693 265.570,120.507 264.944,129.834 264.659,142.887 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.434;opacity:1" stroke-linecap="round" points="264.659,142.887 265.014,149.533 266.076,156.210 266.826,157.373 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.601;opacity:1" stroke-linecap="round" points="266.826,157.373 267.795,158.135 268.772,158.531 269.904,158.394 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.748;opacity:1" stroke-linecap="round" points="269.904,158.394 272.091,156.869 275.380,152.783 286.747,134.725 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.420;opacity:1" stroke-linecap="round" points="286.747,134.725 297.729,110.185 300.343,106.256 301.832,105.189 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.874;opacity:1" stroke-linecap="round" points="301.832,105.189 301.528,113.141 300.975,121.781 297.230,147.620 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.260;opacity:1" stroke-linecap="round" points="297.230,147.620 295.238,157.617 294.031,171.174 294.398,175.379 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.557;opacity:1" stroke-linecap="round" points="294.398,175.379 295.120,179.146 296.138,182.341 297.505,185.263 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.494;opacity:1" stroke-linecap="round" points="297.505,185.263 300.813,191.043 304.225,194.279 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.038;opacity:1" stroke-linecap="round" points="343.440,164.516 346.101,162.118 348.800,157.841 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.911;opacity:1" stroke-linecap="round" points="348.800,157.841 348.610,154.930 348.191,153.220 345.809,150.013 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.408;opacity:1" stroke-linecap="round" points="345.809,150.013 344.757,149.558 341.803,149.487 339.836,149.793 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.680;opacity:1" stroke-linecap="round" points="339.836,149.793 335.227,151.251 332.775,152.583 330.621,154.285 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.237;opacity:1" stroke-linecap="round" points="330.621,154.285 328.829,156.213 325.823,161.073 324.632,163.903 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.235;opacity:1" stroke-linecap="round" points="324.632,163.903 323.585,169.856 323.621,175.742 324.159,178.553 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.163;opacity:1" stroke-linecap="round" points="324.159,178.553 324.860,180.861 325.783,182.604 326.941,183.742 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.296;opacity:1" stroke-linecap="round" points="326.941,183.742 328.352,184.231 329.691,184.222 332.485,183.485 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.095;opacity:1" stroke-linecap="round" points="332.485,183.485 337.455,179.662 341.179,174.941 347.675,164.548 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.031;opacity:1" stroke-linecap="round" points="347.675,164.548 349.756,159.514 349.876,157.864 349.706,159.805 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.765;opacity:1" stroke-linecap="round" points="349.706,159.805 351.591,164.466 354.605,170.827 356.708,174.156 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.963;opacity:1" stroke-linecap="round" points="356.708,174.156 358.070,175.707 359.879,176.816 361.651,178.104 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.174;opacity:1" stroke-linecap="round" points="361.651,178.104 361.651,178.104 364.555,179.985 364.555,179.985 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.183;opacity:1" stroke-linecap="round" points="364.555,179.985 367.854,180.092 367.854,180.092 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.362;opacity:1" stroke-linecap="round" points="373.138,181.960 370.143,182.968 369.151,182.101 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.267;opacity:1" stroke-linecap="round" points="369.151,182.101 368.471,180.084 368.989,174.369 372.376,166.129 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.472;opacity:1" stroke-linecap="round" points="372.376,166.129 377.450,159.051 382.627,153.262 386.070,150.822 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.194;opacity:1" stroke-linecap="round" points="386.070,150.822 390.210,149.229 392.026,148.430 392.026,148.430 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.700;opacity:1" stroke-linecap="round" points="404.881,153.757 403.558,154.236 402.896,154.977 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.357;opacity:1" stroke-linecap="round" points="402.896,154.977 402.621,156.608 402.990,157.487 404.479,167.290 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.816;opacity:1" stroke-linecap="round" points="404.479,167.290 404.393,174.646 404.786,177.395 405.909,180.021 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.501;opacity:1" stroke-linecap="round" points="405.909,180.021 406.386,180.386 406.319,179.958 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.179;opacity:1" stroke-linecap="round" points="410.701,124.187 413.995,123.656 412.985,124.010 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.161;opacity:1" stroke-linecap="round" points="412.985,124.010 412.331,127.012 411.092,152.130 408.486,170.695 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.910;opacity:1" stroke-linecap="round" points="408.486,170.695 406.449,180.939 406.141,184.824 406.465,185.778 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.338;opacity:1" stroke-linecap="round" points="406.465,185.778 407.016,186.058 407.633,185.750 410.665,182.373 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.804;opacity:1" stroke-linecap="round" points="410.665,182.373 412.193,181.328 414.365,180.408 417.967,176.935 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.620;opacity:1" stroke-linecap="round" points="417.967,176.935 419.757,174.147 422.508,167.480 425.701,162.773 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.548;opacity:1" stroke-linecap="round" points="425.701,162.773 426.930,160.242 430.238,155.001 432.268,152.684 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.789;opacity:1" stroke-linecap="round" points="432.268,152.684 437.622,147.671 439.662,146.554 444.969,144.690 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.110;opacity:1" stroke-linecap="round" points="424.547,165.193 424.793,168.516 424.216,171.026 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.484;opacity:1" stroke-linecap="round" points="424.216,171.026 424.764,173.042 425.500,174.130 429.934,179.284 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.915;opacity:1" stroke-linecap="round" points="429.934,179.284 431.504,180.505 434.875,182.049 436.774,182.336 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.078;opacity:1" stroke-linecap="round" points="453.261,172.398 453.292,172.644 454.441,172.717 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.117;opacity:1" stroke-linecap="round" points="454.441,172.717 455.950,172.460 460.221,169.635 476.019,155.978 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.744;opacity:1" stroke-linecap="round" points="476.019,155.978 483.816,148.459 484.621,145.862 484.449,145.135 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.959;opacity:1" stroke-linecap="round" points="484.449,145.135 482.869,144.246 478.079,143.914 473.274,144.692 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.406;opacity:1" stroke-linecap="round" points="473.274,144.692 468.580,146.961 466.405,148.648 464.870,150.722 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.665;opacity:1" stroke-linecap="round" points="464.870,150.722 463.799,152.914 462.976,157.399 463.214,161.856 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.815;opacity:1" stroke-linecap="round" points="463.214,161.856 463.681,164.022 464.584,166.084 467.441,169.715 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.998;opacity:1" stroke-linecap="round" points="467.441,169.715 471.507,172.754 476.436,177.157 480.960,179.505 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.056;opacity:1" stroke-linecap="round" points="480.960,179.505 486.892,180.481 489.070,179.608 489.732,178.596 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.528;opacity:1" stroke-linecap="round" points="489.732,178.596 489.684,177.238 488.964,175.353 488.721,169.649 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.510;opacity:1" stroke-linecap="round" points="488.721,169.649 488.809,168.383 490.416,164.475 492.280,161.705 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.635;opacity:1" stroke-linecap="round" points="492.280,161.705 495.859,158.824 501.641,155.405 512.961,151.175 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.993;opacity:1" stroke-linecap="round" points="512.961,151.175 524.337,147.908 532.374,145.990 536.292,144.920 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.007;opacity:1" stroke-linecap="round" points="536.292,144.920 540.222,143.946 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.486;opacity:1" stroke-linecap="round" points="612.696,158.006 611.963,156.627 609.854,152.479 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.349;opacity:1" stroke-linecap="round" points="609.854,152.479 609.445,151.534 609.261,149.656 609.417,149.514 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.504;opacity:1" stroke-linecap="round" points="609.417,149.514 609.658,151.642 610.926,158.069 612.198,167.615 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.955;opacity:1" stroke-linecap="round" points="612.198,167.615 613.256,180.688 613.781,184.046 614.029,183.594 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.397;opacity:1" stroke-linecap="round" points="614.029,183.594 614.793,180.330 615.177,176.653 614.913,171.644 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.279;opacity:1" stroke-linecap="round" points="614.913,171.644 612.697,152.214 612.761,146.421 613.675,142.247 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.143;opacity:1" stroke-linecap="round" points="613.675,142.247 615.142,138.842 616.682,137.316 618.895,136.262 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.968;opacity:1" stroke-linecap="round" points="618.895,136.262 623.956,134.560 630.400,133.791 633.747,133.850 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.032;opacity:1" stroke-linecap="round" points="633.747,133.850 636.565,134.609 641.331,137.080 644.090,140.047 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.862;opacity:1" stroke-linecap="round" points="644.090,140.047 644.965,141.584 644.782,144.739 641.700,151.440 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.550;opacity:1" stroke-linecap="round" points="641.700,151.440 638.376,157.017 636.675,159.218 637.418,158.770 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.314;opacity:1" stroke-linecap="round" points="637.418,158.770 638.263,158.766 639.892,159.771 646.488,162.621 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.197;opacity:1" stroke-linecap="round" points="646.488,162.621 648.871,163.597 650.903,163.993 655.554,163.459 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.213;opacity:1" stroke-linecap="round" points="655.554,163.459 660.724,161.839 663.430,160.471 668.322,156.343 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.309;opacity:1" stroke-linecap="round" points="668.322,156.343 670.520,153.995 674.038,148.950 675.253,146.503 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.267;opacity:1" stroke-linecap="round" points="675.253,146.503 676.541,142.643 676.782,141.134 676.573,140.012 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.968;opacity:1" stroke-linecap="round" points="676.573,140.012 675.195,138.275 671.385,136.666 669.718,136.249 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.722;opacity:1" stroke-linecap="round" points="669.718,136.249 666.179,136.527 664.826,137.136 663.061,139.267 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.076;opacity:1" stroke-linecap="round" points="663.061,139.267 662.635,143.118 662.963,145.340 664.709,149.873 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.033;opacity:1" stroke-linecap="round" points="664.709,149.873 667.860,154.395 669.839,156.213 674.207,158.576 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.173;opacity:1" stroke-linecap="round" points="674.207,158.576 679.089,160.379 689.032,160.101 697.380,158.266 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.615;opacity:1" stroke-linecap="round" points="697.380,158.266 699.071,158.145 700.271,158.394 698.432,158.997 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.583;opacity:1" stroke-linecap="round" points="698.432,158.997 698.801,160.340 701.909,157.050 705.885,150.308 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.788;opacity:1" stroke-linecap="round" points="705.885,150.308 707.706,147.909 712.330,143.357 715.107,141.246 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.799;opacity:1" stroke-linecap="round" points="715.107,141.246 721.452,137.579 724.894,136.354 731.984,134.981 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.172;opacity:1" stroke-linecap="round" points="731.984,134.981 735.318,135.222 738.360,136.027 741.026,137.325 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.319;opacity:1" stroke-linecap="round" points="741.026,137.325 742.926,138.979 744.183,140.795 745.263,145.466 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.651;opacity:1" stroke-linecap="round" points="745.263,145.466 745.243,147.780 744.043,158.106 744.035,163.689 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.967;opacity:1" stroke-linecap="round" points="744.035,163.689 744.422,166.387 744.422,166.387 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.691;opacity:1" stroke-linecap="round" points="49.524,365.865 49.660,366.839 50.376,367.342 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.179;opacity:1" stroke-linecap="round" points="50.376,367.342 55.185,366.129 60.809,365.311 74.740,363.639 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.208;opacity:1" stroke-linecap="round" points="74.740,363.639 100.556,359.912 125.031,355.839 139.519,353.543 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.214;opacity:1" stroke-linecap="round" points="139.519,353.543 156.863,351.086 177.213,348.119 200.643,344.845 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.214;opacity:1" stroke-linecap="round" points="200.643,344.845 227.227,341.196 257.404,337.610 257.404,337.610 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.344;opacity:1" stroke-linecap="round" points="67.262,453.994 67.672,454.844 69.577,455.975 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.459;opacity:1" stroke-linecap="round" points="69.577,455.975 76.054,454.554 85.182,452.993 99.056,450.327 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.492;opacity:1" stroke-linecap="round" points="99.056,450.327 108.625,448.714 133.090,445.070 148.609,442.790 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.980;opacity:1" stroke-linecap="round" points="148.609,442.790 166.629,440.216 187.374,437.693 211.127,435.046 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.127;opacity:1" stroke-linecap="round" points="211.127,435.046 237.901,432.342 266.930,429.691 298.239,427.110 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.188;opacity:1" stroke-linecap="round" points="298.239,427.110 332.287,424.907 368.632,422.641 407.014,420.577 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.242;opacity:1" stroke-linecap="round" points="407.014,420.577 448.614,418.947 493.330,417.414 540.021,416.163 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.507;opacity:1" stroke-linecap="round" points="540.021,416.163 588.348,415.874 639.560,416.498 691.119,418.369 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.719;opacity:1" stroke-linecap="round" points="691.119,418.369 743.538,421.091 798.413,424.320 852.598,428.513 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.911;opacity:1" stroke-linecap="round" points="852.598,428.513 852.598,428.513 852.598,428.513 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.668;opacity:1" stroke-linecap="round" points="59.746,560.902 57.631,563.668 55.135,565.673 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.828;opacity:1" stroke-linecap="round" points="55.135,565.673 58.773,563.200 62.160,562.165 67.656,561.132 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.799;opacity:1" stroke-linecap="round" points="67.656,561.132 90.220,557.738 111.567,555.195 124.504,553.837 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.770;opacity:1" stroke-linecap="round" points="124.504,553.837 156.451,551.442 176.928,550.120 200.402,548.669 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.762;opacity:1" stroke-linecap="round" points="200.402,548.669 226.779,547.092 255.776,545.517 286.973,544.184 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.966;opacity:1" stroke-linecap="round" points="286.973,544.184 320.547,543.124 356.446,542.207 394.277,541.509 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.058;opacity:1" stroke-linecap="round" points="394.277,541.509 433.505,541.026 517.405,541.188 561.443,541.669 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.329;opacity:1" stroke-linecap="round" points="561.443,541.669 655.157,544.089 706.427,545.921 758.691,548.358 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.478;opacity:1" stroke-linecap="round" points="758.691,548.358 812.836,551.895 866.678,556.443 920.907,562.203 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.492;opacity:1" stroke-linecap="round" points="920.907,562.203 976.870,569.345 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.396;opacity:1" stroke-linecap="round" points="986.818,411.489 985.661,411.742 984.299,412.943 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.215;opacity:1" stroke-linecap="round" points="984.299,412.943 984.188,413.979 985.036,417.331 985.785,422.792 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.530;opacity:1" stroke-linecap="round" points="985.785,422.792 986.162,426.916 986.156,434.668 986.684,437.100 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.692;opacity:1" stroke-linecap="round" points="986.684,437.100 987.015,437.779 987.469,437.920 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.594;opacity:1" stroke-linecap="round" points="976.627,416.038 973.585,414.307 974.915,414.259 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.288;opacity:1" stroke-linecap="round" points="974.915,414.259 977.634,412.645 983.580,409.868 997.889,404.593 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.486;opacity:1" stroke-linecap="round" points="997.889,404.593 1003.764,403.361 1006.132,403.107 1006.132,403.107 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.954;opacity:1" stroke-linecap="round" points="1006.132,403.107 1009.831,402.914 1009.831,402.914 1009.831,402.914 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.430;opacity:1" stroke-linecap="round" points="980.774,429.610 983.618,429.752 984.379,430.253 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.679;opacity:1" stroke-linecap="round" points="984.379,430.253 991.749,430.065 1002.127,429.566 1008.578,428.819 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.434;opacity:1" stroke-linecap="round" points="1008.578,428.819 1016.530,427.315 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.298;opacity:1" stroke-linecap="round" points="1041.249,420.341 1039.290,419.482 1035.698,417.346 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.843;opacity:1" stroke-linecap="round" points="1035.698,417.346 1031.591,420.126 1023.136,428.639 1020.336,433.035 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.577;opacity:1" stroke-linecap="round" points="1020.336,433.035 1019.674,434.854 1019.716,436.459 1021.515,439.435 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.040;opacity:1" stroke-linecap="round" points="1021.515,439.435 1022.848,440.359 1024.389,440.863 1028.079,440.940 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.050;opacity:1" stroke-linecap="round" points="1028.079,440.940 1030.487,440.509 1033.104,439.590 1036.028,438.304 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.987;opacity:1" stroke-linecap="round" points="1036.028,438.304 1038.919,436.432 1046.707,429.576 1048.419,427.490 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.032;opacity:1" stroke-linecap="round" points="1048.419,427.490 1049.478,425.459 1050.120,422.370 1049.464,420.772 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.773;opacity:1" stroke-linecap="round" points="1049.464,420.772 1048.438,420.108 1047.558,420.490 1047.372,421.907 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.653;opacity:1" stroke-linecap="round" points="1047.372,421.907 1044.979,429.040 1044.881,431.142 1045.179,432.924 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.926;opacity:1" stroke-linecap="round" points="1045.179,432.924 1046.823,435.669 1049.022,437.299 1051.970,437.683 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.128;opacity:1" stroke-linecap="round" points="1051.970,437.683 1051.970,437.683 1055.650,436.871 1055.650,436.871 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.610;opacity:1" stroke-linecap="round" points="1089.815,416.439 1088.932,413.917 1088.412,410.323 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.841;opacity:1" stroke-linecap="round" points="1088.412,410.323 1088.731,409.146 1088.434,409.378 1087.069,409.112 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.819;opacity:1" stroke-linecap="round" points="1087.069,409.112 1084.352,408.947 1080.780,409.668 1078.795,410.291 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.789;opacity:1" stroke-linecap="round" points="1078.795,410.291 1076.357,412.306 1076.151,413.848 1079.258,416.715 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.548;opacity:1" stroke-linecap="round" points="1079.258,416.715 1092.466,425.053 1093.639,426.781 1093.685,428.835 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.053;opacity:1" stroke-linecap="round" points="1093.685,428.835 1093.005,430.470 1088.788,434.708 1083.407,437.914 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.610;opacity:1" stroke-linecap="round" points="1083.407,437.914 1078.750,439.384 1071.571,440.115 1071.221,440.056 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.713;opacity:1" stroke-linecap="round" points="1071.221,440.056 1071.194,439.687 1071.194,439.687 1071.194,439.687 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.450;opacity:1" stroke-linecap="round" points="1071.194,439.687 1072.215,437.364 1072.215,437.364 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.219;opacity:1" stroke-linecap="round" points="1116.967,393.578 1121.011,393.920 1120.620,394.721 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.847;opacity:1" stroke-linecap="round" points="1120.620,394.721 1120.483,397.227 1119.911,399.977 1119.473,403.381 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.433;opacity:1" stroke-linecap="round" points="1119.473,403.381 1117.495,415.705 1116.903,419.912 1115.891,434.465 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.765;opacity:1" stroke-linecap="round" points="1115.891,434.465 1115.525,437.076 1114.992,439.476 1114.992,439.476 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.848;opacity:1" stroke-linecap="round" points="1114.992,439.476 1114.992,439.476 1114.992,439.476 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.088;opacity:1" stroke-linecap="round" points="1111.059,434.678 1110.193,432.772 1109.013,428.982 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.732;opacity:1" stroke-linecap="round" points="1109.013,428.982 1109.167,426.969 1110.142,426.058 1111.298,425.543 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.439;opacity:1" stroke-linecap="round" points="1111.298,425.543 1114.613,424.590 1123.808,423.502 1131.881,422.033 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.401;opacity:1" stroke-linecap="round" points="1131.881,422.033 1135.913,421.214 1135.913,421.214 1146.214,419.166 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.240;opacity:1" stroke-linecap="round" points="1146.214,419.166 1146.214,419.166 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.814;opacity:1" stroke-linecap="round" points="63.985,677.003 64.120,675.694 63.511,674.421 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.545;opacity:1" stroke-linecap="round" points="63.511,674.421 62.302,675.194 60.589,674.137 60.182,674.172 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.507;opacity:1" stroke-linecap="round" points="60.182,674.172 60.611,674.136 60.813,673.506 62.499,672.657 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.140;opacity:1" stroke-linecap="round" points="62.499,672.657 68.137,670.905 73.756,670.554 75.921,671.121 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.577;opacity:1" stroke-linecap="round" points="75.921,671.121 79.492,670.972 86.742,671.141 89.411,670.752 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.885;opacity:1" stroke-linecap="round" points="89.411,670.752 99.642,670.783 104.439,670.347 106.100,670.467 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.281;opacity:1" stroke-linecap="round" points="106.100,670.467 112.253,668.703 115.006,668.236 122.120,668.148 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.620;opacity:1" stroke-linecap="round" points="122.120,668.148 130.278,667.285 133.057,667.709 139.609,667.394 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.789;opacity:1" stroke-linecap="round" points="139.609,667.394 150.284,667.865 158.544,667.081 163.713,667.085 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.101;opacity:1" stroke-linecap="round" points="163.713,667.085 170.359,666.460 185.584,666.216 196.459,665.634 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.022;opacity:1" stroke-linecap="round" points="196.459,665.634 202.291,664.949 211.654,664.878 224.307,663.805 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.026;opacity:1" stroke-linecap="round" points="224.307,663.805 245.107,662.911 252.036,662.895 258.042,663.425 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.322;opacity:1" stroke-linecap="round" points="258.042,663.425 286.112,663.161 292.372,662.613 307.281,662.121 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.356;opacity:1" stroke-linecap="round" points="307.281,662.121 323.588,660.820 331.473,660.667 339.044,659.828 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.502;opacity:1" stroke-linecap="round" points="339.044,659.828 349.107,659.462 367.323,658.043 374.375,657.176 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.830;opacity:1" stroke-linecap="round" points="374.375,657.176 408.427,655.407 421.832,655.609 440.288,655.395 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.903;opacity:1" stroke-linecap="round" points="440.288,655.395 446.796,655.948 473.648,656.803 496.756,657.083 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:22.128;opacity:1" stroke-linecap="round" points="496.756,657.083 524.925,656.305 544.997,654.782 565.935,654.487 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.980;opacity:1" stroke-linecap="round" points="565.935,654.487 581.890,653.575 591.582,653.354 605.652,653.360 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.936;opacity:1" stroke-linecap="round" points="605.652,653.360 615.568,653.975 636.985,653.881 667.315,655.677 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:22.093;opacity:1" stroke-linecap="round" points="667.315,655.677 685.469,656.384 695.129,657.401 700.862,657.673 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.833;opacity:1" stroke-linecap="round" points="700.862,657.673 734.031,658.364 748.423,659.046 765.505,659.034 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.922;opacity:1" stroke-linecap="round" points="765.505,659.034 789.087,659.637 793.104,659.816 797.528,660.216 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:22.231;opacity:1" stroke-linecap="round" points="797.528,660.216 803.969,660.570 805.211,660.673 806.497,660.758 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:23.378;opacity:1" stroke-linecap="round" points="806.497,660.758 809.094,660.939 812.644,661.201 830.135,662.925 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.825;opacity:1" stroke-linecap="round" points="830.135,662.925 841.979,663.351 849.164,664.176 871.989,665.091 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:23.644;opacity:1" stroke-linecap="round" points="871.989,665.091 875.066,665.494 905.057,666.164 918.717,665.600 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:23.065;opacity:1" stroke-linecap="round" points="918.717,665.600 921.799,665.629 926.617,665.561 928.029,665.465 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.389;opacity:1" stroke-linecap="round" points="928.029,665.465 937.626,665.796 946.276,665.522 979.017,666.352 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.775;opacity:1" stroke-linecap="round" points="979.017,666.352 1002.647,666.482 1010.652,666.263 1025.716,666.553 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.277;opacity:1" stroke-linecap="round" points="1025.716,666.553 1034.698,667.065 1056.637,667.269 1060.540,667.674 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.335;opacity:1" stroke-linecap="round" points="1060.540,667.674 1068.856,667.837 1080.698,667.714 1079.813,667.706 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.806;opacity:1" stroke-linecap="round" points="1079.813,667.706 1078.166,668.971 1076.422,670.095 1074.307,671.445 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.355;opacity:1" stroke-linecap="round" points="1074.307,671.445 1074.307,671.445 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.234;opacity:1" stroke-linecap="round" points="1145.507,661.023 1146.125,658.055 1146.802,657.661 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.088;opacity:1" stroke-linecap="round" points="1146.802,657.661 1146.878,656.793 1147.224,656.168 1147.102,656.098 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.297;opacity:1" stroke-linecap="round" points="1147.102,656.098 1146.813,655.632 1146.347,655.193 1146.150,654.815 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.414;opacity:1" stroke-linecap="round" points="1146.150,654.815 1145.742,654.635 1144.425,653.825 1143.853,653.269 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.196;opacity:1" stroke-linecap="round" points="1143.853,653.269 1142.350,652.809 1140.362,652.922 1138.549,653.568 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.615;opacity:1" stroke-linecap="round" points="1138.549,653.568 1130.709,657.908 1129.048,658.517 1126.761,661.753 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.141;opacity:1" stroke-linecap="round" points="1126.761,661.753 1126.191,663.455 1126.970,665.104 1129.316,666.627 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.142;opacity:1" stroke-linecap="round" points="1129.316,666.627 1130.181,667.708 1137.055,672.295 1148.039,681.450 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.182;opacity:1" stroke-linecap="round" points="1148.039,681.450 1152.563,689.857 1152.707,691.510 1153.207,691.875 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.725;opacity:1" stroke-linecap="round" points="1153.207,691.875 1153.226,692.266 1149.852,694.517 1147.049,695.650 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.320;opacity:1" stroke-linecap="round" points="1147.049,695.650 1146.750,695.917 1146.933,696.118 1143.906,696.390 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.826;opacity:1" stroke-linecap="round" points="1143.906,696.390 1139.570,695.778 1131.522,692.904 1125.652,689.119 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.788;opacity:1" stroke-linecap="round" points="1125.652,689.119 1125.214,688.427 1124.721,688.262 1125.171,688.123 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.392;opacity:1" stroke-linecap="round" points="1125.171,688.123 1124.050,686.483 1124.423,685.747 1124.511,685.733 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.214;opacity:1" stroke-linecap="round" points="1124.511,685.733 1124.741,685.503 1124.981,685.332 1125.289,685.280 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.584;opacity:1" stroke-linecap="round" points="1125.289,685.280 1125.289,685.280 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.198;opacity:1" stroke-linecap="round" points="1178.301,636.195 1177.541,635.084 1177.688,634.415 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.418;opacity:1" stroke-linecap="round" points="1177.688,634.415 1177.699,634.735 1177.865,634.864 1177.353,635.036 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.219;opacity:1" stroke-linecap="round" points="1177.353,635.036 1177.621,635.187 1178.257,643.043 1178.448,652.649 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.729;opacity:1" stroke-linecap="round" points="1178.448,652.649 1178.974,657.241 1178.564,659.923 1177.993,681.547 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.357;opacity:1" stroke-linecap="round" points="1177.993,681.547 1177.596,684.539 1177.673,688.912 1177.213,692.149 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.086;opacity:1" stroke-linecap="round" points="1177.213,692.149 1177.619,698.717 1177.371,699.072 1177.809,699.761 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.138;opacity:1" stroke-linecap="round" points="1177.809,699.761 1177.880,701.720 1178.279,700.946 1178.122,700.862 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.998;opacity:1" stroke-linecap="round" points="1178.122,700.862 1174.268,705.579 1174.268,705.579 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.180;opacity:1" stroke-linecap="round" points="1216.856,672.083 1216.793,667.529 1217.103,667.239 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.661;opacity:1" stroke-linecap="round" points="1217.103,667.239 1216.705,666.567 1215.333,665.587 1214.850,664.862 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.164;opacity:1" stroke-linecap="round" points="1214.850,664.862 1214.214,664.585 1211.398,665.426 1207.651,669.182 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.530;opacity:1" stroke-linecap="round" points="1207.651,669.182 1203.701,678.945 1202.971,684.543 1203.155,687.683 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.551;opacity:1" stroke-linecap="round" points="1203.155,687.683 1203.628,689.561 1205.701,693.417 1210.568,696.829 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.662;opacity:1" stroke-linecap="round" points="1210.568,696.829 1213.380,697.642 1215.981,697.677 1222.243,695.828 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.729;opacity:1" stroke-linecap="round" points="1222.243,695.828 1223.550,695.197 1236.364,686.055 1238.276,683.562 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.247;opacity:1" stroke-linecap="round" points="1238.276,683.562 1239.916,679.147 1240.081,676.497 1239.724,674.870 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.836;opacity:1" stroke-linecap="round" points="1239.724,674.870 1239.042,674.032 1237.343,669.864 1236.117,667.754 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.983;opacity:1" stroke-linecap="round" points="1236.117,667.754 1234.107,665.485 1232.811,664.731 1230.053,663.922 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.823;opacity:1" stroke-linecap="round" points="1230.053,663.922 1226.758,664.049 1223.522,664.520 1220.435,665.700 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.142;opacity:1" stroke-linecap="round" points="1220.435,665.700 1218.582,667.063 1216.506,669.524 1216.031,672.891 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.376;opacity:1" stroke-linecap="round" points="1216.031,672.891 1215.718,673.791 1215.718,673.791 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.135;opacity:1" stroke-linecap="round" points="1266.678,670.661 1265.140,667.758 1264.934,666.871 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.512;opacity:1" stroke-linecap="round" points="1264.934,666.871 1264.591,666.173 1264.448,666.112 1264.323,666.284 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.474;opacity:1" stroke-linecap="round" points="1264.323,666.284 1264.589,666.296 1264.561,666.449 1264.076,666.584 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.622;opacity:1" stroke-linecap="round" points="1264.076,666.584 1261.993,669.222 1261.391,670.628 1260.233,679.398 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.309;opacity:1" stroke-linecap="round" points="1260.233,679.398 1260.372,681.090 1262.200,686.830 1265.915,691.420 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.299;opacity:1" stroke-linecap="round" points="1265.915,691.420 1268.555,692.625 1272.927,693.407 1276.295,692.619 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.742;opacity:1" stroke-linecap="round" points="1276.295,692.619 1279.503,690.812 1281.760,687.669 1283.342,684.198 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.781;opacity:1" stroke-linecap="round" points="1283.342,684.198 1283.023,683.740 1282.586,680.940 1281.512,678.099 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.674;opacity:1" stroke-linecap="round" points="1281.512,678.099 1281.615,678.623 1281.282,678.823 1281.368,678.788 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.139;opacity:1" stroke-linecap="round" points="1281.368,678.788 1281.230,681.761 1281.713,685.073 1284.562,692.006 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.996;opacity:1" stroke-linecap="round" points="1284.562,692.006 1286.684,694.196 1288.696,695.651 1291.781,696.523 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.099;opacity:1" stroke-linecap="round" points="1291.781,696.523 1294.554,696.061 1297.922,694.273 1302.064,690.913 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.611;opacity:1" stroke-linecap="round" points="1302.064,690.913 1302.543,688.122 1303.383,685.920 1303.660,680.987 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.562;opacity:1" stroke-linecap="round" points="1303.660,680.987 1303.122,674.997 1302.114,670.342 1301.583,668.484 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.095;opacity:1" stroke-linecap="round" points="1301.583,668.484 1301.500,666.948 1300.992,666.094 1300.808,665.565 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.311;opacity:1" stroke-linecap="round" points="1300.808,665.565 1300.411,664.974 1299.625,662.964 1298.202,660.460 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.218;opacity:1" stroke-linecap="round" points="1298.202,660.460 1297.674,660.294 1297.652,661.096 1296.111,663.467 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.299;opacity:1" stroke-linecap="round" points="1296.111,663.467 1295.331,665.244 1295.331,665.244 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.542;opacity:1" stroke-linecap="round" points="69.799,868.594 68.541,871.172 67.137,873.476 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.000;opacity:1" stroke-linecap="round" points="67.137,873.476 67.840,872.583 67.932,872.202 68.040,871.776 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.784;opacity:1" stroke-linecap="round" points="68.040,871.776 68.319,871.492 68.574,871.317 68.785,871.236 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.121;opacity:1" stroke-linecap="round" points="68.785,871.236 68.895,871.233 68.615,872.354 68.964,872.281 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.840;opacity:1" stroke-linecap="round" points="68.964,872.281 68.223,872.129 69.502,872.298 69.597,872.080 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.855;opacity:1" stroke-linecap="round" points="69.597,872.080 69.319,872.121 70.135,872.173 72.238,871.570 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.435;opacity:1" stroke-linecap="round" points="72.238,871.570 76.837,869.605 80.973,868.484 83.747,868.409 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.316;opacity:1" stroke-linecap="round" points="83.747,868.409 85.177,868.684 88.227,868.476 98.287,869.727 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.972;opacity:1" stroke-linecap="round" points="98.287,869.727 109.168,869.933 110.786,870.048 113.285,870.375 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.292;opacity:1" stroke-linecap="round" points="113.285,870.375 115.305,870.570 118.932,871.041 120.596,871.142 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.942;opacity:1" stroke-linecap="round" points="120.596,871.142 145.285,870.616 159.319,871.373 165.591,871.379 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.721;opacity:1" stroke-linecap="round" points="165.591,871.379 171.875,871.885 176.179,871.573 182.616,871.630 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.916;opacity:1" stroke-linecap="round" points="182.616,871.630 194.768,872.583 199.385,872.390 203.060,871.827 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.286;opacity:1" stroke-linecap="round" points="203.060,871.827 229.132,871.451 246.805,872.449 249.006,872.827 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.705;opacity:1" stroke-linecap="round" points="249.006,872.827 252.728,873.383 262.616,874.664 267.349,874.841 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.885;opacity:1" stroke-linecap="round" points="267.349,874.841 285.700,876.684 304.149,877.406 346.501,876.350 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.492;opacity:1" stroke-linecap="round" points="346.501,876.350 369.556,874.322 398.194,872.949 441.643,868.116 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.124;opacity:1" stroke-linecap="round" points="441.643,868.116 448.472,867.955 458.953,867.092 474.921,866.649 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.962;opacity:1" stroke-linecap="round" points="474.921,866.649 488.122,866.738 508.260,866.631 533.388,865.898 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.451;opacity:1" stroke-linecap="round" points="533.388,865.898 572.544,865.473 578.931,865.778 595.437,865.878 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.726;opacity:1" stroke-linecap="round" points="595.437,865.878 629.619,866.970 675.077,869.325 698.949,870.029 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.410;opacity:1" stroke-linecap="round" points="698.949,870.029 737.357,869.949 753.064,869.228 753.359,869.115 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.178;opacity:1" stroke-linecap="round" points="753.359,869.115 751.648,868.727 751.759,869.481 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.985;opacity:1" stroke-linecap="round" points="794.665,864.764 793.362,862.951 792.162,860.537 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.068;opacity:1" stroke-linecap="round" points="792.162,860.537 793.098,860.249 793.428,860.443 793.445,860.864 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.545;opacity:1" stroke-linecap="round" points="793.445,860.864 793.768,861.468 793.922,861.890 795.634,864.734 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.450;opacity:1" stroke-linecap="round" points="795.634,864.734 796.985,868.405 799.418,876.461 800.523,882.589 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.789;opacity:1" stroke-linecap="round" points="800.523,882.589 801.811,887.040 801.953,888.929 802.797,891.263 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.710;opacity:1" stroke-linecap="round" points="802.797,891.263 803.203,891.958 803.758,892.361 804.318,891.333 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.650;opacity:1" stroke-linecap="round" points="804.318,891.333 804.567,889.023 804.273,887.413 804.688,883.039 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.528;opacity:1" stroke-linecap="round" points="804.688,883.039 804.466,880.849 800.975,870.529 798.739,862.133 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.442;opacity:1" stroke-linecap="round" points="798.739,862.133 798.954,856.783 799.545,855.134 800.536,854.062 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.121;opacity:1" stroke-linecap="round" points="800.536,854.062 803.022,852.437 807.213,850.912 812.843,849.654 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.588;opacity:1" stroke-linecap="round" points="812.843,849.654 818.803,849.484 823.607,849.973 830.429,851.376 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.315;opacity:1" stroke-linecap="round" points="830.429,851.376 832.505,852.325 834.097,853.510 835.177,855.066 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.266;opacity:1" stroke-linecap="round" points="835.177,855.066 835.639,856.840 834.608,862.874 833.064,867.249 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.853;opacity:1" stroke-linecap="round" points="833.064,867.249 832.034,869.036 829.402,872.075 825.526,874.408 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.013;opacity:1" stroke-linecap="round" points="825.526,874.408 817.891,876.849 815.293,877.047 810.513,876.401 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.028;opacity:1" stroke-linecap="round" points="810.513,876.401 808.597,875.717 807.275,874.666 805.647,871.949 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.669;opacity:1" stroke-linecap="round" points="805.647,871.949 805.730,871.524 806.466,871.062 807.581,868.869 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.293;opacity:1" stroke-linecap="round" points="807.581,868.869 810.479,868.341 814.033,868.846 818.846,870.038 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.933;opacity:1" stroke-linecap="round" points="818.846,870.038 828.305,874.019 833.310,875.355 839.338,876.034 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.844;opacity:1" stroke-linecap="round" points="839.338,876.034 843.214,877.129 845.141,877.310 848.785,877.519 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.759;opacity:1" stroke-linecap="round" points="848.785,877.519 850.743,877.845 852.505,878.122 856.538,878.038 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.644;opacity:1" stroke-linecap="round" points="856.538,878.038 858.630,878.239 858.943,878.438 858.915,878.893 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.266;opacity:1" stroke-linecap="round" points="858.915,878.893 857.409,882.545 855.557,884.810 854.191,885.917 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.444;opacity:1" stroke-linecap="round" points="854.191,885.917 854.737,885.307 854.940,885.180 855.205,883.914 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.664;opacity:1" stroke-linecap="round" points="855.205,883.914 854.546,881.155 855.608,861.658 856.119,859.419 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.785;opacity:1" stroke-linecap="round" points="856.119,859.419 857.456,856.538 859.281,854.580 860.233,854.470 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.987;opacity:1" stroke-linecap="round" points="860.233,854.470 864.976,858.986 868.698,863.305 872.896,866.639 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.954;opacity:1" stroke-linecap="round" points="872.896,866.639 876.694,867.699 880.382,868.229 886.616,868.279 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.781;opacity:1" stroke-linecap="round" points="886.616,868.279 888.822,868.198 893.607,867.348 899.334,864.865 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.745;opacity:1" stroke-linecap="round" points="899.334,864.865 900.577,863.946 901.301,862.881 901.688,861.741 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.893;opacity:1" stroke-linecap="round" points="901.688,861.741 901.652,858.146 900.763,856.426 897.359,854.095 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.340;opacity:1" stroke-linecap="round" points="897.359,854.095 893.540,853.514 891.274,854.024 889.001,855.076 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.633;opacity:1" stroke-linecap="round" points="889.001,855.076 886.733,856.736 882.467,861.084 879.193,866.008 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.908;opacity:1" stroke-linecap="round" points="879.193,866.008 876.988,872.503 876.915,874.445 878.063,877.643 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.177;opacity:1" stroke-linecap="round" points="878.063,877.643 879.879,880.100 882.931,881.336 887.045,881.724 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.419;opacity:1" stroke-linecap="round" points="887.045,881.724 899.295,879.853 906.081,878.293 912.039,875.860 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.064;opacity:1" stroke-linecap="round" points="912.039,875.860 917.535,873.096 920.141,871.390 925.953,866.203 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.049;opacity:1" stroke-linecap="round" points="925.953,866.203 928.316,863.422 928.381,862.323 927.795,861.482 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.411;opacity:1" stroke-linecap="round" points="927.795,861.482 925.801,859.944 924.367,859.274 920.254,858.256 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.846;opacity:1" stroke-linecap="round" points="920.254,858.256 918.030,858.231 915.806,858.323 908.895,859.655 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.670;opacity:1" stroke-linecap="round" points="908.895,859.655 907.280,860.328 906.311,861.070 906.208,861.701 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.352;opacity:1" stroke-linecap="round" points="906.208,861.701 911.796,865.734 915.396,867.365 922.602,869.798 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.260;opacity:1" stroke-linecap="round" points="922.602,869.798 926.624,872.558 927.783,873.863 928.174,876.660 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.001;opacity:1" stroke-linecap="round" points="928.174,876.660 928.112,880.355 927.439,882.027 926.189,883.635 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.891;opacity:1" stroke-linecap="round" points="926.189,883.635 924.724,885.240 920.857,888.483 910.938,895.006 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.680;opacity:1" stroke-linecap="round" points="910.938,895.006 909.727,895.491 908.145,895.237 908.803,894.438 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.897;opacity:1" stroke-linecap="round" points="908.803,894.438 908.690,890.885 909.448,889.270 910.894,887.454 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.321;opacity:1" stroke-linecap="round" points="910.894,887.454 913.226,885.670 916.417,883.876 919.876,882.077 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.486;opacity:1" stroke-linecap="round" points="919.876,882.077 923.382,880.457 927.157,878.832 927.157,878.832 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.817;opacity:1" stroke-linecap="round" points="970.544,848.883 969.655,844.983 968.678,844.295 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.306;opacity:1" stroke-linecap="round" points="968.678,844.295 967.394,844.050 966.155,843.882 962.588,844.214 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.755;opacity:1" stroke-linecap="round" points="962.588,844.214 957.610,845.496 953.218,847.310 952.139,848.177 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.775;opacity:1" stroke-linecap="round" points="952.139,848.177 952.099,849.442 952.422,849.979 956.404,854.056 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.012;opacity:1" stroke-linecap="round" points="956.404,854.056 961.327,860.247 964.576,864.919 966.344,868.128 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.856;opacity:1" stroke-linecap="round" points="966.344,868.128 966.909,869.621 966.933,870.893 965.883,872.933 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.162;opacity:1" stroke-linecap="round" points="965.883,872.933 963.389,875.397 959.465,877.470 953.759,878.985 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.279;opacity:1" stroke-linecap="round" points="953.759,878.985 950.635,879.395 946.245,879.280 943.972,878.482 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.276;opacity:1" stroke-linecap="round" points="943.972,878.482 940.493,876.016 939.608,874.758 938.981,873.060 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.096;opacity:1" stroke-linecap="round" points="938.981,873.060 938.959,872.466 939.192,872.076 939.483,871.758 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.678;opacity:1" stroke-linecap="round" points="939.483,871.758 939.483,871.758 939.483,871.758 939.483,871.758 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.796;opacity:1" stroke-linecap="round" points="1010.258,854.377 1008.900,854.412 1007.756,853.461 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.540;opacity:1" stroke-linecap="round" points="1007.756,853.461 1007.644,853.035 1007.583,853.268 1007.573,853.534 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.489;opacity:1" stroke-linecap="round" points="1007.573,853.534 1007.369,853.971 1006.723,855.001 1003.809,858.600 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.353;opacity:1" stroke-linecap="round" points="1003.809,858.600 1001.310,864.108 1000.476,869.899 1000.609,872.832 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.217;opacity:1" stroke-linecap="round" points="1000.609,872.832 1001.972,878.331 1003.010,880.497 1005.880,883.003 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.159;opacity:1" stroke-linecap="round" points="1005.880,883.003 1008.990,884.354 1010.775,884.627 1015.775,884.111 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.586;opacity:1" stroke-linecap="round" points="1015.775,884.111 1018.725,882.352 1022.358,879.266 1025.451,875.237 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.773;opacity:1" stroke-linecap="round" points="1025.451,875.237 1029.152,867.666 1029.660,865.667 1029.120,861.192 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.043;opacity:1" stroke-linecap="round" points="1029.120,861.192 1028.228,857.970 1028.380,856.060 1028.008,854.299 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.011;opacity:1" stroke-linecap="round" points="1028.008,854.299 1027.213,853.020 1026.995,854.724 1027.379,855.490 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.987;opacity:1" stroke-linecap="round" points="1027.379,855.490 1028.589,864.701 1030.571,869.953 1035.087,877.379 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.572;opacity:1" stroke-linecap="round" points="1035.087,877.379 1034.879,878.721 1036.595,884.554 1036.833,886.102 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.559;opacity:1" stroke-linecap="round" points="1036.833,886.102 1036.662,888.943 1035.823,893.092 1035.436,894.218 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.904;opacity:1" stroke-linecap="round" points="1035.436,894.218 1036.252,893.249 1037.532,890.340 1042.502,881.633 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.090;opacity:1" stroke-linecap="round" points="1042.502,881.633 1045.475,873.368 1045.967,870.187 1046.949,867.399 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.973;opacity:1" stroke-linecap="round" points="1046.949,867.399 1048.947,865.123 1050.826,862.009 1051.649,861.459 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.762;opacity:1" stroke-linecap="round" points="1051.649,861.459 1052.929,861.613 1052.819,862.162 1051.953,863.060 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.233;opacity:1" stroke-linecap="round" points="1051.953,863.060 1052.295,863.690 1054.098,865.836 1057.693,871.334 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.800;opacity:1" stroke-linecap="round" points="1057.693,871.334 1061.027,874.205 1063.354,875.685 1070.546,877.926 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.937;opacity:1" stroke-linecap="round" points="1070.546,877.926 1073.335,878.469 1076.438,878.579 1093.943,876.396 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.567;opacity:1" stroke-linecap="round" points="1093.943,876.396 1098.720,875.575 1102.884,874.301 1106.235,872.730 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.716;opacity:1" stroke-linecap="round" points="1106.235,872.730 1108.503,871.066 1110.028,869.406 1110.753,867.780 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.032;opacity:1" stroke-linecap="round" points="1110.753,867.780 1110.914,866.327 1110.362,863.401 1110.193,862.101 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.485;opacity:1" stroke-linecap="round" points="1110.193,862.101 1109.395,860.873 1106.279,858.147 1102.022,855.064 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.601;opacity:1" stroke-linecap="round" points="1102.022,855.064 1099.491,853.915 1096.831,853.588 1094.651,853.877 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.854;opacity:1" stroke-linecap="round" points="1094.651,853.877 1092.921,854.903 1091.435,856.310 1088.198,860.569 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.124;opacity:1" stroke-linecap="round" points="1088.198,860.569 1085.658,866.378 1083.976,872.277 1083.716,875.129 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.325;opacity:1" stroke-linecap="round" points="1083.716,875.129 1084.102,878.035 1087.529,884.485 1089.261,886.359 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.378;opacity:1" stroke-linecap="round" points="1089.261,886.359 1091.432,888.056 1094.342,889.753 1098.183,891.425 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.854;opacity:1" stroke-linecap="round" points="1098.183,891.425 1102.994,893.204 1108.821,894.955 1108.821,894.955 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.237;opacity:1" stroke-linecap="round" points="95.982,988.438 97.142,990.512 99.604,992.594 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.096;opacity:1" stroke-linecap="round" points="99.604,992.594 103.206,991.575 108.550,990.648 112.123,990.927 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.945;opacity:1" stroke-linecap="round" points="112.123,990.927 113.150,991.390 112.928,991.704 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.309;opacity:1" stroke-linecap="round" points="62.601,991.710 64.198,989.968 66.108,988.208 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.311;opacity:1" stroke-linecap="round" points="66.108,988.208 66.380,988.560 65.759,989.502 66.421,989.941 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.526;opacity:1" stroke-linecap="round" points="66.421,989.941 76.556,988.860 79.390,989.063 92.698,988.442 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.651;opacity:1" stroke-linecap="round" points="92.698,988.442 103.353,988.807 111.017,989.861 132.296,990.521 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.853;opacity:1" stroke-linecap="round" points="132.296,990.521 137.395,990.976 137.395,990.976 142.166,991.513 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.873;opacity:1" stroke-linecap="round" points="142.166,991.513 144.273,991.704 162.818,991.788 166.512,991.576 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.948;opacity:1" stroke-linecap="round" points="198.134,991.102 200.363,990.807 207.887,989.999 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.126;opacity:1" stroke-linecap="round" points="207.887,989.999 222.264,989.036 234.436,987.053 242.324,986.386 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.038;opacity:1" stroke-linecap="round" points="242.324,986.386 259.470,985.768 280.854,983.660 300.497,983.407 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.028;opacity:1" stroke-linecap="round" points="300.497,983.407 314.459,981.876 333.277,981.332 348.224,980.423 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.913;opacity:1" stroke-linecap="round" points="348.224,980.423 362.425,981.046 374.601,980.790 388.647,979.774 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.115;opacity:1" stroke-linecap="round" points="388.647,979.774 398.868,979.728 411.028,980.318 434.959,980.097 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.533;opacity:1" stroke-linecap="round" points="434.959,980.097 461.940,981.139 475.865,980.938 484.347,981.405 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.224;opacity:1" stroke-linecap="round" points="484.347,981.405 496.295,981.257 512.821,981.665 529.163,981.077 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.993;opacity:1" stroke-linecap="round" points="529.163,981.077 549.281,981.206 558.918,980.711 576.840,980.807 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.713;opacity:1" stroke-linecap="round" points="576.840,980.807 589.637,980.161 608.418,979.791 635.832,979.782 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.480;opacity:1" stroke-linecap="round" points="635.832,979.782 709.976,978.536 723.569,978.824 750.191,978.447 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.687;opacity:1" stroke-linecap="round" points="750.191,978.447 762.018,979.091 770.344,979.021 785.167,979.903 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.164;opacity:1" stroke-linecap="round" points="785.167,979.903 792.812,980.033 798.485,980.447 798.771,981.428 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.684;opacity:1" stroke-linecap="round" points="845.640,979.122 843.405,979.251 843.856,979.840 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.699;opacity:1" stroke-linecap="round" points="843.856,979.840 844.031,983.870 843.197,988.708 841.115,995.850 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.164;opacity:1" stroke-linecap="round" points="841.115,995.850 841.222,997.001 842.472,993.061 845.849,986.464 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.843;opacity:1" stroke-linecap="round" points="845.849,986.464 849.545,980.491 854.885,973.608 857.120,971.905 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.476;opacity:1" stroke-linecap="round" points="857.120,971.905 859.401,970.717 861.189,970.377 862.906,970.840 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.338;opacity:1" stroke-linecap="round" points="862.906,970.840 865.815,972.234 867.481,973.785 867.984,976.491 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.927;opacity:1" stroke-linecap="round" points="867.984,976.491 867.728,986.414 868.169,989.318 869.908,992.270 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.387;opacity:1" stroke-linecap="round" points="869.908,992.270 871.618,992.737 872.989,993.369 873.530,994.038 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.475;opacity:1" stroke-linecap="round" points="873.530,994.038 874.947,994.509 878.550,993.489 881.871,991.253 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.623;opacity:1" stroke-linecap="round" points="881.871,991.253 887.151,986.110 896.325,978.642 897.095,977.825 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.902;opacity:1" stroke-linecap="round" points="897.095,977.825 896.964,975.904 896.116,976.221 895.464,976.957 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.650;opacity:1" stroke-linecap="round" points="895.464,976.957 892.364,982.486 891.676,984.634 891.901,989.203 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.009;opacity:1" stroke-linecap="round" points="891.901,989.203 893.196,993.930 894.276,995.972 895.852,997.380 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.306;opacity:1" stroke-linecap="round" points="895.852,997.380 897.566,998.352 899.689,998.853 904.401,998.270 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.386;opacity:1" stroke-linecap="round" points="904.401,998.270 906.999,997.313 911.973,994.229 915.910,989.818 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.448;opacity:1" stroke-linecap="round" points="915.910,989.818 917.827,986.147 917.440,983.582 916.292,981.415 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.834;opacity:1" stroke-linecap="round" points="916.292,981.415 915.405,980.485 908.673,976.489 905.236,975.178 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.262;opacity:1" stroke-linecap="round" points="905.236,975.178 900.372,974.038 899.377,974.207 898.953,974.616 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.818;opacity:1" stroke-linecap="round" points="898.953,974.616 899.664,975.719 901.344,977.305 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.833;opacity:1" stroke-linecap="round" points="956.817,980.104 956.920,981.029 957.472,981.952 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.140;opacity:1" stroke-linecap="round" points="957.472,981.952 958.481,982.235 960.024,985.125 961.042,989.371 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.820;opacity:1" stroke-linecap="round" points="961.042,989.371 962.159,997.923 961.891,1002.616 961.082,1006.395 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.907;opacity:1" stroke-linecap="round" points="961.082,1006.395 960.776,1009.866 959.567,1014.120 960.642,1012.376 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.924;opacity:1" stroke-linecap="round" points="960.642,1012.376 961.629,1009.528 963.998,1000.402 964.182,998.079 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.639;opacity:1" stroke-linecap="round" points="964.182,998.079 963.272,981.989 963.504,979.028 964.241,976.436 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.365;opacity:1" stroke-linecap="round" points="964.241,976.436 966.563,972.608 971.317,968.804 976.101,966.889 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.070;opacity:1" stroke-linecap="round" points="976.101,966.889 981.574,965.622 987.936,965.381 991.570,965.551 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.165;opacity:1" stroke-linecap="round" points="991.570,965.551 994.814,966.147 999.714,968.036 1001.131,969.161 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.103;opacity:1" stroke-linecap="round" points="1001.131,969.161 1002.048,970.405 1002.377,972.016 1002.146,974.005 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.735;opacity:1" stroke-linecap="round" points="1002.146,974.005 1001.291,976.210 998.488,980.995 995.207,985.434 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.505;opacity:1" stroke-linecap="round" points="995.207,985.434 989.820,990.016 987.097,991.551 984.214,991.783 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.060;opacity:1" stroke-linecap="round" points="984.214,991.783 983.120,991.418 981.685,990.076 981.171,989.076 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.581;opacity:1" stroke-linecap="round" points="981.171,989.076 980.242,985.465 980.277,984.314 981.184,982.857 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.093;opacity:1" stroke-linecap="round" points="981.184,982.857 981.986,982.280 985.189,981.402 986.511,981.089 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.064;opacity:1" stroke-linecap="round" points="986.511,981.089 989.532,981.069 993.409,982.055 997.469,985.600 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.408;opacity:1" stroke-linecap="round" points="997.469,985.600 999.871,990.963 1001.459,997.427 1002.145,998.977 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.769;opacity:1" stroke-linecap="round" points="1002.145,998.977 1004.818,1002.061 1006.124,1002.664 1006.877,1002.879 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.464;opacity:1" stroke-linecap="round" points="1006.877,1002.879 1007.040,1001.147 1008.934,997.582 1017.413,986.518 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.197;opacity:1" stroke-linecap="round" points="1017.413,986.518 1019.289,983.378 1020.454,982.362 1021.812,982.291 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.657;opacity:1" stroke-linecap="round" points="1021.812,982.291 1026.328,983.883 1031.812,985.273 1036.598,985.798 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.187;opacity:1" stroke-linecap="round" points="1036.598,985.798 1044.225,985.287 1054.710,983.135 1057.797,982.066 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.000;opacity:1" stroke-linecap="round" points="1057.797,982.066 1065.007,978.803 1068.732,976.261 1069.788,974.690 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.475;opacity:1" stroke-linecap="round" points="1069.788,974.690 1069.660,974.031 1065.104,972.535 1063.280,972.405 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.063;opacity:1" stroke-linecap="round" points="1063.280,972.405 1061.563,972.633 1058.135,973.709 1056.283,974.773 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.349;opacity:1" stroke-linecap="round" points="1056.283,974.773 1052.697,977.944 1048.341,984.016 1047.311,986.073 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.599;opacity:1" stroke-linecap="round" points="1047.311,986.073 1046.266,989.915 1046.757,992.561 1048.645,994.621 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.051;opacity:1" stroke-linecap="round" points="1048.645,994.621 1049.981,995.449 1053.976,996.570 1058.987,997.264 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.296;opacity:1" stroke-linecap="round" points="1058.987,997.264 1072.613,997.417 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.189;opacity:1" stroke-linecap="round" points="1097.856,983.989 1099.670,981.348 1102.550,977.130 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.470;opacity:1" stroke-linecap="round" points="1102.550,977.130 1103.238,975.329 1102.748,974.874 1098.113,973.176 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.015;opacity:1" stroke-linecap="round" points="1098.113,973.176 1094.907,972.301 1093.092,972.047 1091.141,972.233 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.096;opacity:1" stroke-linecap="round" points="1091.141,972.233 1088.183,973.187 1085.466,975.577 1085.059,977.098 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.559;opacity:1" stroke-linecap="round" points="1085.059,977.098 1085.417,978.942 1085.952,979.836 1093.060,985.749 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.768;opacity:1" stroke-linecap="round" points="1093.060,985.749 1095.104,988.206 1095.921,990.609 1095.598,993.050 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.354;opacity:1" stroke-linecap="round" points="1095.598,993.050 1094.216,994.246 1087.631,997.343 1083.000,998.501 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.240;opacity:1" stroke-linecap="round" points="1083.000,998.501 1078.679,998.677 1077.064,998.345 1076.002,997.696 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.953;opacity:1" stroke-linecap="round" points="1076.002,997.696 1075.652,996.967 1075.898,996.234 1077.654,994.694 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.178;opacity:1" stroke-linecap="round" points="1077.654,994.694 1077.654,994.694 1080.930,992.901 1080.930,992.901 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.468;opacity:1" stroke-linecap="round" points="1137.130,967.949 1138.253,964.201 1137.216,964.624 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.799;opacity:1" stroke-linecap="round" points="1137.216,964.624 1136.794,965.136 1128.779,967.575 1123.925,970.188 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.039;opacity:1" stroke-linecap="round" points="1123.925,970.188 1123.095,971.232 1122.656,973.154 1123.842,974.697 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.737;opacity:1" stroke-linecap="round" points="1123.842,974.697 1126.594,975.967 1131.018,978.837 1135.848,982.918 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.647;opacity:1" stroke-linecap="round" points="1135.848,982.918 1138.900,987.540 1140.248,991.288 1140.053,991.966 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.100;opacity:1" stroke-linecap="round" points="1140.053,991.966 1138.234,993.382 1134.757,995.224 1131.039,996.689 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.902;opacity:1" stroke-linecap="round" points="1131.039,996.689 1126.448,997.934 1121.527,998.748 1117.359,998.737 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.175;opacity:1" stroke-linecap="round" points="1117.359,998.737 1113.779,997.983 1112.958,997.604 1112.711,996.602 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.117;opacity:1" stroke-linecap="round" points="1161.134,973.308 1161.826,972.463 1162.545,970.517 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.138;opacity:1" stroke-linecap="round" points="1162.545,970.517 1164.209,968.851 1163.635,970.125 1164.221,978.275 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.264;opacity:1" stroke-linecap="round" points="1164.221,978.275 1164.151,983.345 1164.479,987.928 1165.622,991.623 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.790;opacity:1" stroke-linecap="round" points="1165.622,991.623 1166.551,993.216 1168.628,995.009 1169.637,995.519 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.285;opacity:1" stroke-linecap="round" points="1169.637,995.519 1171.833,995.788 1174.769,995.017 1177.908,993.442 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.548;opacity:1" stroke-linecap="round" points="1177.908,993.442 1181.442,990.373 1182.390,989.233 1185.119,982.589 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.455;opacity:1" stroke-linecap="round" points="1185.119,982.589 1185.452,978.953 1185.209,977.712 1185.146,978.136 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.348;opacity:1" stroke-linecap="round" points="1185.146,978.136 1186.396,981.021 1189.555,986.943 1191.257,988.620 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.397;opacity:1" stroke-linecap="round" points="1191.257,988.620 1193.940,993.275 1196.400,995.544 1196.023,995.261 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.423;opacity:1" stroke-linecap="round" points="1196.023,995.261 1196.082,994.745 1197.785,990.955 1198.542,984.141 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.165;opacity:1" stroke-linecap="round" points="1198.542,984.141 1201.261,976.602 1204.753,973.823 1206.685,973.393 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.930;opacity:1" stroke-linecap="round" points="1206.685,973.393 1209.036,974.025 1213.006,974.392 1217.407,977.413 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.341;opacity:1" stroke-linecap="round" points="1217.407,977.413 1219.974,978.761 1222.543,979.028 1225.317,978.493 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.370;opacity:1" stroke-linecap="round" points="1225.317,978.493 1230.311,975.938 1232.142,974.096 1236.121,968.423 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.344;opacity:1" stroke-linecap="round" points="1236.121,968.423 1236.609,966.685 1236.160,964.196 1234.261,963.102 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.853;opacity:1" stroke-linecap="round" points="1234.261,963.102 1233.267,962.963 1231.080,963.570 1228.807,965.583 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.347;opacity:1" stroke-linecap="round" points="1228.807,965.583 1228.038,967.107 1227.375,970.654 1227.327,974.690 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.641;opacity:1" stroke-linecap="round" points="1227.327,974.690 1228.286,981.171 1230.174,984.861 1231.814,986.120 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.207;opacity:1" stroke-linecap="round" points="66.017,1308.085 66.017,1308.085 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.832;opacity:1" stroke-linecap="round" points="54.966,1139.913 54.966,1139.913 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.862;opacity:1" stroke-linecap="round" points="104.904,1135.134 108.520,1133.727 114.231,1132.151 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.457;opacity:1" stroke-linecap="round" points="114.231,1132.151 117.448,1132.094 121.156,1131.999 159.996,1126.967 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.372;opacity:1" stroke-linecap="round" points="159.996,1126.967 169.057,1126.817 192.905,1125.281 221.667,1122.759 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.697;opacity:1" stroke-linecap="round" points="221.667,1122.759 244.742,1122.636 254.033,1122.269 275.906,1122.438 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.910;opacity:1" stroke-linecap="round" points="275.906,1122.438 303.169,1124.363 324.024,1124.858 365.148,1124.816 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.135;opacity:1" stroke-linecap="round" points="365.148,1124.816 397.546,1124.204 428.812,1125.588 446.029,1125.164 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.157;opacity:1" stroke-linecap="round" points="446.029,1125.164 474.533,1125.004 486.487,1125.485 503.630,1126.782 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.262;opacity:1" stroke-linecap="round" points="503.630,1126.782 517.719,1127.279 545.322,1126.904 619.534,1131.259 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.140;opacity:1" stroke-linecap="round" points="619.534,1131.259 641.654,1134.025 650.656,1134.640 679.025,1135.516 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.921;opacity:1" stroke-linecap="round" points="679.025,1135.516 713.160,1134.468 756.603,1135.303 786.629,1134.862 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.757;opacity:1" stroke-linecap="round" points="786.629,1134.862 798.532,1135.015 815.553,1135.600 838.301,1137.028 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.808;opacity:1" stroke-linecap="round" points="838.301,1137.028 851.107,1138.232 858.860,1138.302 874.939,1139.464 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.871;opacity:1" stroke-linecap="round" points="874.939,1139.464 880.941,1139.598 905.769,1141.823 928.983,1143.235 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.754;opacity:1" stroke-linecap="round" points="928.983,1143.235 932.470,1143.699 932.608,1144.502 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.186;opacity:1" stroke-linecap="round" points="985.409,1108.575 985.672,1106.546 984.839,1106.348 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.581;opacity:1" stroke-linecap="round" points="984.839,1106.348 985.042,1107.064 984.728,1107.667 986.150,1114.208 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.080;opacity:1" stroke-linecap="round" points="986.150,1114.208 987.986,1120.300 988.357,1122.669 988.404,1127.460 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.034;opacity:1" stroke-linecap="round" points="988.404,1127.460 987.999,1135.008 987.721,1137.678 987.721,1137.678 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.921;opacity:1" stroke-linecap="round" points="987.721,1137.678 986.881,1143.709 986.462,1146.738 983.936,1156.985 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.806;opacity:1" stroke-linecap="round" points="972.822,1143.197 973.190,1143.776 974.335,1143.829 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.298;opacity:1" stroke-linecap="round" points="974.335,1143.829 985.862,1140.867 989.780,1140.437 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.746;opacity:1" stroke-linecap="round" points="1006.248,1139.199 1007.185,1137.778 1006.629,1138.556 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.958;opacity:1" stroke-linecap="round" points="1006.629,1138.556 1006.581,1141.440 1005.880,1144.613 1002.973,1152.349 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.649;opacity:1" stroke-linecap="round" points="1002.973,1152.349 1001.466,1155.138 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.674;opacity:1" stroke-linecap="round" points="1010.891,1118.023 1013.454,1116.137 1016.128,1114.284 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.642;opacity:1" stroke-linecap="round" points="1016.128,1114.284 1014.496,1114.993 1013.179,1116.557 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.816;opacity:1" stroke-linecap="round" points="1025.156,1142.735 1023.990,1145.683 1023.259,1150.338 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.726;opacity:1" stroke-linecap="round" points="1023.259,1150.338 1023.431,1152.663 1023.609,1153.841 1023.660,1155.181 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.766;opacity:1" stroke-linecap="round" points="1023.660,1155.181 1023.434,1161.103 1022.445,1167.386 1022.037,1168.067 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.721;opacity:1" stroke-linecap="round" points="1022.037,1168.067 1022.421,1166.171 1022.205,1164.252 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.897;opacity:1" stroke-linecap="round" points="1024.542,1149.865 1024.371,1147.740 1024.497,1143.064 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.795;opacity:1" stroke-linecap="round" points="1024.497,1143.064 1025.296,1137.515 1027.062,1135.104 1029.436,1133.740 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.367;opacity:1" stroke-linecap="round" points="1029.436,1133.740 1031.436,1133.477 1040.991,1134.810 1048.588,1137.306 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.453;opacity:1" stroke-linecap="round" points="1048.588,1137.306 1051.347,1139.299 1053.745,1142.904 1053.586,1143.766 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.986;opacity:1" stroke-linecap="round" points="1053.586,1143.766 1051.966,1145.498 1048.551,1147.945 1044.301,1149.402 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.819;opacity:1" stroke-linecap="round" points="1044.301,1149.402 1038.854,1149.698 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.270;opacity:1" stroke-linecap="round" points="61.148,1226.368 59.687,1229.948 58.717,1233.758 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.061;opacity:1" stroke-linecap="round" points="58.717,1233.758 60.507,1232.992 60.845,1231.969 62.381,1231.669 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:22.233;opacity:1" stroke-linecap="round" points="62.381,1231.669 64.876,1231.831 66.686,1232.090 67.058,1232.264 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:21.505;opacity:1" stroke-linecap="round" points="67.058,1232.264 66.082,1232.685 70.978,1233.608 75.694,1233.757 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:23.147;opacity:1" stroke-linecap="round" points="75.694,1233.757 80.878,1234.653 90.937,1235.244 99.460,1236.512 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:24.641;opacity:1" stroke-linecap="round" points="99.460,1236.512 108.164,1237.228 116.926,1237.749 127.116,1238.834 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:25.987;opacity:1" stroke-linecap="round" points="127.116,1238.834 129.979,1238.951 138.412,1238.564 143.486,1238.503 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:27.505;opacity:1" stroke-linecap="round" points="143.486,1238.503 150.347,1238.914 157.132,1239.572 165.829,1240.987 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:28.374;opacity:1" stroke-linecap="round" points="165.829,1240.987 175.023,1241.510 178.678,1242.141 188.137,1242.832 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:28.951;opacity:1" stroke-linecap="round" points="188.137,1242.832 209.893,1246.368 219.195,1248.353 232.293,1249.539 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:29.264;opacity:1" stroke-linecap="round" points="232.293,1249.539 241.112,1251.128 249.357,1251.353 258.629,1252.084 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:29.160;opacity:1" stroke-linecap="round" points="258.629,1252.084 280.439,1252.725 304.388,1252.534 323.832,1253.066 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:29.879;opacity:1" stroke-linecap="round" points="323.832,1253.066 347.219,1252.960 352.530,1253.289 362.744,1252.628 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:26.806;opacity:1" stroke-linecap="round" points="362.744,1252.628 368.442,1252.490 383.813,1252.604 388.428,1253.028 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:28.509;opacity:1" stroke-linecap="round" points="388.428,1253.028 398.801,1252.925 404.096,1252.484 413.807,1252.377 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:27.109;opacity:1" stroke-linecap="round" points="413.807,1252.377 428.749,1251.090 432.603,1250.933 434.756,1250.861 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:27.606;opacity:1" stroke-linecap="round" points="434.756,1250.861 437.115,1250.789 439.607,1250.710 442.390,1250.626 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:30.535;opacity:1" stroke-linecap="round" points="442.390,1250.626 445.098,1250.649 449.622,1250.267 456.355,1250.222 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:29.137;opacity:1" stroke-linecap="round" points="456.355,1250.222 473.470,1249.170 484.282,1248.937 501.258,1247.804 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:29.695;opacity:1" stroke-linecap="round" points="501.258,1247.804 513.752,1247.525 528.751,1246.776 534.511,1246.262 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:32.698;opacity:1" stroke-linecap="round" points="534.511,1246.262 560.564,1246.156 612.033,1247.072 619.247,1246.806 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:31.264;opacity:1" stroke-linecap="round" points="619.247,1246.806 636.283,1246.878 645.794,1246.433 647.389,1246.100 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:33.546;opacity:1" stroke-linecap="round" points="647.389,1246.100 656.146,1246.262 677.300,1245.723 741.315,1246.388 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:33.845;opacity:1" stroke-linecap="round" points="741.315,1246.388 784.198,1247.864 829.889,1250.502 842.725,1250.545 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:32.716;opacity:1" stroke-linecap="round" points="842.725,1250.545 845.919,1250.757 848.943,1250.984 859.789,1251.262 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:31.625;opacity:1" stroke-linecap="round" points="859.789,1251.262 882.289,1251.215 901.319,1252.333 930.937,1255.214 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:30.618;opacity:1" stroke-linecap="round" points="930.937,1255.214 940.604,1255.669 943.827,1255.486 942.492,1255.612 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:30.493;opacity:1" stroke-linecap="round" points="942.492,1255.612 940.006,1260.461 938.161,1262.438 935.639,1264.658 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:26.605;opacity:1" stroke-linecap="round" points="935.639,1264.658 932.471,1267.435 932.471,1267.435 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.201;opacity:1" stroke-linecap="round" points="1016.503,1227.853 1016.325,1225.586 1016.302,1239.806 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.966;opacity:1" stroke-linecap="round" points="1016.302,1239.806 1015.452,1252.340 1013.876,1262.329 1013.487,1265.259 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.539;opacity:1" stroke-linecap="round" points="1013.487,1265.259 1013.487,1265.259 1013.487,1265.259 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.063;opacity:1" stroke-linecap="round" points="1004.973,1252.016 1006.797,1250.210 1011.134,1250.801 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.946;opacity:1" stroke-linecap="round" points="1011.134,1250.801 1016.914,1252.173 1021.700,1252.720 1022.542,1253.092 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.253;opacity:1" stroke-linecap="round" points="1032.174,1252.895 1032.622,1251.748 1034.128,1251.444 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.834;opacity:1" stroke-linecap="round" points="1034.128,1251.444 1035.276,1253.329 1036.425,1259.368 1036.663,1263.267 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.828;opacity:1" stroke-linecap="round" points="1036.663,1263.267 1036.431,1267.541 1036.829,1268.590 1037.273,1268.804 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.173;opacity:1" stroke-linecap="round" points="1042.748,1240.536 1044.744,1239.306 1046.610,1237.667 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.129;opacity:1" stroke-linecap="round" points="1046.610,1237.667 1045.697,1237.207 1044.915,1238.374 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.660;opacity:1" stroke-linecap="round" points="1068.925,1215.793 1069.010,1214.296 1068.946,1215.337 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.369;opacity:1" stroke-linecap="round" points="1068.946,1215.337 1069.473,1217.448 1069.416,1226.424 1067.291,1241.449 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.503;opacity:1" stroke-linecap="round" points="1067.291,1241.449 1066.117,1247.016 1066.078,1249.544 1065.793,1251.825 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.549;opacity:1" stroke-linecap="round" points="1065.793,1251.825 1065.481,1254.453 1065.481,1254.453 1065.481,1254.453 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.379;opacity:1" stroke-linecap="round" points="1092.383,1214.729 1092.905,1213.307 1092.680,1213.977 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.986;opacity:1" stroke-linecap="round" points="1092.680,1213.977 1093.392,1218.729 1093.771,1231.829 1093.484,1238.408 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.975;opacity:1" stroke-linecap="round" points="1093.484,1238.408 1092.870,1245.251 1089.515,1261.943 1089.515,1261.943 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.987;opacity:1" stroke-linecap="round" points="1089.515,1261.943 1089.269,1265.629 1089.269,1265.629 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.834;opacity:1" stroke-linecap="round" points="1086.984,1244.816 1088.390,1243.747 1090.787,1244.993 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.713;opacity:1" stroke-linecap="round" points="1090.787,1244.993 1093.354,1244.929 1095.389,1244.427 1103.693,1241.185 " />
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.670;opacity:1" stroke-linecap="round" points="188.127,1360.722 187.480,1356.493 186.999,1358.256 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.554;opacity:1" stroke-linecap="round" points="186.999,1358.256 182.485,1361.567 180.430,1363.240 176.024,1367.199 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.497;opacity:1" stroke-linecap="round" points="176.024,1367.199 167.483,1377.455 157.202,1391.925 146.061,1409.161 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.551;opacity:1" stroke-linecap="round" points="146.061,1409.161 138.863,1421.827 130.221,1442.713 128.014,1449.408 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.649;opacity:1" stroke-linecap="round" points="128.014,1449.408 123.575,1467.068 123.043,1471.855 123.552,1476.852 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.858;opacity:1" stroke-linecap="round" points="123.552,1476.852 125.242,1481.986 127.426,1487.187 129.664,1491.927 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.968;opacity:1" stroke-linecap="round" points="129.664,1491.927 132.289,1496.061 135.157,1499.531 138.389,1502.448 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.895;opacity:1" stroke-linecap="round" points="138.389,1502.448 141.920,1504.866 145.983,1506.592 150.409,1507.744 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.843;opacity:1" stroke-linecap="round" points="150.409,1507.744 155.566,1508.224 167.491,1507.074 174.130,1505.432 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.825;opacity:1" stroke-linecap="round" points="174.130,1505.432 189.382,1500.010 197.789,1496.655 213.102,1488.823 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.532;opacity:1" stroke-linecap="round" points="213.102,1488.823 228.918,1479.779 236.584,1474.779 250.912,1464.057 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.472;opacity:1" stroke-linecap="round" points="250.912,1464.057 271.362,1447.969 283.060,1438.223 297.104,1427.469 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.474;opacity:1" stroke-linecap="round" points="297.104,1427.469 308.285,1418.393 316.786,1409.781 318.565,1408.425 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.425;opacity:1" stroke-linecap="round" points="318.565,1408.425 321.531,1406.571 324.029,1405.948 326.858,1405.877 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.415;opacity:1" stroke-linecap="round" points="326.858,1405.877 328.050,1406.140 328.690,1406.703 328.883,1407.600 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.359;opacity:1" stroke-linecap="round" points="328.883,1407.600 328.761,1411.783 328.270,1413.562 326.327,1417.802 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.268;opacity:1" stroke-linecap="round" points="326.327,1417.802 324.978,1420.587 318.379,1430.453 301.270,1452.454 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.172;opacity:1" stroke-linecap="round" points="301.270,1452.454 296.642,1457.883 286.028,1468.859 280.659,1475.275 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.180;opacity:1" stroke-linecap="round" points="280.659,1475.275 256.946,1505.534 251.542,1513.171 237.671,1532.624 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.192;opacity:1" stroke-linecap="round" points="237.671,1532.624 233.113,1538.916 229.222,1545.751 222.142,1559.851 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.091;opacity:1" stroke-linecap="round" points="222.142,1559.851 213.431,1580.141 211.357,1586.282 209.597,1592.785 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.135;opacity:1" stroke-linecap="round" points="209.597,1592.785 208.478,1599.225 208.322,1605.132 208.805,1610.075 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.332;opacity:1" stroke-linecap="round" points="208.805,1610.075 210.305,1613.850 212.470,1616.545 215.226,1618.283 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.652;opacity:1" stroke-linecap="round" points="215.226,1618.283 218.224,1619.396 225.568,1621.334 229.758,1622.075 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.382;opacity:1" stroke-linecap="round" points="229.758,1622.075 238.486,1622.924 248.998,1622.998 260.178,1621.943 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.179;opacity:1" stroke-linecap="round" points="260.178,1621.943 273.014,1619.648 286.916,1616.368 301.767,1611.690 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.852;opacity:1" stroke-linecap="round" points="301.767,1611.690 309.722,1608.756 317.574,1605.210 333.812,1596.143 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.035;opacity:1" stroke-linecap="round" points="333.812,1596.143 361.884,1579.036 371.625,1572.632 398.163,1552.734 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.106;opacity:1" stroke-linecap="round" points="398.163,1552.734 432.240,1525.404 447.350,1514.248 478.254,1492.534 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.101;opacity:1" stroke-linecap="round" points="478.254,1492.534 494.568,1479.779 498.245,1477.203 501.705,1475.360 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.979;opacity:1" stroke-linecap="round" points="501.705,1475.360 506.510,1473.649 507.772,1473.592 508.597,1473.888 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.689;opacity:1" stroke-linecap="round" points="508.597,1473.888 508.824,1474.462 505.796,1481.071 500.204,1489.114 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.466;opacity:1" stroke-linecap="round" points="500.204,1489.114 486.594,1504.821 478.313,1515.135 464.767,1530.484 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.461;opacity:1" stroke-linecap="round" points="464.767,1530.484 459.904,1536.607 455.202,1543.825 429.494,1585.402 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.512;opacity:1" stroke-linecap="round" points="429.494,1585.402 424.653,1593.715 416.008,1611.469 406.806,1628.885 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.547;opacity:1" stroke-linecap="round" points="406.806,1628.885 402.917,1637.033 399.985,1644.192 397.939,1650.783 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.627;opacity:1" stroke-linecap="round" points="397.939,1650.783 396.504,1656.828 396.064,1662.334 396.348,1670.402 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.875;opacity:1" stroke-linecap="round" points="396.348,1670.402 397.606,1673.106 399.251,1675.499 401.365,1677.655 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.066;opacity:1" stroke-linecap="round" points="401.365,1677.655 403.846,1679.633 406.806,1681.072 410.266,1681.655 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.959;opacity:1" stroke-linecap="round" points="410.266,1681.655 419.470,1681.322 425.231,1680.501 430.952,1679.190 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.795;opacity:1" stroke-linecap="round" points="430.952,1679.190 437.141,1677.132 451.116,1671.526 474.297,1660.534 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.003;opacity:1" stroke-linecap="round" points="474.297,1660.534 505.538,1643.286 529.263,1629.470 544.789,1620.001 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.863;opacity:1" stroke-linecap="round" points="544.789,1620.001 584.150,1593.499 603.803,1580.814 614.997,1573.991 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.102;opacity:1" stroke-linecap="round" points="614.997,1573.991 628.684,1566.391 632.112,1564.575 637.647,1560.435 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.255;opacity:1" stroke-linecap="round" points="637.647,1560.435 635.934,1561.644 635.344,1562.469 632.567,1568.983 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.522;opacity:1" stroke-linecap="round" points="632.567,1568.983 626.376,1580.827 619.655,1596.586 612.170,1615.758 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.615;opacity:1" stroke-linecap="round" points="612.170,1615.758 607.604,1629.803 602.548,1643.823 600.374,1651.283 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.636;opacity:1" stroke-linecap="round" points="600.374,1651.283 598.335,1659.034 595.502,1674.953 594.580,1682.675 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.995;opacity:1" stroke-linecap="round" points="594.580,1682.675 594.165,1689.464 594.388,1694.703 595.346,1698.443 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.107;opacity:1" stroke-linecap="round" points="595.346,1698.443 596.877,1701.315 598.952,1703.615 601.541,1705.513 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.297;opacity:1" stroke-linecap="round" points="601.541,1705.513 608.179,1708.655 616.314,1711.668 620.683,1713.036 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.379;opacity:1" stroke-linecap="round" points="620.683,1713.036 625.503,1714.055 630.820,1714.338 636.533,1714.158 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.117;opacity:1" stroke-linecap="round" points="636.533,1714.158 642.692,1713.405 649.617,1711.987 656.843,1709.917 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.124;opacity:1" stroke-linecap="round" points="656.843,1709.917 664.234,1706.941 680.656,1699.405 718.184,1679.501 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.048;opacity:1" stroke-linecap="round" points="718.184,1679.501 727.269,1674.162 744.922,1662.854 762.364,1652.258 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.232;opacity:1" stroke-linecap="round" points="762.364,1652.258 792.296,1634.760 804.039,1628.955 813.656,1624.942 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.128;opacity:1" stroke-linecap="round" points="813.656,1624.942 826.667,1620.047 828.423,1619.604 829.630,1619.655 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.178;opacity:1" stroke-linecap="round" points="829.630,1619.655 830.476,1619.967 830.950,1620.848 831.175,1623.299 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.886;opacity:1" stroke-linecap="round" points="831.175,1623.299 830.770,1626.490 830.048,1629.050 825.657,1640.599 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.828;opacity:1" stroke-linecap="round" points="825.657,1640.599 824.135,1646.025 819.890,1666.760 817.990,1682.301 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.938;opacity:1" stroke-linecap="round" points="817.990,1682.301 817.570,1697.816 818.224,1711.149 819.036,1717.450 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.031;opacity:1" stroke-linecap="round" points="819.036,1717.450 820.449,1722.936 822.143,1727.222 824.489,1730.222 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.293;opacity:1" stroke-linecap="round" points="824.489,1730.222 827.292,1732.168 830.605,1733.587 834.591,1734.532 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.770;opacity:1" stroke-linecap="round" points="834.591,1734.532 839.551,1734.890 845.252,1734.662 851.512,1734.056 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.764;opacity:1" stroke-linecap="round" points="851.512,1734.056 858.345,1732.529 866.075,1730.248 874.998,1727.205 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.681;opacity:1" stroke-linecap="round" points="874.998,1727.205 884.307,1723.586 928.165,1703.471 943.516,1696.978 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.734;opacity:1" stroke-linecap="round" points="943.516,1696.978 962.646,1689.411 983.812,1682.980 991.954,1680.921 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:13.291;opacity:1" stroke-linecap="round" points="991.954,1680.921 997.174,1680.154 998.842,1680.385 999.899,1680.988 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.313;opacity:1" stroke-linecap="round" points="999.899,1680.988 1001.306,1682.536 1001.632,1685.049 1002.261,1687.062 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.657;opacity:1" stroke-linecap="round" points="1002.261,1687.062 1006.426,1701.477 1009.844,1710.307 1011.980,1714.199 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.040;opacity:1" stroke-linecap="round" points="1011.980,1714.199 1014.270,1717.568 1016.598,1720.165 1021.864,1723.909 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.689;opacity:1" stroke-linecap="round" points="1021.864,1723.909 1027.518,1726.262 1033.862,1726.716 1037.059,1726.295 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.954;opacity:1" stroke-linecap="round" points="1037.059,1726.295 1040.955,1725.410 1046.047,1723.745 1057.804,1718.475 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.429;opacity:1" stroke-linecap="round" points="1057.804,1718.475 1081.108,1706.819 1086.396,1704.551 1095.835,1701.122 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.539;opacity:1" stroke-linecap="round" points="1095.835,1701.122 1099.719,1700.208 1103.463,1700.258 1106.755,1700.982 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.502;opacity:1" stroke-linecap="round" points="1106.755,1700.982 1109.089,1702.188 1110.974,1703.744 1121.097,1717.539 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.768;opacity:1" stroke-linecap="round" points="1121.097,1717.539 1123.185,1719.683 1131.233,1725.500 1134.115,1726.877 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.035;opacity:1" stroke-linecap="round" points="1134.115,1726.877 1137.471,1727.965 1145.524,1729.452 1170.523,1731.885 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.984;opacity:1" stroke-linecap="round" points="1170.523,1731.885 1193.556,1734.795 1217.696,1739.850 1224.070,1741.406 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.957;opacity:1" stroke-linecap="round" points="1224.070,1741.406 1236.039,1745.317 1242.143,1748.012 1248.100,1751.387 "/>
+<polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.069;opacity:1" stroke-linecap="round" points="1248.100,1751.387 1254.270,1755.454 " />
+<rect x="0" y="0" width="1404" height="1872" fill-opacity="0"/></g></svg>
