@@ -81,7 +81,8 @@ def set_coloured_annots():
         0: [0, 0, 0],
         1: [255, 0, 0],
         2: [255,255,255],
-        3: [100,100, 0]
+        3: [150, 0, 0],
+        4: [0,0, 125]
     }
 
 def abort(msg):
@@ -158,6 +159,8 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                 pen = Marker(width, colour)
             # BallPoint
             elif (pen_nr == 2 or pen_nr == 15):
+                if coloured_annotations:
+                    colour = 4
                 pen = Ballpoint(width, colour)
             # Fineliner
             elif (pen_nr == 4 or pen_nr == 17):
@@ -183,8 +186,8 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
             else:
                 print('Unknown pen_nr: {}'.format(pen_nr))
 
-            output.write('<polyline style="fill:none;stroke:{};stroke-width:{};opacity:{}" stroke-linecap="{}" points="'.format(
-                         stroke_colour[colour], width, opacity, pen.stroke_cap)) # BEGIN stroke
+            output.write('<!-- pen: {} --> \n<polyline style="fill:none;stroke:{};stroke-width:{};opacity:{}" stroke-linecap="{}" points="'.format(
+                         pen.name, stroke_colour[colour], width, opacity, pen.stroke_cap)) # BEGIN stroke
 
             # Iterate through the segments to form a polyline
             for segment in range(nsegments):
@@ -273,6 +276,7 @@ class Pen:
         self.segment_length = 1000
         self.stroke_cap = "round"
         self.base_opacity = 1
+        self.name = "Basic Pen"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         return self.base_width
@@ -293,13 +297,15 @@ class Pen:
 class Fineliner(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
-        self.base_width = (base_width**2.1)*1.3
+        self.base_width = (base_width ** 2.1) * 1.3
+        self.name = "Fineliner"
 
 
 class Ballpoint(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.segment_length = 5
+        self.name = "Ballpoint"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         segment_width = (0.5 + pressure) + (1 * width) - 0.5*(speed/50)
@@ -323,6 +329,7 @@ class Marker(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.segment_length = 3
+        self.name = "Marker"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         segment_width = 0.9 * (((1 * width)) - 0.4 * tilt) + (0.1 * last_width)
@@ -333,6 +340,7 @@ class Pencil(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.segment_length = 2
+        self.name = "Pencil"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         segment_width = 0.7 * ((((0.8*self.base_width) + (0.5 * pressure)) * (1 * width)) - (0.25 * tilt**1.8) - (0.6 * speed / 50))
@@ -352,6 +360,7 @@ class Mechanical_Pencil(Pen):
         super().__init__(base_width, base_color)
         self.base_width = self.base_width ** 2
         self.base_opacity = 0.7
+        self.name = "Machanical Pencil"
 
 
 class Brush(Pen):
@@ -360,6 +369,7 @@ class Brush(Pen):
         self.segment_length = 2
         self.stroke_cap = "round"
         self.opacity = 1
+        self.name = "Brush"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         segment_width = 0.7 * (((1 + (1.4 * pressure)) * (1 * width)) - (0.5 * tilt) - (0.5 * speed / 50))  #+ (0.2 * last_width)
@@ -382,25 +392,30 @@ class Highlighter(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.stroke_cap = "square"
+        self.base_opacity = 0.3
+        self.name = "Highlighter"
 
 
 class Eraser(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.stroke_cap = "square"
-        self.base_width = self.base_width*2
+        self.base_width = self.base_width * 2
+        self.name = "Eraser"
 
 class Erase_Area(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.stroke_cap = "square"
         self.base_opacity = 0
+        self.name = "Erase Area"
 
 
 class Caligraphy(Pen):
     def __init__(self, base_width, base_color):
         super().__init__(base_width, base_color)
         self.segment_length = 2
+        self.name = "Calligraphy"
 
     def get_segment_width(self, speed, tilt, width, pressure, last_width):
         segment_width = 0.9 * (((1 + pressure) * (1 * width)) - 0.3 * tilt) + (0.1 * last_width)

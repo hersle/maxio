@@ -7,7 +7,8 @@
                 visiblePage = page;
             }
         ]]> </script>
-    <g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter><polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
+    <g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter><!-- pen Calligraphy --> 
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.800;opacity:1" stroke-linecap="round" points="169.437,269.444 168.805,269.552 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.284;opacity:1" stroke-linecap="round" points="168.805,269.552 169.639,269.954 173.817,269.220 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.809;opacity:1" stroke-linecap="round" points="173.817,269.220 175.507,269.163 177.160,269.726 "/>
@@ -57,50 +58,73 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.632;opacity:1" stroke-linecap="round" points="1297.861,266.080 1298.023,266.064 1298.083,266.021 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.276;opacity:1" stroke-linecap="round" points="1298.083,266.021 1297.676,265.493 1298.331,264.634 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.479;opacity:1" stroke-linecap="round" points="1298.331,264.634 1302.655,262.316 1303.390,262.638 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="129.351,148.377 133.908,146.227 133.084,145.814 131.859,147.019 132.183,146.889 133.086,148.857 136.463,160.186 137.376,161.367 137.856,161.433 138.712,160.433 144.402,146.444 146.942,138.286 147.439,138.111 145.756,140.398 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="167.305,141.328 164.000,140.789 162.243,141.067 160.476,142.273 158.171,145.418 158.138,147.489 158.543,149.481 160.351,151.248 161.537,151.491 162.189,151.144 165.508,147.797 167.932,144.609 169.157,141.951 169.154,142.502 172.908,149.881 174.895,154.802 177.624,157.748 176.806,159.289 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="183.859,160.523 185.307,160.162 185.923,159.129 184.738,157.308 184.509,156.430 184.637,153.643 185.198,151.762 187.173,147.225 189.427,144.660 193.117,144.370 194.378,144.767 198.134,151.588 199.440,152.462 200.746,152.445 202.507,151.391 204.354,149.130 205.468,147.126 206.316,146.260 209.567,140.115 209.325,140.393 209.548,140.761 211.437,142.872 216.156,146.483 217.027,147.709 218.406,148.142 219.673,149.084 220.865,150.727 222.109,155.411 222.014,161.248 220.889,165.235 219.460,168.799 216.563,171.553 214.184,172.691 211.426,172.775 208.371,170.503 207.455,169.638 205.746,166.344 205.008,164.213 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="252.476,140.173 253.872,139.063 253.474,138.945 253.168,139.971 253.806,145.334 254.424,156.170 253.575,149.535 253.755,146.577 253.161,140.967 253.294,139.555 253.944,137.147 256.008,133.738 258.727,131.523 260.277,130.729 264.833,129.627 268.820,130.463 270.491,131.279 271.524,132.309 271.369,135.468 270.364,138.072 269.490,139.305 265.348,143.002 262.937,143.931 262.073,143.680 261.643,142.089 261.968,142.308 263.053,141.926 274.427,143.013 280.267,143.266 284.644,142.988 287.710,142.153 289.763,140.780 290.130,140.830 289.495,141.056 289.993,140.957 290.220,138.672 289.844,137.976 290.077,137.497 289.865,137.292 290.078,137.334 289.736,137.553 290.120,137.496 290.005,137.136 289.745,137.539 289.999,137.461 289.684,138.622 289.706,141.293 289.276,142.222 289.389,142.658 289.029,142.963 289.211,142.331 288.531,139.631 288.834,137.303 288.509,132.948 289.286,128.129 289.886,126.769 290.900,125.949 291.921,125.978 294.379,127.187 299.482,128.197 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="307.845,136.061 308.749,137.329 311.008,139.287 313.826,139.497 315.948,139.110 321.270,135.964 324.024,132.542 324.652,131.045 324.442,130.560 321.079,128.927 315.318,128.365 313.000,128.832 312.114,129.315 310.443,131.436 309.341,134.053 307.475,140.960 307.912,143.956 309.041,144.530 315.246,144.696 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="343.081,124.717 341.763,122.904 338.251,121.491 335.376,123.350 329.633,126.236 331.788,125.936 333.506,126.405 335.649,128.058 339.475,132.087 341.409,135.379 342.677,138.286 342.648,138.690 340.951,140.866 338.004,142.392 335.243,143.061 332.649,143.263 330.357,143.018 329.438,142.577 328.353,141.292 328.293,140.680 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="367.237,122.315 364.868,124.192 361.354,125.453 359.528,124.704 356.736,125.014 353.367,125.949 351.115,127.793 350.710,128.482 351.270,136.566 352.859,139.178 354.108,144.277 353.914,146.428 352.843,148.091 348.265,149.923 345.985,150.377 343.500,150.370 340.022,148.759 339.265,147.620 339.370,147.299 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="377.514,130.354 379.278,130.896 378.528,131.389 377.769,132.868 377.769,135.333 378.246,137.522 380.336,140.843 381.440,141.908 382.366,141.944 387.742,139.637 391.094,135.091 391.620,132.666 391.471,130.627 389.301,128.195 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="403.986,143.078 402.180,141.780 400.111,141.565 400.639,144.146 401.103,143.839 401.214,143.253 400.442,140.680 400.827,131.615 400.432,127.859 401.451,125.041 403.312,125.428 408.902,128.067 412.510,128.878 415.595,129.233 418.578,129.040 421.011,129.277 422.514,129.071 425.140,128.121 428.808,126.136 428.686,125.560 427.933,125.457 428.388,125.234 428.237,124.882 424.995,124.241 423.350,124.565 421.799,125.560 420.009,128.444 417.988,134.029 417.883,135.623 418.949,138.629 420.579,140.647 423.205,142.606 428.306,143.816 434.507,144.054 434.434,145.369 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="527.894,144.742 530.712,141.854 532.049,142.214 544.262,139.879 554.240,139.176 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="558.285,132.019 560.765,128.803 560.474,128.643 559.873,130.044 567.834,134.540 568.709,135.867 569.009,137.750 568.490,139.170 566.575,141.753 562.672,143.769 556.225,146.148 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="101.025,493.799 100.451,493.337 100.196,492.542 100.241,490.898 100.482,490.966 100.438,491.292 103.500,493.590 105.091,495.590 107.473,501.223 109.883,508.456 111.941,511.730 113.238,512.861 114.591,513.358 118.849,502.339 121.076,493.395 121.833,487.568 123.658,483.413 124.694,482.763 124.410,483.019 124.607,483.677 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="151.615,496.579 149.406,492.175 146.907,490.863 144.935,490.382 142.471,490.539 140.979,490.873 138.625,492.127 137.190,493.785 135.080,500.167 135.386,503.892 136.942,507.256 138.539,508.531 140.213,508.649 142.245,507.732 144.859,505.678 148.303,502.101 150.188,498.068 150.116,497.091 149.650,496.556 148.952,498.671 150.471,502.497 153.939,504.895 159.030,507.034 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="170.730,511.479 169.012,511.191 167.060,509.965 166.925,508.840 167.506,506.609 167.278,505.308 167.530,504.143 168.905,501.352 170.613,496.248 172.720,495.496 175.225,495.273 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="190.985,494.273 191.252,495.169 188.392,500.674 187.769,502.846 188.103,503.647 189.598,505.230 192.232,507.127 193.384,507.434 195.831,507.661 196.959,507.299 198.811,506.054 201.496,503.387 202.097,502.736 202.945,500.504 202.580,498.183 203.037,497.123 202.735,496.829 204.185,502.024 204.706,505.884 204.439,511.940 203.144,517.938 201.207,522.748 198.135,526.264 195.480,528.274 189.839,530.816 185.959,531.442 181.695,531.335 179.928,530.799 176.435,528.778 173.391,526.525 172.263,524.890 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="250.267,478.479 250.345,482.517 249.303,500.328 249.584,506.456 250.306,510.684 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="245.990,504.694 245.303,504.097 249.051,503.947 253.542,503.986 258.089,504.707 262.366,504.833 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="276.354,498.753 276.369,496.598 276.283,500.553 274.891,503.524 274.029,507.611 273.832,511.399 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="281.513,489.068 280.055,485.576 278.967,484.920 278.486,485.436 279.081,485.969 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="291.281,478.265 292.926,481.903 293.407,485.594 292.636,494.520 290.452,505.811 290.043,513.592 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="312.478,474.696 312.616,476.970 312.865,476.486 312.638,476.421 312.512,476.842 312.892,481.149 312.777,485.550 307.687,510.080 307.392,512.738 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="304.880,501.642 305.552,499.306 304.814,499.851 305.412,500.172 309.940,500.418 313.244,499.935 317.766,498.769 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.074;opacity:1" stroke-linecap="round" points="83.627,641.255 79.067,639.072 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.654;opacity:1" stroke-linecap="round" points="79.067,639.072 79.828,640.108 81.441,639.970 "/>
@@ -145,15 +169,20 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.875;opacity:1" stroke-linecap="round" points="485.991,647.510 493.390,650.480 502.782,652.929 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.888;opacity:1" stroke-linecap="round" points="502.782,652.929 510.328,655.760 511.775,656.642 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.989;opacity:1" stroke-linecap="round" points="511.775,656.642 515.936,657.317 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.800;opacity:1" stroke-linecap="round" points="667.000,633.077 678.947,628.786 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.845;opacity:1" stroke-linecap="round" points="678.947,628.786 680.028,629.377 680.666,629.334 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.800;opacity:1" stroke-linecap="round" points="712.492,625.845 722.005,625.453 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.800;opacity:1" stroke-linecap="round" points="781.689,627.184 785.271,627.540 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.226;opacity:1" stroke-linecap="round" points="798.818,627.979 798.818,627.979 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.659;opacity:1" stroke-linecap="round" points="809.338,628.538 817.752,628.793 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.920;opacity:1" stroke-linecap="round" points="817.752,628.793 823.358,629.860 825.873,629.662 "/>
@@ -198,9 +227,11 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.305;opacity:1" stroke-linecap="round" points="1337.567,623.802 1338.125,623.563 1338.497,623.821 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.018;opacity:1" stroke-linecap="round" points="1338.497,623.821 1338.039,623.792 1338.340,623.669 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.093;opacity:1" stroke-linecap="round" points="1338.340,623.669 1337.989,623.693 1338.079,623.354 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.878;opacity:1" stroke-linecap="round" points="71.999,974.555 71.244,974.448 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.129;opacity:1" stroke-linecap="round" points="71.244,974.448 70.149,974.823 69.860,975.682 " />
+<!-- pen Calligraphy --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.067;opacity:1" stroke-linecap="round" points="70.533,974.868 73.857,974.525 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.569;opacity:1" stroke-linecap="round" points="73.857,974.525 75.079,973.609 78.151,973.274 "/>
@@ -238,18 +269,25 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.861;opacity:1" stroke-linecap="round" points="1344.342,1000.130 1354.834,1001.279 1366.614,1003.177 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.846;opacity:1" stroke-linecap="round" points="1366.614,1003.177 1382.083,1006.455 1399.430,1010.072 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.455;opacity:1" stroke-linecap="round" points="1399.430,1010.072 1403.000,1013.189 1403.911,1011.619 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="95.657,809.390 89.752,814.352 91.046,813.291 91.740,813.552 94.732,830.437 96.034,831.886 96.754,832.194 97.315,832.030 102.895,817.577 104.027,810.432 104.108,808.701 103.084,803.129 103.444,801.492 103.726,802.169 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="124.301,812.706 123.468,810.401 122.527,809.716 120.709,809.117 117.936,809.968 116.469,812.791 116.280,813.918 116.372,818.771 117.306,820.759 118.454,821.717 119.733,821.381 126.015,813.606 127.085,810.153 127.493,806.236 127.616,807.759 129.990,812.800 131.030,817.689 133.563,823.816 134.387,825.217 136.526,826.910 136.103,828.649 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="139.696,828.062 140.558,827.637 140.570,826.695 139.879,826.261 139.269,825.182 139.172,822.939 141.306,817.373 142.589,815.551 149.712,812.780 154.486,812.395 156.502,813.073 156.881,813.538 156.897,818.863 157.153,821.309 157.796,823.485 158.378,824.593 159.608,825.696 160.989,828.531 161.726,829.090 163.056,829.172 164.583,827.667 166.009,823.928 166.338,822.402 166.535,815.028 165.823,815.297 165.856,816.387 168.598,823.963 169.194,827.917 170.284,831.695 170.559,835.032 169.703,841.350 169.245,842.835 166.115,848.780 164.142,850.267 162.702,850.856 160.445,851.354 159.265,851.298 156.379,850.450 153.328,848.984 148.452,845.938 147.572,846.111 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="225.536,809.846 224.183,809.423 223.209,808.690 223.420,807.604 223.060,807.293 221.783,806.978 220.121,807.221 212.352,810.784 210.916,812.091 210.297,813.167 210.726,815.580 212.866,817.885 216.889,820.765 219.226,822.849 222.164,824.776 222.488,825.574 222.753,825.591 222.593,825.790 216.535,826.480 210.487,825.084 209.615,824.573 211.235,824.494 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="240.816,807.132 238.580,810.116 238.807,810.596 239.777,810.643 240.170,811.244 239.934,812.432 240.276,816.246 241.163,820.762 240.791,823.029 240.903,827.324 241.449,833.084 242.043,834.796 242.256,834.755 241.999,834.184 241.547,825.569 238.712,812.937 238.830,810.999 239.852,807.986 241.797,805.764 242.175,804.905 243.019,804.313 245.697,803.533 249.894,803.842 256.551,805.976 259.191,807.379 259.675,808.142 259.590,810.180 258.552,813.708 255.409,818.312 253.565,819.524 251.022,819.915 248.706,818.768 247.520,817.469 246.852,816.330 247.024,815.807 248.367,815.454 251.507,816.823 256.759,820.893 259.822,822.317 260.712,822.431 265.262,820.789 269.333,818.365 271.083,816.923 274.727,812.849 275.489,811.705 276.011,810.042 275.944,809.366 273.925,807.043 272.071,806.061 269.760,805.723 268.903,806.392 267.050,811.494 266.933,816.190 267.973,819.651 269.712,822.458 271.617,824.663 274.126,825.301 278.661,824.502 285.992,819.775 288.745,817.403 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="294.644,813.509 295.723,812.025 296.449,813.010 297.129,813.215 301.126,811.852 305.203,807.233 305.308,805.153 304.509,802.983 302.111,800.588 300.298,799.822 298.662,799.694 297.119,800.572 295.602,802.060 293.295,805.771 292.065,809.256 291.352,812.346 291.483,816.368 291.890,818.905 293.498,822.081 296.119,823.116 299.848,823.562 304.724,823.737 311.817,823.437 316.539,822.209 320.730,820.050 " />
+<!-- pen Fineliner --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.125;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.330;opacity:1" stroke-linecap="round" points="326.471,813.313 326.899,809.150 326.704,808.433 323.482,806.161 321.788,805.538 319.854,805.390 315.996,806.647 314.042,808.199 313.412,808.863 312.277,811.623 312.087,812.894 313.077,817.557 314.822,821.897 315.424,822.966 316.225,823.444 317.842,823.633 320.760,822.353 322.643,820.990 324.521,818.235 327.453,812.889 328.252,811.168 328.958,801.008 327.285,781.335 327.286,782.222 327.803,782.979 328.512,785.766 330.131,789.472 331.369,794.169 332.470,796.415 336.442,809.206 338.176,811.994 339.774,813.544 340.367,814.532 340.455,815.572 " />
 <rect x="0" y="0" width="1404" height="1872" fill-opacity="0"/></g></svg>

@@ -7,7 +7,8 @@
                 visiblePage = page;
             }
         ]]> </script>
-    <g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter><polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
+    <g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter><!-- pen Pencil --> 
+<polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.433;opacity:-0.1" stroke-linecap="round" points="342.126,104.872 344.302,100.572 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.301;opacity:-0.09411494284336057" stroke-linecap="round" points="344.302,100.572 343.693,99.709 342.931,99.338 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.919;opacity:0.07242797000067575" stroke-linecap="round" points="342.931,99.338 342.717,98.992 342.461,98.907 "/>
@@ -19,6 +20,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.754;opacity:0.8819403753961835" stroke-linecap="round" points="344.469,142.253 345.827,151.196 346.719,153.817 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.808;opacity:0.8516117519991738" stroke-linecap="round" points="346.719,153.817 347.153,154.160 347.153,154.160 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.091;opacity:0.6974104285240174" stroke-linecap="round" points="347.153,154.160 347.153,154.160 347.153,154.160 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.903;opacity:-0.1" stroke-linecap="round" points="335.278,97.831 335.861,96.037 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.315;opacity:-0.09574792928993703" stroke-linecap="round" points="335.861,96.037 335.648,93.542 335.087,92.481 "/>
@@ -35,6 +37,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.966;opacity:0.8050258834021432" stroke-linecap="round" points="359.165,109.457 357.265,109.224 354.842,107.933 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.513;opacity:0.8161341121792793" stroke-linecap="round" points="354.842,107.933 354.020,106.881 353.847,106.974 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.146;opacity:0.5716327071189881" stroke-linecap="round" points="353.847,106.974 353.847,106.974 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.440;opacity:-0.1" stroke-linecap="round" points="373.518,144.040 376.700,148.793 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.798;opacity:-0.1" stroke-linecap="round" points="376.700,148.793 378.854,150.838 380.850,151.800 "/>
@@ -53,6 +56,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.902;opacity:0.7152970055171421" stroke-linecap="round" points="388.585,159.009 393.155,157.768 396.336,156.380 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.555;opacity:0.7043246834618705" stroke-linecap="round" points="396.336,156.380 403.016,152.638 405.882,150.639 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.048;opacity:0.6422681450843811" stroke-linecap="round" points="405.882,150.639 405.882,150.639 405.882,150.639 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.791;opacity:-0.1" stroke-linecap="round" points="418.970,134.027 416.730,142.273 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.685;opacity:-0.033158371959413804" stroke-linecap="round" points="416.730,142.273 415.619,149.379 415.721,150.622 "/>
@@ -67,6 +71,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.486;opacity:0.817710838999067" stroke-linecap="round" points="442.957,120.199 444.030,126.028 444.000,131.754 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.991;opacity:0.8592101451328823" stroke-linecap="round" points="444.000,131.754 439.940,151.126 440.613,154.906 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.350;opacity:0.8737080083574568" stroke-linecap="round" points="440.613,154.906 440.980,155.422 443.782,154.513 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.642;opacity:-0.1" stroke-linecap="round" points="487.442,130.599 488.853,127.800 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.839;opacity:-0.08860846930848701" stroke-linecap="round" points="488.853,127.800 488.376,126.924 487.886,126.303 "/>
@@ -88,12 +93,14 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.311;opacity:0.8304708644321986" stroke-linecap="round" points="495.100,148.795 496.248,154.687 497.076,155.937 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.468;opacity:0.826379360130855" stroke-linecap="round" points="497.076,155.937 498.018,156.569 499.103,156.624 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.164;opacity:0.7625891208648682" stroke-linecap="round" points="499.103,156.624 499.103,156.624 499.103,156.624 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.241;opacity:-0.1" stroke-linecap="round" points="507.437,116.026 508.366,112.273 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.481;opacity:-0.08074306362441608" stroke-linecap="round" points="508.366,112.273 508.832,107.346 507.824,106.260 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.234;opacity:0.09582517709050858" stroke-linecap="round" points="507.824,106.260 507.315,106.816 507.263,107.505 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.539;opacity:0.2982563034125737" stroke-linecap="round" points="507.263,107.505 507.286,107.943 507.215,108.455 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.787;opacity:0.5288402176754815" stroke-linecap="round" points="507.215,108.455 507.503,109.256 509.224,111.182 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.172;opacity:-0.1" stroke-linecap="round" points="531.379,94.453 530.112,95.645 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.905;opacity:0.0071332268204007815" stroke-linecap="round" points="530.112,95.645 530.085,96.474 530.726,99.926 "/>
@@ -103,6 +110,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.502;opacity:0.8044838544300624" stroke-linecap="round" points="527.570,130.974 527.242,138.797 527.634,141.839 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.936;opacity:0.8517929240635463" stroke-linecap="round" points="527.634,141.839 529.381,145.236 530.542,146.393 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.158;opacity:0.6572721838951111" stroke-linecap="round" points="530.542,146.393 532.441,147.226 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="89.336,311.578 86.696,322.894 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.325;opacity:-0.1" stroke-linecap="round" points="86.696,322.894 87.888,322.683 87.660,320.045 "/>
@@ -135,6 +143,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.177;opacity:0.8938590056555612" stroke-linecap="round" points="713.739,307.916 734.103,307.021 738.992,307.402 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.944;opacity:0.8994397404789924" stroke-linecap="round" points="738.992,307.402 737.427,307.032 738.716,306.494 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.429;opacity:0.8989170561517988" stroke-linecap="round" points="738.716,306.494 738.487,306.193 739.469,304.877 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.752;opacity:-0.1" stroke-linecap="round" points="806.699,280.136 806.360,273.685 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.653;opacity:-0.03622093566826412" stroke-linecap="round" points="806.360,273.685 806.694,273.352 806.725,273.934 "/>
@@ -162,6 +171,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.455;opacity:0.8916813285010202" stroke-linecap="round" points="816.251,303.373 818.676,303.808 832.668,302.995 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.377;opacity:0.6960863842282977" stroke-linecap="round" points="832.668,302.995 835.714,303.174 838.487,303.423 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.991;opacity:0.44646199941635134" stroke-linecap="round" points="838.487,303.423 838.487,303.423 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.911;opacity:-0.1" stroke-linecap="round" points="847.830,311.759 848.121,311.494 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.264;opacity:-0.1" stroke-linecap="round" points="848.121,311.494 848.529,313.377 847.907,317.378 "/>
@@ -210,6 +220,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.106;opacity:0.8991672781535558" stroke-linecap="round" points="898.360,322.199 897.605,321.444 899.864,321.401 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.064;opacity:0.894712554046086" stroke-linecap="round" points="899.864,321.401 902.233,320.079 905.419,318.923 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.116;opacity:0.681376600265503" stroke-linecap="round" points="905.419,318.923 919.425,314.298 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:-0.008;opacity:-0.1" stroke-linecap="round" points="951.709,288.352 950.003,286.998 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.097;opacity:0.09155632879052844" stroke-linecap="round" points="950.003,286.998 946.995,283.164 945.937,282.960 "/>
@@ -226,6 +237,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.689;opacity:0.8970210811070034" stroke-linecap="round" points="926.891,327.993 925.855,327.979 924.040,326.370 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.473;opacity:0.8975449686391013" stroke-linecap="round" points="924.040,326.370 923.573,324.329 924.360,323.269 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.223;opacity:0.8949597746985299" stroke-linecap="round" points="924.360,323.269 924.937,320.547 926.246,318.986 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.972;opacity:-0.1" stroke-linecap="round" points="959.770,284.621 957.003,286.639 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.664;opacity:0.07322514516966683" stroke-linecap="round" points="957.003,286.639 957.527,286.900 957.705,286.636 "/>
@@ -274,6 +286,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.038;opacity:0.8937892150878907" stroke-linecap="round" points="1022.077,314.264 1028.162,316.982 1030.823,317.525 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.264;opacity:0.8903913273130145" stroke-linecap="round" points="1030.823,317.525 1037.115,318.010 1054.907,316.846 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.751;opacity:0.8909733724594117" stroke-linecap="round" points="1054.907,316.846 1058.025,316.336 1065.264,314.304 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:14.267;opacity:-0.1" stroke-linecap="round" points="81.096,424.700 79.742,428.224 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:16.025;opacity:-0.1" stroke-linecap="round" points="79.742,428.224 79.868,426.872 81.161,425.644 "/>
@@ -288,6 +301,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.334;opacity:-0.1" stroke-linecap="round" points="320.284,421.520 374.495,416.820 387.299,416.214 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.559;opacity:-0.1" stroke-linecap="round" points="387.299,416.214 516.878,414.263 523.274,414.387 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.335;opacity:-0.1" stroke-linecap="round" points="523.274,414.387 535.635,414.800 553.204,415.702 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.510;opacity:-0.1" stroke-linecap="round" points="55.471,428.182 53.757,432.243 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.717;opacity:-0.1" stroke-linecap="round" points="53.757,432.243 54.904,429.997 59.978,429.169 "/>
@@ -303,6 +317,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.468;opacity:-0.051102252794163576" stroke-linecap="round" points="766.796,424.842 797.275,423.215 802.442,422.689 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.348;opacity:-0.0321945236836161" stroke-linecap="round" points="802.442,422.689 804.667,422.108 803.845,422.002 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.627;opacity:-0.06048875525593758" stroke-linecap="round" points="803.845,422.002 803.138,422.437 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.479;opacity:-0.1" stroke-linecap="round" points="108.325,472.021 103.541,472.870 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.951;opacity:-0.1" stroke-linecap="round" points="103.541,472.870 101.436,472.244 98.995,472.172 "/>
@@ -320,6 +335,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.214;opacity:0.09108127951622008" stroke-linecap="round" points="673.946,480.720 731.375,480.999 776.583,479.974 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.567;opacity:0.1271099361351558" stroke-linecap="round" points="776.583,479.974 792.068,480.210 793.727,480.374 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.896;opacity:0.011916683614253992" stroke-linecap="round" points="793.727,480.374 793.034,480.643 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.479;opacity:-0.1" stroke-linecap="round" points="165.240,544.870 163.317,545.412 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.115;opacity:-0.1" stroke-linecap="round" points="163.317,545.412 160.787,545.508 160.474,545.131 "/>
@@ -341,6 +357,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.997;opacity:0.7324189731052944" stroke-linecap="round" points="730.496,544.152 751.481,545.006 752.416,544.968 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.406;opacity:0.6378331808532988" stroke-linecap="round" points="752.416,544.968 753.125,544.577 753.792,544.366 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.543;opacity:0.45218328250305995" stroke-linecap="round" points="753.792,544.366 753.892,544.509 753.892,544.509 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.436;opacity:-0.1" stroke-linecap="round" points="118.274,467.712 115.006,470.415 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.374;opacity:-0.1" stroke-linecap="round" points="115.006,470.415 115.302,470.687 116.404,469.231 "/>
@@ -395,6 +412,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.482;opacity:0.39651722158704483" stroke-linecap="round" points="608.428,424.185 626.217,425.208 680.019,426.828 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.970;opacity:0.27667042323521207" stroke-linecap="round" points="680.019,426.828 692.176,427.614 698.254,428.263 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.322;opacity:0.12185730934143066" stroke-linecap="round" points="698.254,428.263 704.621,429.117 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.151;opacity:-0.1" stroke-linecap="round" points="841.685,485.318 840.706,484.406 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.567;opacity:-0.1" stroke-linecap="round" points="840.706,484.406 841.046,485.131 840.800,487.329 "/>
@@ -409,6 +427,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.004;opacity:-0.1" stroke-linecap="round" points="866.441,484.532 865.657,491.084 861.754,508.082 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.125;opacity:-0.09293721083019461" stroke-linecap="round" points="861.754,508.082 861.013,513.423 862.048,516.471 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.484;opacity:-0.0863487240352801" stroke-linecap="round" points="862.048,516.471 862.928,517.773 866.530,515.519 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.868;opacity:-0.1" stroke-linecap="round" points="851.642,479.438 851.006,476.729 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.794;opacity:0.012172316099916175" stroke-linecap="round" points="851.006,476.729 850.986,472.296 851.202,472.508 "/>
@@ -427,6 +446,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.732;opacity:0.574986922613212" stroke-linecap="round" points="883.169,507.149 882.873,507.228 883.088,507.584 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:12.664;opacity:0.4288734791960035" stroke-linecap="round" points="883.088,507.584 883.362,508.648 883.735,509.758 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.559;opacity:0.1962812372616359" stroke-linecap="round" points="883.735,509.758 883.991,509.844 884.273,509.911 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.094;opacity:-0.1" stroke-linecap="round" points="918.326,482.272 914.433,477.363 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.332;opacity:-0.08020589278212616" stroke-linecap="round" points="914.433,477.363 913.105,477.160 910.624,477.676 "/>
@@ -447,6 +467,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.191;opacity:0.37752949697630744" stroke-linecap="round" points="901.311,484.684 900.824,486.072 900.606,489.594 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.417;opacity:0.15185535124370028" stroke-linecap="round" points="900.606,489.594 902.290,491.585 907.809,493.715 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.608;opacity:-0.03189413100481034" stroke-linecap="round" points="907.809,493.715 912.621,494.244 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.695;opacity:-0.1" stroke-linecap="round" points="967.819,480.420 966.750,479.169 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.588;opacity:-0.08229107424616815" stroke-linecap="round" points="966.750,479.169 967.131,479.661 967.032,480.281 "/>
@@ -509,6 +530,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.748;opacity:0.3355068324293409" stroke-linecap="round" points="1073.587,507.334 1071.811,507.267 1070.499,507.118 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.966;opacity:0.2408724927902222" stroke-linecap="round" points="1070.499,507.118 1068.152,505.918 1068.199,505.888 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.894;opacity:0.0800866425037384" stroke-linecap="round" points="1068.199,505.888 1068.518,505.821 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.425;opacity:-0.1" stroke-linecap="round" points="1122.828,476.467 1122.505,475.242 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.656;opacity:-0.1" stroke-linecap="round" points="1122.505,475.242 1123.240,472.884 1125.965,469.989 "/>
@@ -529,6 +551,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.447;opacity:0.5070080547673362" stroke-linecap="round" points="1102.941,503.997 1103.158,503.408 1102.869,502.059 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.531;opacity:0.4613419112137386" stroke-linecap="round" points="1102.869,502.059 1103.319,501.366 1103.835,501.122 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.134;opacity:0.2584605835165297" stroke-linecap="round" points="1103.835,501.122 1105.794,500.939 1106.794,501.409 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.517;opacity:-0.1" stroke-linecap="round" points="1152.979,478.290 1149.615,473.938 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.930;opacity:-0.1" stroke-linecap="round" points="1149.615,473.938 1148.439,473.610 1148.022,473.871 "/>
@@ -563,6 +586,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.643;opacity:0.3008465783936637" stroke-linecap="round" points="1204.770,510.974 1206.624,511.882 1212.140,513.827 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.766;opacity:0.22543756570134846" stroke-linecap="round" points="1212.140,513.827 1218.572,515.533 1222.131,516.144 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.359;opacity:0.095780411362648" stroke-linecap="round" points="1222.131,516.144 1225.704,516.704 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.105;opacity:-0.1" stroke-linecap="round" points="97.098,764.584 91.289,771.965 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.266;opacity:-0.1" stroke-linecap="round" points="91.289,771.965 92.846,771.235 92.961,769.941 "/>
@@ -592,6 +616,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.504;opacity:0.8854093423060009" stroke-linecap="round" points="842.736,725.766 841.814,725.780 842.323,725.639 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.997;opacity:0.8269873835785049" stroke-linecap="round" points="842.323,725.639 842.105,725.070 841.590,724.641 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.251;opacity:0.5739694476127625" stroke-linecap="round" points="841.590,724.641 840.592,724.372 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.980;opacity:-0.1" stroke-linecap="round" points="124.452,820.309 122.876,821.590 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.862;opacity:-0.06701695256999561" stroke-linecap="round" points="122.876,821.590 121.793,822.984 122.631,822.493 "/>
@@ -618,6 +643,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.806;opacity:0.8995528972148895" stroke-linecap="round" points="883.494,767.669 891.469,767.036 889.969,767.165 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.853;opacity:0.8988940347943988" stroke-linecap="round" points="889.969,767.165 889.670,766.919 890.421,766.999 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.106;opacity:0.8927825747217452" stroke-linecap="round" points="890.421,766.999 887.381,765.711 881.935,763.944 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.478;opacity:-0.1" stroke-linecap="round" points="975.476,720.034 977.377,717.870 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.359;opacity:-0.1" stroke-linecap="round" points="977.377,717.870 976.974,717.538 976.823,718.173 "/>
@@ -636,6 +662,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.754;opacity:0.8849036194596972" stroke-linecap="round" points="976.535,772.527 977.305,771.931 976.971,770.789 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.225;opacity:0.8422979891300202" stroke-linecap="round" points="976.971,770.789 977.650,770.538 977.650,770.538 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.833;opacity:0.7449215279306685" stroke-linecap="round" points="977.650,770.538 977.992,769.564 977.992,769.564 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.253;opacity:-0.1" stroke-linecap="round" points="946.154,724.860 944.496,725.372 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.489;opacity:-0.08557384519704751" stroke-linecap="round" points="944.496,725.372 944.859,725.556 945.880,724.784 "/>
@@ -649,6 +676,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.921;opacity:0.7169583678245545" stroke-linecap="round" points="1003.098,717.426 1003.098,717.426 1003.098,717.426 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.069;opacity:0.533888065814972" stroke-linecap="round" points="1003.098,717.426 1003.098,717.426 1003.098,717.426 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.114;opacity:0.31562080383300783" stroke-linecap="round" points="1003.098,717.426 1003.098,717.426 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.339;opacity:-0.1" stroke-linecap="round" points="1019.464,739.262 1020.073,740.497 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.166;opacity:-0.08628797829151154" stroke-linecap="round" points="1020.073,740.497 1020.213,742.908 1019.563,744.859 "/>
@@ -660,6 +688,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.414;opacity:0.8189934894016812" stroke-linecap="round" points="1022.683,761.467 1023.730,761.659 1024.236,761.825 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.361;opacity:0.8244410958034651" stroke-linecap="round" points="1024.236,761.825 1024.123,762.039 1024.320,761.989 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.182;opacity:0.7711840510368347" stroke-linecap="round" points="1024.320,761.989 1024.320,761.989 1024.320,761.989 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.479;opacity:-0.1" stroke-linecap="round" points="1030.382,723.785 1033.410,718.218 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.868;opacity:0.019801572688988273" stroke-linecap="round" points="1033.410,718.218 1033.942,718.545 1033.059,719.652 "/>
@@ -668,6 +697,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.684;opacity:0.7165458251748766" stroke-linecap="round" points="1032.358,720.589 1032.552,720.407 1032.865,720.627 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.553;opacity:0.7782399212888309" stroke-linecap="round" points="1032.865,720.627 1032.756,720.814 1032.398,720.827 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.972;opacity:0.7276270627975464" stroke-linecap="round" points="1032.398,720.827 1032.398,720.827 1032.398,720.827 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.106;opacity:-0.1" stroke-linecap="round" points="1041.521,749.854 1039.427,751.971 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.976;opacity:-0.06723452849047526" stroke-linecap="round" points="1039.427,751.971 1038.373,754.071 1039.591,753.624 "/>
@@ -682,6 +712,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.310;opacity:0.7973150253295899" stroke-linecap="round" points="1046.869,777.366 1046.869,777.366 1045.941,777.295 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.649;opacity:0.6595898509025574" stroke-linecap="round" points="1045.941,777.295 1045.941,777.295 1045.941,777.295 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.648;opacity:0.4394956469535828" stroke-linecap="round" points="1045.941,777.295 1045.941,777.295 1045.941,777.295 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.351;opacity:-0.1" stroke-linecap="round" points="1045.513,749.555 1043.338,747.178 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.172;opacity:-0.055834462131772726" stroke-linecap="round" points="1043.338,747.178 1042.884,745.964 1042.582,745.217 "/>
@@ -700,6 +731,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.313;opacity:0.8911477344802448" stroke-linecap="round" points="1049.740,755.579 1049.470,755.308 1049.254,755.378 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.324;opacity:0.8820336573038783" stroke-linecap="round" points="1049.254,755.378 1049.248,755.599 1049.288,755.752 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.503;opacity:0.8366269111633301" stroke-linecap="round" points="1049.288,755.752 1049.288,755.752 1049.288,755.752 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="109.833,936.587 108.023,941.729 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="108.023,941.729 105.444,946.024 104.860,944.203 "/>
@@ -765,6 +797,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.7265677002498082" stroke-linecap="round" points="652.805,1020.261 667.778,1020.962 697.448,1022.817 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.721910035610199" stroke-linecap="round" points="697.448,1022.817 712.288,1024.053 726.018,1025.516 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.5233722567558289" stroke-linecap="round" points="726.018,1025.516 739.652,1027.134 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:19.767;opacity:-0.1" stroke-linecap="round" points="966.506,924.731 965.893,928.961 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="965.893,928.961 965.382,927.109 965.624,926.763 "/>
@@ -781,6 +814,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8629907355989729" stroke-linecap="round" points="973.714,1008.857 974.224,1011.247 974.834,1011.702 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8671389244709696" stroke-linecap="round" points="974.834,1011.702 975.418,1011.601 977.127,1009.292 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8660386432920184" stroke-linecap="round" points="977.127,1009.292 979.847,1004.213 983.423,995.400 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="930.439,918.953 928.485,920.623 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="928.485,920.623 924.112,922.585 920.192,922.369 "/>
@@ -791,6 +825,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.43723607165472855" stroke-linecap="round" points="940.795,922.529 947.864,920.533 953.548,919.822 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.4875584101676941" stroke-linecap="round" points="953.548,919.822 955.425,920.170 959.696,922.792 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.619974023955209" stroke-linecap="round" points="959.696,922.792 963.470,923.839 964.993,924.677 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1011.364,975.471 1010.582,973.554 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.06310268996017321" stroke-linecap="round" points="1010.582,973.554 1010.804,971.467 1010.828,971.460 "/>
@@ -803,6 +838,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.7720124782834734" stroke-linecap="round" points="1016.259,1006.826 1017.796,1005.125 1018.803,1003.456 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.6972314786911011" stroke-linecap="round" points="1018.803,1003.456 1019.933,1001.233 1019.933,1001.233 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.46217831373214724" stroke-linecap="round" points="1019.933,1001.233 1019.933,1001.233 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1014.704,931.446 1013.525,933.066 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1013.525,933.066 1011.180,934.064 1010.240,933.183 "/>
@@ -810,6 +846,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.2829082243783133" stroke-linecap="round" points="1010.071,932.035 1010.408,932.110 1010.446,932.145 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.390667710346835" stroke-linecap="round" points="1010.446,932.145 1010.607,932.063 1010.558,932.347 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.3700679183006287" stroke-linecap="round" points="1010.558,932.347 1012.941,932.119 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1045.146,926.044 1045.271,927.002 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.08497700831719808" stroke-linecap="round" points="1045.271,927.002 1044.415,930.602 1044.304,933.664 "/>
@@ -822,6 +859,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8702178174257279" stroke-linecap="round" points="1048.998,1014.350 1051.095,1017.734 1052.483,1017.583 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8702375085013253" stroke-linecap="round" points="1052.483,1017.583 1054.216,1016.125 1056.358,1013.037 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8162747427395413" stroke-linecap="round" points="1056.358,1013.037 1057.496,1011.260 1057.496,1011.260 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1099.528,930.105 1099.230,933.190 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.07180416339210102" stroke-linecap="round" points="1099.230,933.190 1099.407,932.881 1099.370,932.625 "/>
@@ -836,6 +874,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8920823075090136" stroke-linecap="round" points="1098.438,999.849 1099.473,1001.219 1099.986,1001.450 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.863122478893825" stroke-linecap="round" points="1099.986,1001.450 1101.408,1000.880 1102.017,1000.076 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.7832300305366516" stroke-linecap="round" points="1102.017,1000.076 1102.017,1000.076 1101.290,1000.228 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="1087.054,955.737 1076.364,956.512 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.22925387910434178" stroke-linecap="round" points="1076.364,956.512 1077.113,956.289 1077.635,956.222 "/>
@@ -847,6 +886,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8443546081866538" stroke-linecap="round" points="1133.044,951.129 1137.863,951.135 1137.010,951.457 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.8674060027939933" stroke-linecap="round" points="1137.010,951.457 1138.268,952.454 1139.460,952.916 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.7286987543106079" stroke-linecap="round" points="1139.460,952.916 1141.172,953.197 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="919.745,926.994 918.556,926.306 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:-0.1" stroke-linecap="round" points="918.556,926.306 919.262,925.874 921.273,921.670 "/>
@@ -860,6 +900,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.5979230785369873" stroke-linecap="round" points="982.065,920.254 987.129,920.804 986.920,921.113 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.6895708083254951" stroke-linecap="round" points="986.920,921.113 987.343,921.453 988.325,921.878 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.6810287543705532" stroke-linecap="round" points="988.325,921.878 989.523,922.241 989.523,922.241 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.102;opacity:-0.1" stroke-linecap="round" points="59.793,1308.471 52.376,1309.255 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:-0.158;opacity:-0.1" stroke-linecap="round" points="52.376,1309.255 54.571,1308.989 63.713,1308.984 "/>
@@ -875,6 +916,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.029;opacity:0.26390848602567396" stroke-linecap="round" points="875.492,1251.849 911.808,1254.315 946.164,1257.074 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.866;opacity:0.22925943085125514" stroke-linecap="round" points="946.164,1257.074 978.422,1259.865 1007.749,1262.900 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.368;opacity:0.1334481030702591" stroke-linecap="round" points="1007.749,1262.900 1007.749,1262.900 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.302;opacity:-0.1" stroke-linecap="round" points="143.850,1407.523 137.329,1410.761 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:0.821;opacity:0.08364064923354558" stroke-linecap="round" points="137.329,1410.761 139.067,1409.803 143.255,1410.038 "/>
@@ -892,10 +934,12 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.420;opacity:0.7874785126958574" stroke-linecap="round" points="902.981,1322.588 930.726,1323.519 1001.739,1327.575 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.458;opacity:0.8050157853535244" stroke-linecap="round" points="1001.739,1327.575 1021.313,1329.168 1038.274,1330.796 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.370;opacity:0.8096177220344544" stroke-linecap="round" points="1038.274,1330.796 1038.274,1330.796 1038.274,1330.796 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.772;opacity:-0.1" stroke-linecap="round" points="144.338,1350.775 142.167,1352.147 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.265;opacity:-0.1" stroke-linecap="round" points="142.167,1352.147 138.290,1352.046 136.012,1349.191 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.746;opacity:-0.09999788487752995" stroke-linecap="round" points="136.012,1349.191 134.729,1345.001 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.094;opacity:-0.1" stroke-linecap="round" points="126.590,1339.186 124.001,1340.399 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.526;opacity:-0.1" stroke-linecap="round" points="124.001,1340.399 111.070,1342.775 107.825,1343.910 "/>
@@ -913,12 +957,14 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.803;opacity:0.7454827659470694" stroke-linecap="round" points="1004.315,1250.599 1053.542,1250.368 1099.713,1251.091 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.071;opacity:0.763893928527832" stroke-linecap="round" points="1099.713,1251.091 1143.156,1252.552 1184.198,1254.618 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.924;opacity:0.772889222417559" stroke-linecap="round" points="1184.198,1254.618 1222.265,1257.147 1257.312,1260.101 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.940;opacity:-0.1" stroke-linecap="round" points="1103.970,1300.972 1103.238,1300.632 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.577;opacity:-0.09855843050538429" stroke-linecap="round" points="1103.238,1300.632 1103.515,1301.001 1103.843,1306.170 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.183;opacity:0.05001806497573852" stroke-linecap="round" points="1103.843,1306.170 1103.852,1318.885 1103.347,1327.170 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.679;opacity:0.146017621415002" stroke-linecap="round" points="1103.347,1327.170 1102.394,1335.622 1101.224,1343.806 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.163;opacity:0.24031652825219288" stroke-linecap="round" points="1101.224,1343.806 1099.657,1351.182 1094.772,1368.334 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.727;opacity:-0.1" stroke-linecap="round" points="1076.674,1311.911 1077.305,1308.441 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.461;opacity:-0.1" stroke-linecap="round" points="1077.305,1308.441 1080.124,1302.737 1085.137,1299.539 "/>
@@ -926,11 +972,13 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.161;opacity:0.03298192194529942" stroke-linecap="round" points="1119.504,1285.833 1131.038,1282.590 1142.818,1279.993 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.317;opacity:0.10090734975678581" stroke-linecap="round" points="1142.818,1279.993 1153.685,1278.136 1162.314,1277.098 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.709;opacity:0.07412547767162322" stroke-linecap="round" points="1162.314,1277.098 1168.144,1277.067 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.957;opacity:-0.1" stroke-linecap="round" points="1081.262,1343.558 1085.257,1339.202 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.382;opacity:0.041326484595026275" stroke-linecap="round" points="1085.257,1339.202 1093.718,1333.449 1098.711,1330.604 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.377;opacity:0.11597367542130607" stroke-linecap="round" points="1098.711,1330.604 1104.573,1328.552 1110.790,1327.042 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.102;opacity:0.1745655691623688" stroke-linecap="round" points="1110.790,1327.042 1117.202,1325.992 1123.886,1325.440 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.244;opacity:-0.1" stroke-linecap="round" points="1154.003,1325.355 1131.961,1329.572 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.277;opacity:-0.1" stroke-linecap="round" points="1131.961,1329.572 1122.972,1331.693 1117.115,1333.382 "/>
@@ -972,6 +1020,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.177;opacity:0.8808131963866098" stroke-linecap="round" points="1155.471,1362.229 1155.148,1361.178 1156.677,1358.935 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.443;opacity:0.799247888496944" stroke-linecap="round" points="1156.677,1358.935 1158.463,1357.392 1161.771,1355.656 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.134;opacity:0.5686690449714661" stroke-linecap="round" points="1161.771,1355.656 1161.771,1355.656 1161.771,1355.656 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.382;opacity:-0.1" stroke-linecap="round" points="1244.993,1294.731 1246.565,1292.144 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.104;opacity:-0.1" stroke-linecap="round" points="1246.565,1292.144 1247.517,1287.521 1245.800,1286.129 "/>
@@ -984,6 +1033,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.072;opacity:0.7996708393096924" stroke-linecap="round" points="1206.979,1369.122 1206.979,1369.122 1205.629,1372.828 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.889;opacity:0.6245090007781983" stroke-linecap="round" points="1205.629,1372.828 1205.629,1372.828 1205.629,1372.828 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.556;opacity:0.3749557673931122" stroke-linecap="round" points="1205.629,1372.828 1205.629,1372.828 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.815;opacity:-0.1" stroke-linecap="round" points="1193.828,1347.892 1193.497,1341.581 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.558;opacity:0.04615447981016976" stroke-linecap="round" points="1193.497,1341.581 1193.840,1339.575 1194.137,1339.490 "/>
@@ -992,6 +1042,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.045;opacity:0.6702603820392063" stroke-linecap="round" points="1195.679,1341.667 1204.496,1339.993 1224.824,1337.135 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.518;opacity:0.8126467752456665" stroke-linecap="round" points="1224.824,1337.135 1237.352,1334.597 1251.206,1330.138 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.793;opacity:0.8610695389338903" stroke-linecap="round" points="1251.206,1330.138 1254.563,1329.234 1260.699,1328.256 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.541;opacity:-0.1" stroke-linecap="round" points="1090.065,1293.864 1091.402,1294.070 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.761;opacity:-0.1" stroke-linecap="round" points="1091.402,1294.070 1092.566,1296.694 1092.619,1301.192 "/>
@@ -999,6 +1050,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.620;opacity:0.35425894056047713" stroke-linecap="round" points="1093.179,1326.761 1092.816,1333.443 1091.394,1346.712 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.708;opacity:0.575866574559893" stroke-linecap="round" points="1091.394,1346.712 1090.472,1352.177 1087.817,1365.330 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.863;opacity:0.775003753389631" stroke-linecap="round" points="1087.817,1365.330 1087.610,1370.183 1088.056,1371.441 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.490;opacity:-0.1" stroke-linecap="round" points="1089.135,1297.526 1088.603,1295.841 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.827;opacity:-0.09401559659945113" stroke-linecap="round" points="1088.603,1295.841 1087.564,1294.042 1086.466,1294.953 "/>
@@ -1012,6 +1064,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.130;opacity:0.8837184933253697" stroke-linecap="round" points="1166.304,1271.972 1164.470,1274.286 1162.156,1276.987 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.593;opacity:0.8094611406326294" stroke-linecap="round" points="1162.156,1276.987 1162.156,1276.987 1162.156,1276.987 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.274;opacity:0.5362059712409973" stroke-linecap="round" points="1162.156,1276.987 1162.156,1276.987 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.376;opacity:-0.1" stroke-linecap="round" points="1064.126,1335.215 1060.360,1338.401 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.600;opacity:0.07086188963481357" stroke-linecap="round" points="1060.360,1338.401 1061.058,1337.675 1061.382,1337.362 "/>
@@ -1024,6 +1077,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.995;opacity:0.8905349499838693" stroke-linecap="round" points="1173.629,1287.301 1174.323,1286.960 1171.818,1287.238 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.665;opacity:0.8918925445420401" stroke-linecap="round" points="1171.818,1287.238 1170.372,1287.760 1169.801,1288.954 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:11.192;opacity:0.8012041091918946" stroke-linecap="round" points="1169.801,1288.954 1167.876,1290.353 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.538;opacity:-0.1" stroke-linecap="round" points="83.209,1626.428 77.319,1631.595 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.983;opacity:-0.1" stroke-linecap="round" points="77.319,1631.595 77.176,1631.083 79.449,1629.528 "/>
@@ -1091,6 +1145,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.112;opacity:0.8263423841340202" stroke-linecap="round" points="1009.391,1600.349 1012.391,1600.460 1012.497,1600.320 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.254;opacity:0.7540474689432554" stroke-linecap="round" points="1012.497,1600.320 1012.009,1600.026 1011.867,1599.627 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.797;opacity:0.47329756021499636" stroke-linecap="round" points="1011.867,1599.627 1011.478,1598.892 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.549;opacity:-0.1" stroke-linecap="round" points="1080.919,1592.021 1080.486,1590.251 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:1.676;opacity:-0.1" stroke-linecap="round" points="1080.486,1590.251 1080.516,1588.210 1082.400,1587.718 "/>
@@ -1115,6 +1170,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.223;opacity:0.890192956158093" stroke-linecap="round" points="1065.459,1613.057 1063.135,1612.001 1063.082,1611.120 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.365;opacity:0.8664575545276915" stroke-linecap="round" points="1063.082,1611.120 1063.750,1610.750 1063.192,1610.705 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.809;opacity:0.6645460452352252" stroke-linecap="round" points="1063.192,1610.705 1063.194,1611.207 1063.194,1611.207 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.989;opacity:-0.1" stroke-linecap="round" points="1099.197,1565.327 1101.791,1562.480 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.820;opacity:-0.1" stroke-linecap="round" points="1101.791,1562.480 1101.522,1562.227 1100.702,1563.122 "/>
@@ -1132,6 +1188,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:6.685;opacity:0.8324062620741981" stroke-linecap="round" points="1101.993,1612.330 1101.928,1612.031 1101.928,1612.031 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.504;opacity:0.7120424151420593" stroke-linecap="round" points="1101.928,1612.031 1101.928,1612.031 1101.928,1612.031 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.225;opacity:0.4528621077537537" stroke-linecap="round" points="1101.928,1612.031 1101.928,1612.031 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:4.891;opacity:-0.1" stroke-linecap="round" points="1131.294,1593.481 1132.869,1591.146 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.444;opacity:-0.09504820628091694" stroke-linecap="round" points="1132.869,1591.146 1132.292,1590.180 1131.561,1589.715 "/>
@@ -1153,6 +1210,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.598;opacity:0.7379632425308228" stroke-linecap="round" points="1120.433,1595.830 1119.286,1597.296 1119.425,1598.661 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:8.142;opacity:0.7164950328213828" stroke-linecap="round" points="1119.425,1598.661 1120.107,1599.758 1121.364,1600.763 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:7.978;opacity:0.6294065659386772" stroke-linecap="round" points="1121.364,1600.763 1121.895,1601.025 1122.480,1601.365 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:2.423;opacity:-0.1" stroke-linecap="round" points="1152.571,1591.369 1154.003,1590.323 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:5.863;opacity:-0.08555638250495706" stroke-linecap="round" points="1154.003,1590.323 1153.388,1589.914 1153.089,1590.191 "/>
@@ -1181,6 +1239,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.000;opacity:0.8258633422851562" stroke-linecap="round" points="1175.672,1586.076 1174.514,1586.262 1173.995,1587.709 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.065;opacity:0.7482909274101257" stroke-linecap="round" points="1173.995,1587.709 1173.733,1589.049 1173.617,1590.525 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:9.674;opacity:0.5788395207268852" stroke-linecap="round" points="1173.617,1590.525 1173.552,1592.167 1173.552,1592.167 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.198;opacity:-0.1" stroke-linecap="round" points="93.538,1813.090 87.006,1812.251 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:3.628;opacity:-0.1" stroke-linecap="round" points="87.006,1812.251 86.659,1812.568 88.416,1812.539 "/>
@@ -1264,6 +1323,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.21261366333280288" stroke-linecap="round" points="593.175,1767.830 593.446,1768.381 593.385,1769.124 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:20.000;opacity:0.09841166581426347" stroke-linecap="round" points="593.385,1769.124 593.643,1771.241 593.780,1773.698 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.976;opacity:-0.047633482430662434" stroke-linecap="round" points="593.780,1773.698 595.546,1777.810 595.654,1778.740 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:17.604;opacity:-0.1" stroke-linecap="round" points="667.806,1792.655 662.866,1794.342 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.228;opacity:-0.1" stroke-linecap="round" points="662.866,1794.342 662.717,1794.797 664.969,1793.352 "/>
@@ -1370,6 +1430,7 @@
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.528;opacity:0.1308986758334296" stroke-linecap="round" points="1299.947,1802.349 1299.949,1802.832 1299.609,1803.337 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:15.920;opacity:0.0641570668561118" stroke-linecap="round" points="1299.609,1803.337 1298.600,1804.412 1297.899,1805.520 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:18.437;opacity:0.00665667057037353" stroke-linecap="round" points="1297.899,1805.520 1297.899,1805.520 " />
+<!-- pen Pencil --> 
 <polyline style="fill:none;stroke:[0, 0, 0];stroke-width:2.0;opacity:1" stroke-linecap="round" points=""/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.222;opacity:-0.1" stroke-linecap="round" points="628.548,133.578 632.590,134.889 "/>
 <polyline style="fill:none; stroke:rgb(0, 0, 0) ;stroke-width:10.926;opacity:-0.1" stroke-linecap="round" points="632.590,134.889 636.083,136.592 634.538,137.086 "/>
