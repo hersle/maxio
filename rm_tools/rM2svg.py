@@ -170,11 +170,10 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                 pen = Mechanical_Pencil(width, colour)
             # Highlighter
             elif (pen_nr == 5 or pen_nr == 18):
-                width = 30
+                width = 15
                 opacity = 0.2
                 if coloured_annotations:
                     colour = 3
-                width /= 2.3
                 pen = Highlighter(width, colour)
             elif (pen_nr == 8): # Erase area
                pen = Erase_Area(width, colour)
