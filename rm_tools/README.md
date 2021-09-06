@@ -9,7 +9,7 @@ Bottom row is the output SVG!
 # Use in Terminal
 Convert a .rm file to an svg file. This will only be one page of your document.
 
-    usage: rM2svg [-h] -i FILENAME -o NAME -c
+    usage: rm2svg [-h] -i FILENAME -o NAME -c
 
     optional arguments:
       -h, --help                      show this help message and exit
