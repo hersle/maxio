@@ -211,12 +211,12 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
         command = 'inkscape %s --export-filename=%s' % (pagesvg, pagepdf)
         returncode, out, err = run(command, False)
-        assert(returncode == 0)
+        assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
     # put all the pages together
     command = 'pdfunite %s "%s"' % (' '.join(pagepdf_list), outfile)
     returncode, out, err = run(command, False)
-    assert(returncode == 0)
+    assert(returncode == 0), command
 
 
 def convert_all(rootdir, outdir, width, height, debug):
