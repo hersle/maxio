@@ -18,6 +18,15 @@ sys.path.append(test_dir)
 
 import rm2svg
 
+# try to add the rmscene repo
+VERSION_6_SUPPORT = False
+rmscene_dirname = os.path.join(dirname, "..", "..", "rmscene", "src")
+rmscene_test_dir = os.path.abspath(rmscene_dirname)
+if os.path.isdir(rmscene_test_dir):
+    sys.path.append(rmscene_test_dir)
+    import rmscene.rm2svg as rm2svgv6
+    VERSION_6_SUPPORT = True
+
 
 ENUM_COMMANDS = ['list', 'convert', 'convert-all']
 
@@ -200,14 +209,24 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
     tmpdir = tempfile.mkdtemp(prefix='rmtool.tmp.', dir='/tmp')
     # convert pages to pdf
     pagepdf_list = []
-    for page_uuid in content['pages']:
+
+    # get page list
+    if content['formatVersion'] == 1:
+        page_uuid_list = content['pages']
+    elif content['formatVersion'] == 2:
+        page_uuid_list = [l['id'] for l in content['cPages']['pages']]
+
+    for page_uuid in page_uuid_list:
         # ensure the file exists
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
         assert(os.path.exists(page_path))
         pagerm = page_path
         pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
         colored_annotations = True
-        rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width, height)
+        try:
+            rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width, height)
+        except:
+            rm2svgv6.rm2svg(pagerm, pagesvg)
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
         command = 'inkscape %s --export-filename=%s' % (pagesvg, pagepdf)
         returncode, out, err = run(command, False)
