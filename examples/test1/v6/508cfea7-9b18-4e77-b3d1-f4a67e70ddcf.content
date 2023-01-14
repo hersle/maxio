@@ -1,0 +1,90 @@
+{
+    "cPages": {
+        "lastOpened": {
+            "timestamp": "1:1",
+            "value": "f5184f96-afae-4e9a-8102-c2c986dc183e"
+        },
+        "original": {
+            "timestamp": "0:0",
+            "value": -1
+        },
+        "pages": [
+            {
+                "id": "f5184f96-afae-4e9a-8102-c2c986dc183e",
+                "idx": {
+                    "timestamp": "1:1",
+                    "value": "ba"
+                },
+                "scrollTime": {
+                    "timestamp": "1:1",
+                    "value": "2023-01-13T23:45:26Z"
+                },
+                "template": {
+                    "timestamp": "1:1",
+                    "value": "Blank"
+                },
+                "verticalScroll": {
+                    "timestamp": "1:1",
+                    "value": 1872
+                }
+            },
+            {
+                "id": "85357846-db21-412b-8be2-427629cb2421",
+                "idx": {
+                    "timestamp": "1:1",
+                    "value": "bb"
+                },
+                "template": {
+                    "timestamp": "1:1",
+                    "value": "Blank"
+                }
+            }
+        ],
+        "uuids": [
+            {
+                "first": "7f493ff7-c157-5496-8ee4-6c07d9cb40fb",
+                "second": 1
+            }
+        ]
+    },
+    "coverPageNumber": -1,
+    "customZoomCenterX": 0,
+    "customZoomCenterY": 936,
+    "customZoomOrientation": "portrait",
+    "customZoomPageHeight": 1872,
+    "customZoomPageWidth": 1404,
+    "customZoomScale": 1,
+    "documentMetadata": {
+    },
+    "dummyDocument": false,
+    "extraMetadata": {
+        "LastBallpointv2Color": "Black",
+        "LastBallpointv2Size": "2",
+        "LastEraserColor": "Black",
+        "LastEraserSize": "2",
+        "LastEraserTool": "Eraser",
+        "LastPen": "SharpPencilv2",
+        "LastPencilv2Color": "Black",
+        "LastPencilv2Size": "2",
+        "LastSelectionToolColor": "Black",
+        "LastSelectionToolSize": "2",
+        "LastSharpPencilv2Color": "Black",
+        "LastSharpPencilv2Size": "2",
+        "LastTool": "SharpPencilv2"
+    },
+    "fileType": "notebook",
+    "fontName": "",
+    "formatVersion": 2,
+    "lineHeight": -1,
+    "margins": 125,
+    "orientation": "portrait",
+    "pageCount": 2,
+    "pageTags": [
+    ],
+    "sizeInBytes": "8926",
+    "tags": [
+    ],
+    "textAlignment": "justify",
+    "textScale": 1,
+    "zoomMode": "bestFit"
+}
