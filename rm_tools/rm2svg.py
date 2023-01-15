@@ -90,12 +90,59 @@ def abort(msg):
     sys.exit(1)
 
 
+class Segment():
+    def __init__(self, _id, xpos, ypos, speed, tilt, width, pressure):
+        self.id = _id
+        self.xpos = xpos
+        self.ypos = ypos
+        self.speed = speed
+        self.tilt = tilt
+        self.width = width
+        self.pressure = pressure
+
+
+class Stroke():
+    def __init__(self, pen, color, width, opacity):
+        self.pen = pen
+        self.color = color
+        self.width = width
+        self.opacity = opacity
+        self.segments = []
+
+    def append_segment(self, segment):
+        self.segments.append(segment)
+
+
+class Layer():
+    def __init__(self):
+        self.strokes = []
+        pass
+
+    def append_stroke(self, stroke):
+        self.strokes.append(stroke)
+
+
+class Page():
+    def __init__(self):
+        self.layers = []
+        pass
+
+    def append_layer(self, layer):
+        self.layers.append(layer)
+
+
+
 def rm2svg(input_file, output_name, coloured_annotations=False,
-              x_width=default_x_width, y_width=default_y_width):
+           x_width=default_x_width, y_width=default_y_width):
 
     if coloured_annotations:
         set_coloured_annots()
 
+    page = parse_rm_input(input_file, coloured_annotations)
+    convert_to_svg(page, output_name, x_width, y_width)
+
+
+def parse_rm_input(input_file, coloured_annotations):
     with open(input_file, 'rb') as f:
         data = f.read()
     offset = 0
@@ -114,25 +161,13 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
         abort('Not a valid reMarkable file: <header={}><nlayers={}>'.format(header, nlayers))
         return
 
-    output = open(output_name, 'w')
-    output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">'.format(y_width, x_width)) # BEGIN Notebook
-    output.write('''
-        <script type="application/ecmascript"> <![CDATA[
-            var visiblePage = 'p1';
-            function goToPage(page) {
-                document.getElementById(visiblePage).setAttribute('style', 'display: none');
-                document.getElementById(page).setAttribute('style', 'display: inline');
-                visiblePage = page;
-            }
-        ]]> </script>
-    ''')
-
-    # Iterate through pages (There is at least one)
-    output.write('<g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter>')
+    page = Page()
 
     for layer in range(nlayers):
         fmt = '<I'
         (nstrokes,) = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+
+        layer = Layer()
 
         # Iterate through the strokes in the layer (If there is any)
         for stroke in range(nstrokes):
@@ -145,8 +180,6 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
                 #print('Stroke {}: pen_nr={}, colour={}, width={}, unknown={}, nsegments={}'.format(stroke, pen_nr, colour, width, unknown, nsegments))
 
             opacity = 1
-            last_x = -1.; last_y = -1.
-            last_width = 0
             #print(pen_nr)
             # Brush
             if (pen_nr == 0 or pen_nr == 12):
@@ -186,33 +219,72 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
             else:
                 print('Unknown pen_nr: {}'.format(pen_nr))
 
-            output.write('<!-- pen: {} --> \n<polyline style="fill:none;stroke:{};stroke-width:{};opacity:{}" stroke-linecap="{}" points="'.format(
-                         pen.name, stroke_colour[colour], width, opacity, pen.stroke_cap)) # BEGIN stroke
+            stroke = Stroke(pen, stroke_colour[colour], width, opacity)
 
-            # Iterate through the segments to form a polyline
-            for segment in range(nsegments):
+            # Iterate through the segments
+            for segment_id in range(nsegments):
                 fmt = '<ffffff'
                 xpos, ypos, speed, tilt, width, pressure = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)
+                stroke.append_segment(Segment(segment_id, xpos, ypos, speed, tilt, width, pressure))
+
+            # store stroke
+            layer.append_stroke(stroke)
+
+        # store layer
+        page.append_layer(layer)
+
+    return page
+
+
+def convert_to_svg(page, output_name, x_width, y_width):
+    output = open(output_name, 'w')
+    output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">'.format(y_width, x_width)) # BEGIN Notebook
+    output.write('''
+        <script type="application/ecmascript"> <![CDATA[
+            var visiblePage = 'p1';
+            function goToPage(page) {
+                document.getElementById(visiblePage).setAttribute('style', 'display: none');
+                document.getElementById(page).setAttribute('style', 'display: inline');
+                visiblePage = page;
+            }
+        ]]> </script>
+    ''')
+
+    # Iterate through pages (There is at least one)
+    output.write('<g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter>')
+
+    for layer in page.layers:
+        # Iterate through the strokes in the layer (If there is any)
+        for stroke in layer.strokes:
+            last_x = -1.; last_y = -1.
+            last_width = 0
+            output.write('<!-- pen: {} --> \n<polyline style="fill:none;stroke:{};stroke-width:{};opacity:{}" stroke-linecap="{}" points="'.format(
+                         stroke.pen.name, stroke.color, stroke.width, stroke.opacity, stroke.pen.stroke_cap)) # BEGIN stroke
+
+            last_x = -1.; last_y = -1.
+            last_width = 0
+            # Iterate through the segments to form a polyline
+            for segment in stroke.segments:
                 ratio = (y_width/x_width)/(1872/1404)
                 if ratio > 1:
-                    xpos = ratio*((xpos*x_width)/1404)
-                    ypos = (ypos*y_width)/1872
+                    segment.xpos = ratio*((segment.xpos*x_width)/1404)
+                    segment.ypos = (segment.ypos*y_width)/1872
                 else:
-                    xpos = (xpos*x_width)/1404
-                    ypos = (1/ratio)*(ypos*y_width)/1872
-                if segment % pen.segment_length == 0:
-                    segment_color = pen.get_segment_color(speed, tilt, width, pressure, last_width)
-                    segment_width = pen.get_segment_width(speed, tilt, width, pressure, last_width)
-                    segment_opacity = pen.get_segment_opacity(speed, tilt, width, pressure, last_width)
-                    #print(segment_color, segment_width, segment_opacity, pen.stroke_cap)
+                    segment.xpos = (segment.xpos*x_width)/1404
+                    segment.ypos = (1/ratio)*(segment.ypos*y_width)/1872
+                if segment.id % stroke.pen.segment_length == 0:
+                    segment_color = stroke.pen.get_segment_color(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
+                    segment_width = stroke.pen.get_segment_width(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
+                    segment_opacity = stroke.pen.get_segment_opacity(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
+                    #print(segment_color, segment_width, segment_opacity, stroke.pen.stroke_cap)
                     output.write('"/>\n<polyline style="fill:none; stroke:{} ;stroke-width:{:.3f};opacity:{}" stroke-linecap="{}" points="'.format(
-                                 segment_color, segment_width, segment_opacity, pen.stroke_cap)) # UPDATE stroke
+                                 segment_color, segment_width, segment_opacity, stroke.pen.stroke_cap)) # UPDATE stroke
                     if last_x != -1.:
                         output.write('{:.3f},{:.3f} '.format(last_x, last_y)) # Join to previous segment
 
-                last_x = xpos; last_y = ypos; last_width = segment_width
+                last_x = segment.xpos; last_y = segment.ypos; last_width = segment_width
 
-                output.write('{:.3f},{:.3f} '.format(xpos, ypos)) # BEGIN and END polyline segment
+                output.write('{:.3f},{:.3f} '.format(segment.xpos, segment.ypos)) # BEGIN and END polyline segment
 
             output.write('" />\n') # END stroke
 
@@ -221,6 +293,7 @@ def rm2svg(input_file, output_name, coloured_annotations=False,
     output.write('</g>') # Closing page group
     output.write('</svg>') # END notebook
     output.close()
+
 
 def extract_data(input_file):
     """
