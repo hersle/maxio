@@ -68,7 +68,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.exists(args.input):
-        parser.error('The file "{}" does not exist!'.format(args.input))
+        parser.error(f'The file "{args.input}" does not exist!')
     if args.coloured_annotations:
         set_coloured_annots()
     rm2svg(args.input, args.output, args.coloured_annotations,
@@ -103,7 +103,8 @@ class Segment():
 
 
 class Stroke():
-    def __init__(self, pen, color, width, opacity):
+    def __init__(self, _id, pen, color, width, opacity):
+        self.id = _id
         self.pen = pen
         self.color = color
         self.width = width
@@ -115,7 +116,8 @@ class Stroke():
 
 
 class Layer():
-    def __init__(self):
+    def __init__(self, _id):
+        self.id = _id
         self.strokes = []
         pass
 
@@ -153,31 +155,31 @@ def parse_rm_input(input_file, coloured_annotations):
     if len(data) < len(expected_header_v5) + 4:
         abort('File too short to be a valid file')
 
-    fmt = '<{}sI'.format(len(expected_header_v5))
+    fmt = f'<{len(expected_header_v5)}sI'
     header, nlayers = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
     is_v3 = (header == expected_header_v3)
     is_v5 = (header == expected_header_v5)
     if (not is_v3 and not is_v5) or nlayers < 1:
-        abort('Not a valid reMarkable file: <header={}><nlayers={}>'.format(header, nlayers))
+        abort(f'Not a valid reMarkable file: <header={header}><nlayers={nlayers}>')
         return
 
     page = Page()
 
-    for layer in range(nlayers):
+    for layer_id in range(nlayers):
         fmt = '<I'
         (nstrokes,) = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
 
-        layer = Layer()
+        layer = Layer(layer_id)
 
         # Iterate through the strokes in the layer (If there is any)
-        for stroke in range(nstrokes):
+        for stroke_id in range(nstrokes):
             if is_v3:
                 fmt = '<IIIfI'
                 pen_nr, colour, i_unk, width, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
             if is_v5:
                 fmt = '<IIIffI'
                 pen_nr, colour, i_unk, width, unknown, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
-                # print('Stroke {}: pen_nr={}, colour={}, width={}, unknown={}, nsegments={}'.format(stroke, pen_nr, colour, width, unknown, nsegments))
+                # print(f'Stroke {stroke}: pen_nr={pen_nr}, colour={colour}, width={width}, unknown={unknown}, nsegments={nsgiments}')
 
             opacity = 1
             # print(pen_nr)
@@ -217,9 +219,9 @@ def parse_rm_input(input_file, coloured_annotations):
                 colour = 2
                 pen = Eraser(width, colour)
             else:
-                print('Unknown pen_nr: {}'.format(pen_nr))
+                print(f'Unknown pen_nr: {pen_nr}')
 
-            stroke = Stroke(pen, stroke_colour[colour], width, opacity)
+            stroke = Stroke(stroke_id, pen, stroke_colour[colour], width, opacity)
 
             # Iterate through the segments
             for segment_id in range(nsegments):
@@ -238,38 +240,46 @@ def parse_rm_input(input_file, coloured_annotations):
 
 def convert_to_svg(page, output_name, x_width, y_width):
     svg_header = '''
-        <script type="application/ecmascript"> <![CDATA[
-            var visiblePage = 'p1';
-            function goToPage(page) {
-                document.getElementById(visiblePage).setAttribute('style', 'display: none');
-                document.getElementById(page).setAttribute('style', 'display: inline');
-                visiblePage = page;
-            }
-        ]]> </script>
+    <script type="application/ecmascript"> <![CDATA[
+        var visiblePage = 'p1';
+        function goToPage(page) {
+            document.getElementById(visiblePage).setAttribute('style', 'display: none');
+            document.getElementById(page).setAttribute('style', 'display: inline');
+            visiblePage = page;
+        }
+    ]]>
+    </script>
     '''
     with open(output_name, 'w') as output:
         # BEGIN Notebook
-        output.write('<svg xmlns="http://www.w3.org/2000/svg" height="{}" width="{}">'.format(y_width, x_width))
-        output.write(svg_header)
+        output.write(f'<svg xmlns="http://www.w3.org/2000/svg" height="{y_width}" width="{x_width}">')
+        output.write(svg_header + '\n')
 
         # Iterate through pages (There is at least one)
-        output.write('<g id="p1" style="display:inline"><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter>')
+        output.write('    <g id="p1" style="display:inline">\n')
+        output.write('        <filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /></filter>\n')
 
         for layer in page.layers:
             # Iterate through the strokes in the layer (If there is any)
+            output.write(f'        <!-- layer: {layer.id} --> \n')
             for stroke in layer.strokes:
                 last_x = -1.
                 last_y = -1.
                 last_width = 0
                 # BEGIN stroke
-                output.write('<!-- pen: {} --> \n<polyline style="fill:none;stroke:{};stroke-width:{};opacity:{}" stroke-linecap="{}" points="'.format(
-                             stroke.pen.name, stroke.color, stroke.width, stroke.opacity, stroke.pen.stroke_cap))
+                output.write(f'        <!-- stroke: {stroke.id} pen: "{stroke.pen.name}" --> \n')
+                output.write('        <polyline ')
+                output.write(f'style="fill:none;stroke:{stroke.color};stroke-width:{stroke.width};opacity:{stroke.opacity}" ')
+                output.write(f'stroke-linecap="{stroke.pen.stroke_cap}" ')
+
+                output.write('points="')
 
                 last_x = -1.
                 last_y = -1.
                 last_width = 0
                 # Iterate through the segments to form a polyline
                 for segment in stroke.segments:
+                    # output.write(f'        <!-- segment: {segment.id} --> \n')
                     ratio = (y_width/x_width)/(1872/1404)
                     if ratio > 1:
                         segment.xpos = ratio*((segment.xpos*x_width)/1404)
@@ -283,8 +293,11 @@ def convert_to_svg(page, output_name, x_width, y_width):
                         segment_opacity = stroke.pen.get_segment_opacity(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
                         # print(segment_color, segment_width, segment_opacity, stroke.pen.stroke_cap)
                         # UPDATE stroke
-                        output.write('"/>\n<polyline style="fill:none; stroke:{} ;stroke-width:{:.3f};opacity:{}" stroke-linecap="{}" points="'.format(
-                                     segment_color, segment_width, segment_opacity, stroke.pen.stroke_cap))
+                        output.write('"/>\n')
+                        output.write('        <polyline ')
+                        output.write(f'style="fill:none; stroke:{segment_color} ;stroke-width:{segment_width:.3f};opacity:{segment_opacity}" ')
+                        output.write(f'stroke-linecap="{stroke.pen.stroke_cap}" ')
+                        output.write('points="')
                         if last_x != -1.:
                             # Join to previous segment
                             output.write('{:.3f},{:.3f} '.format(last_x, last_y))
@@ -300,9 +313,9 @@ def convert_to_svg(page, output_name, x_width, y_width):
                 output.write('" />\n')
 
         # Overlay the page with a clickable rect to flip pages
-        output.write('<rect x="0" y="0" width="{}" height="{}" fill-opacity="0"/>'.format(x_width, y_width))
+        output.write(f'        <rect x="0" y="0" width="{x_width}" height="{y_width}" fill-opacity="0"/>\n')
         # Closing page group
-        output.write('</g>')
+        output.write('    </g>\n')
         # END notebook
         output.write('</svg>')
         output.close()
@@ -323,12 +336,12 @@ def extract_data(input_file):
     if len(data) < len(expected_header_v5) + 4:
         abort('File too short to be a valid file')
 
-    fmt = '<{}sI'.format(len(expected_header_v5))
+    fmt = f'<{len(expected_header_v5)}sI'
     header, nlayers = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
     is_v3 = (header == expected_header_v3)
     is_v5 = (header == expected_header_v5)
     if (not is_v3 and not is_v5) or nlayers < 1:
-        abort('Not a valid reMarkable file: <header={}><nlayers={}>'.format(header, nlayers))
+        abort(f'Not a valid reMarkable file: <header={header}><nlayers={nlayers}>')
         return
 
     my_list = []
@@ -341,7 +354,7 @@ def extract_data(input_file):
             if is_v5:
                 fmt = '<IIIffI'
                 pen, colour, i_unk, width, i_unk4, nsegments = struct.unpack_from(fmt, data, offset); offset += struct.calcsize(fmt)  # noqa: E702
-                # print('Stroke {}: pen={}, colour={}, width={}, unknown={}, nsegments={}'.format(stroke, pen, colour, width, unknown, nsegments))
+                # print(f'Stroke {stroke}: pen={pen}, colour={colour}, width={width}, unknown={unknown}, nsegments={nsegments}')
 
             # Iterate through the segments to form a polyline
             for _ in range(nsegments):
@@ -445,7 +458,7 @@ class Mechanical_Pencil(Pen):
         super().__init__(base_width, base_color)
         self.base_width = self.base_width ** 2
         self.base_opacity = 0.7
-        self.name = "Machanical Pencil"
+        self.name = "Mechanical Pencil"
 
 
 class Brush(Pen):
