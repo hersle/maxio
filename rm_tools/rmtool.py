@@ -214,7 +214,7 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
     if content['formatVersion'] == 1:
         page_uuid_list = content['pages']
     elif content['formatVersion'] == 2:
-        page_uuid_list = [l['id'] for l in content['cPages']['pages']]
+        page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
     for page_uuid in page_uuid_list:
         # ensure the file exists
