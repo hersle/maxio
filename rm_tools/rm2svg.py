@@ -15,8 +15,8 @@ __version__ = "0.0.2"
 
 
 # Size
-default_x_width = 1404
-default_y_width = 1872
+default_width = 1404
+default_height = 1872
 
 # Mappings
 stroke_colour = {
@@ -38,11 +38,11 @@ def main():
     parser.add_argument('--height',
                         help='Desired height of image',
                         type=float,
-                        default=default_y_width)
+                        default=default_height)
     parser.add_argument('--width',
                         help='Desired width of image',
                         type=float,
-                        default=default_x_width)
+                        default=default_width)
     parser.add_argument("-i",
                         "--input",
                         help=".rm input file",
@@ -135,13 +135,13 @@ class Page():
 
 
 def rm2svg(input_file, output_name, coloured_annotations=False,
-           x_width=default_x_width, y_width=default_y_width):
+           width=default_width, height=default_height):
 
     if coloured_annotations:
         set_coloured_annots()
 
     page = parse_rm_input(input_file, coloured_annotations)
-    convert_to_svg(page, output_name, x_width, y_width)
+    convert_to_svg(page, output_name, width, height)
 
 
 def parse_rm_input(input_file, coloured_annotations):
@@ -238,7 +238,7 @@ def parse_rm_input(input_file, coloured_annotations):
     return page
 
 
-def convert_to_svg(page, output_name, x_width, y_width):
+def convert_to_svg(page, output_name, width, height):
     svg_header = '''
     <script type="application/ecmascript"> <![CDATA[
         var visiblePage = 'p1';
@@ -252,7 +252,7 @@ def convert_to_svg(page, output_name, x_width, y_width):
     '''
     with open(output_name, 'w') as output:
         # BEGIN Notebook
-        output.write(f'<svg xmlns="http://www.w3.org/2000/svg" height="{y_width}" width="{x_width}">')
+        output.write(f'<svg xmlns="http://www.w3.org/2000/svg" height="{height}" width="{width}">')
         output.write(svg_header + '\n')
 
         # Iterate through pages (There is at least one)
@@ -280,13 +280,13 @@ def convert_to_svg(page, output_name, x_width, y_width):
                 # Iterate through the segments to form a polyline
                 for segment in stroke.segments:
                     # output.write(f'        <!-- segment: {segment.id} --> \n')
-                    ratio = (y_width/x_width)/(1872/1404)
+                    ratio = (height/width)/(1872/1404)
                     if ratio > 1:
-                        segment.xpos = ratio*((segment.xpos*x_width)/1404)
-                        segment.ypos = (segment.ypos*y_width)/1872
+                        segment.xpos = ratio*((segment.xpos*width)/1404)
+                        segment.ypos = (segment.ypos*height)/1872
                     else:
-                        segment.xpos = (segment.xpos*x_width)/1404
-                        segment.ypos = (1/ratio)*(segment.ypos*y_width)/1872
+                        segment.xpos = (segment.xpos*width)/1404
+                        segment.ypos = (1/ratio)*(segment.ypos*height)/1872
                     if segment.id % stroke.pen.segment_length == 0:
                         segment_color = stroke.pen.get_segment_color(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
                         segment_width = stroke.pen.get_segment_width(segment.speed, segment.tilt, segment.width, segment.pressure, last_width)
@@ -315,7 +315,7 @@ def convert_to_svg(page, output_name, x_width, y_width):
         # Overlay the page with a clickable rect to flip pages
         output.write('\n')
         output.write('        <!-- clickable rect to flip pages -->\n')
-        output.write(f'        <rect x="0" y="0" width="{x_width}" height="{y_width}" fill-opacity="0"/>\n')
+        output.write(f'        <rect x="0" y="0" width="{width}" height="{height}" fill-opacity="0"/>\n')
         # Closing page group
         output.write('    </g>\n')
         # END notebook
