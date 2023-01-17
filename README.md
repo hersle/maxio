@@ -25,14 +25,14 @@ $ rsync -avut --progress --rsync-path=/opt/bin/rsync remarkable:/home/root/.loca
 Convert all raaw files into pdf files:
 
 ```
-$ ~/proj/maxio/rm_tools/rmtool.py convert-all --root ~/personal/notebook/raw/ --outdir ~/personal/notebook/pdf -dd
+$ rm_tools/rmtool.py convert-all --root ~/personal/notebook/raw/ --outdir ~/personal/notebook/pdf -dd
 ```
 
 
 ## 1.3. List all the raw file names
 
 ```
-$ ~/proj/maxio/rm_tools/rmtool.py --root ~/personal/notebook/raw/ list
+$ rm_tools/rmtool.py --root ~/personal/notebook/raw/ list
 <uuid1> <data1> <name1>
   <uuid11> <data11> <name11>
   <uuid12> <data12> <name12>
@@ -48,10 +48,10 @@ $ ~/proj/maxio/rm_tools/rmtool.py --root ~/personal/notebook/raw/ list
 Convert into svg:
 
 ```
-$ ~/proj/maxio/rm_tools/rm2svg.py -i input.rm -o /tmp/output.svg
+$ rm_tools/rm2svg.py -i ./rm_tools/convert_procedure/paper/93ce11cf-31e6-4a6c-ac67-7214c6be96ab.rm -o /tmp/foo.svg
 ```
 
 Convert into pdf:
 ```
-$ ~/proj/maxio/rm_tools/convert ~/personal/notebook/raw/<uuid> out/pdf
+$ rm_tools/convert ~/personal/notebook/raw/<uuid> out/pdf
 ```
