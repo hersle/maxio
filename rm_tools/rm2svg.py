@@ -22,7 +22,10 @@ default_height = 1872
 stroke_colour = {
     0: [0, 0, 0],
     1: [125, 125, 125],
-    2: [255, 255, 255]
+    2: [255, 255, 255],
+    # XXX: fix me
+    # https://www.color-name.com/highlighter-yellow.color
+    3: [251, 247, 25],
 }
 
 
