@@ -313,6 +313,8 @@ def convert_to_svg(page, output_name, x_width, y_width):
                 output.write('" />\n')
 
         # Overlay the page with a clickable rect to flip pages
+        output.write('\n')
+        output.write('        <!-- clickable rect to flip pages -->\n')
         output.write(f'        <rect x="0" y="0" width="{x_width}" height="{y_width}" fill-opacity="0"/>\n')
         # Closing page group
         output.write('    </g>\n')
