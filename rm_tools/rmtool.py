@@ -232,10 +232,25 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
+
     # put all the pages together
     command = 'pdfunite %s "%s"' % (' '.join(pagepdf_list), outfile)
     returncode, out, err = run(command, False)
     assert(returncode == 0), command
+
+    # if a background PDF exists, render the foreground annotations on top of it
+    bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
+    if os.path.exists(bg_pdf_path):
+        fg_pdf_path = outfile # what we just rendered above
+        outfile_merged = outfile.removesuffix('.pdf') + '_merged.pdf'
+        command = 'qpdf "%s" --overlay "%s" -- "%s"' % (bg_pdf_path, fg_pdf_path, outfile_merged)
+        returncode, out, err = run(command, False)
+        assert(returncode == 0), command
+
+        # overwrite outfile (foreground only) with outfile_merged (foreground + background)
+        command = 'mv "%s" "%s"' % (outfile_merged, outfile)
+        returncode, out, err = run(command, False)
+        assert(returncode == 0), command
 
 
 def convert_all(rootdir, outdir, width, height, debug):
