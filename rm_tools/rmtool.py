@@ -227,8 +227,15 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
             rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width, height)
         except:
             rm2svgv6.rm2svg(pagerm, pagesvg)
+
+        # scale svg according to the 157mm x 210mm documents
+        # that RM's renderer outputs for unextended 1872px x 1404px documents
+        px_per_mm_x = width / 210 # for unextended standard notes: 1872 / 210
+        px_per_mm_y = height / 157 # for unextended standard notes: 1404 / 157
+        px_per_in_x = px_per_mm_x * 25.4 # for unextended standard notes: around 226
+        px_per_in_y = px_per_mm_y * 25.4 # for unextended standard notes: around 226
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
-        command = 'inkscape %s --export-filename=%s' % (pagesvg, pagepdf)
+        command = 'rsvg-convert --format=pdf --dpi-x=%f --dpi-y=%f "%s" > "%s"' % (px_per_in_x, px_per_in_y, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
