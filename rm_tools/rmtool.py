@@ -228,14 +228,25 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
         except:
             rm2svgv6.rm2svg(pagerm, pagesvg)
 
-        # scale svg according to the 157mm x 210mm documents
-        # that RM's renderer outputs for unextended 1872px x 1404px documents
-        px_per_mm_x = width / 210 # for unextended standard notes: 1872 / 210
-        px_per_mm_y = height / 157 # for unextended standard notes: 1404 / 157
-        px_per_in_x = px_per_mm_x * 25.4 # for unextended standard notes: around 226
-        px_per_in_y = px_per_mm_y * 25.4 # for unextended standard notes: around 226
+        # scale SVG:
+        # 1) if a background PDF exists, take its document size
+        # 2) otherwise, scale to the 157mm x 210mm PDF documents that RM's renderer
+        #    outputs for unextended 1872px x 1404px documents
+        px_per_mm_x = 1404 / 157 # for unextended standard notes
+        px_per_mm_y = 1872 / 210 # for unextended standard notes
+        bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
+        if os.path.exists(bg_pdf_path):
+            command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF without shell command
+            returncode, out, err = run(command, False)
+            w_h_pairs = [float(size) for size in out.split()]
+            w_h_pairs = [w_h_pair / 72 * 25.4 for w_h_pair in w_h_pairs] # convert to mm
+            width_pdf_mm = w_h_pairs[0] # TODO: match correct pages
+            height_pdf_mm = w_h_pairs[1] # TODO: match correct pages
+        else:
+            width_pdf_mm  = width  / px_per_mm_x # for unextended standard notes: 157mm
+            height_pdf_mm = height / px_per_mm_y # for unextended standard notes: 210mm
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
-        command = 'rsvg-convert --format=pdf --dpi-x=%f --dpi-y=%f "%s" > "%s"' % (px_per_in_x, px_per_in_y, pagesvg, pagepdf)
+        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_pdf_mm, height_pdf_mm, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
@@ -246,7 +257,6 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
     assert(returncode == 0), command
 
     # if a background PDF exists, render the foreground annotations on top of it
-    bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
     if os.path.exists(bg_pdf_path):
         fg_pdf_path = outfile # what we just rendered above
         outfile_merged = outfile.removesuffix('.pdf') + '_merged.pdf'
