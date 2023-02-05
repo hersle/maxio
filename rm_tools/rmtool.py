@@ -34,8 +34,6 @@ default_values = {
     'debug': 0,
     'rootdir': None,
     'outdir': None,
-    'width': 1404,
-    'height': 1872,
     'command': None,
     'infile': None,
     'outfile': None,
@@ -196,7 +194,7 @@ def run(command, dry_run, **kwargs):
     return returncode, out, err
 
 
-def convert_file(infile, outfile, rootdir, width, height, debug):
+def convert_file(infile, outfile, rootdir, debug):
     # get uuid
     uuid = os.path.basename(infile).split('.')[0]
     if not rootdir:
@@ -216,22 +214,17 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
     elif content['formatVersion'] == 2:
         page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
-    for page_uuid in page_uuid_list:
+    for page_num, page_uuid in enumerate(page_uuid_list):
         # ensure the file exists
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
         assert(os.path.exists(page_path))
         pagerm = page_path
         pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
         colored_annotations = True
-        try:
-            rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width, height)
-        except:
-            rm2svgv6.rm2svg(pagerm, pagesvg)
 
-        # scale SVG:
-        # 1) if a background PDF exists, take its document size
-        # 2) otherwise, scale to the 157mm x 210mm PDF documents that RM's renderer
-        #    outputs for unextended 1872px x 1404px documents
+        # determine background document's size:
+        # 1) no background PDF (pure RM notebook): 1404px x 1872 px (RM screen size) = 157mm x 210mm (exported PDF)
+        # 2) with background PDF: obtain its physical size and convert to RM pixels
         px_per_mm_x = 1404 / 157 # for unextended standard notes
         px_per_mm_y = 1872 / 210 # for unextended standard notes
         bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
@@ -239,14 +232,21 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
             command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF without shell command
             returncode, out, err = run(command, False)
             w_h_pairs = [float(size) for size in out.split()]
-            w_h_pairs = [w_h_pair / 72 * 25.4 for w_h_pair in w_h_pairs] # convert to mm
-            width_pdf_mm = w_h_pairs[0] # TODO: match correct pages
-            height_pdf_mm = w_h_pairs[1] # TODO: match correct pages
+            width_mm = w_h_pairs[2*page_num+0] / 72 * 25.4 # convert to mm
+            height_mm = w_h_pairs[2*page_num+1] / 72 * 25.4 # # convert to mm
         else:
-            width_pdf_mm  = width  / px_per_mm_x # for unextended standard notes: 157mm
-            height_pdf_mm = height / px_per_mm_y # for unextended standard notes: 210mm
+            width_mm  = width  / px_per_mm_x # for unextended standard notes: 157mm
+            height_mm = height / px_per_mm_y # for unextended standard notes: 210mm
+        width_px = width_mm * px_per_mm_x
+        height_px = height_mm * px_per_mm_y
+
+        try:
+            rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width_px, height_px)
+        except:
+            rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=width_px, minheight=height_px)
+
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
-        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_pdf_mm, height_pdf_mm, pagesvg, pagepdf)
+        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_mm, height_mm, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
@@ -270,11 +270,11 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
         assert(returncode == 0), command
 
 
-def convert_all(rootdir, outdir, width, height, debug):
+def convert_all(rootdir, outdir, debug):
     rootnode = get_repo_info(rootdir, debug)
 
     # traverse the tree
-    def traverse_node(node, rootdir, outdir, width, height, debug):
+    def traverse_node(node, rootdir, outdir, debug):
         if node.uuid == '':
             # ignore the root node
             pass
@@ -305,12 +305,11 @@ def convert_all(rootdir, outdir, width, height, debug):
                 if do_convert:
                     if debug > 0:
                         print('..converting %s -> %s' % (infile, outfile))
-                    convert_file(infile, outfile, rootdir, width,
-                                 height, debug)
+                    convert_file(infile, outfile, rootdir, debug)
         for node in node.children:
-            traverse_node(node, rootdir, outdir, width, height, debug)
+            traverse_node(node, rootdir, outdir, debug)
 
-    traverse_node(rootnode, rootdir, outdir, width, height, debug)
+    traverse_node(rootnode, rootdir, outdir, debug)
 
 
 def get_options(argv):
@@ -346,16 +345,6 @@ def get_options(argv):
             dest='outdir', default=default_values['outdir'],
             metavar='OUTDIR',
             help='use OUTDIR as outdir directory',)
-    parser.add_argument(
-            '--width', action='store', type=int,
-            dest='width', default=default_values['width'],
-            metavar='WIDTH',
-            help=('use WIDTH width (default: %i)' % default_values['width']),)
-    parser.add_argument(
-            '--height', action='store', type=int,
-            dest='height', default=default_values['height'],
-            metavar='HEIGHT',
-            help=('HEIGHT height (default: %i)' % default_values['height']),)
     # add command
     parser.add_argument(
             'command', action='store', type=str,
@@ -391,11 +380,9 @@ def main(argv):
     if options.command == 'list':
         list_repo(options.rootdir, options.debug)
     elif options.command == 'convert':
-        convert_file(options.infile, options.outfile, options.rootdir,
-                     options.width, options.height, options.debug)
+        convert_file(options.infile, options.outfile, options.rootdir, options.debug)
     elif options.command == 'convert-all':
-        convert_all(options.rootdir, options.outdir, options.width,
-                    options.height, options.debug)
+        convert_all(options.rootdir, options.outdir, options.debug)
 
 
 if __name__ == '__main__':
