@@ -215,59 +215,79 @@ def convert_file(infile, outfile, rootdir, debug):
         page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
     for page_num, page_uuid in enumerate(page_uuid_list):
-        # ensure the file exists
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
-        assert(os.path.exists(page_path))
-        pagerm = page_path
-        pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
-        colored_annotations = True
 
-        # determine background document's size:
-        # 1) no background PDF (pure RM notebook): 1404px x 1872 px (RM screen size) = 157mm x 210mm (exported PDF)
-        # 2) with background PDF: obtain its physical size and convert to RM pixels
+        # determine whether page has
+        # foreground (FG) notes (like a "pure" RM notebook),
+        # a background (BG) document (like an annotated PDF file),
+        # or both
+        fg_exists = os.path.exists(page_path)
+        bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
+        bg_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
+
+        # determine document size based on background (BG)
+        # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
+        #                    for unexported notes; scale up with this pixel density if extended
+        # BG exists:         obtain BG document's physical size and convert it to RM pixels
         px_per_mm_x = 1404 / 157 # for unextended standard notes
         px_per_mm_y = 1872 / 210 # for unextended standard notes
-        bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
-        if os.path.exists(bg_pdf_path):
-            command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF without shell command
+        if bg_exists:
+            command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF size without shell command
             returncode, out, err = run(command, False)
+            assert(returncode == 0), command
             w_h_pairs = [float(size) for size in out.split()]
-            width_mm = w_h_pairs[2*page_num+0] / 72 * 25.4 # convert to mm
-            height_mm = w_h_pairs[2*page_num+1] / 72 * 25.4 # # convert to mm
+            bg_page_num = content['cPages']['pages'][page_num]['redir']['value']
+            width_mm = w_h_pairs[2*bg_page_num+0] / 72 * 25.4 # convert to mm
+            height_mm = w_h_pairs[2*bg_page_num+1] / 72 * 25.4 # # convert to mm
         else:
-            width_mm  = width  / px_per_mm_x # for unextended standard notes: 157mm
-            height_mm = height / px_per_mm_y # for unextended standard notes: 210mm
+            width_mm = 157
+            height_mm = 210
         width_px = width_mm * px_per_mm_x
         height_px = height_mm * px_per_mm_y
 
-        try:
-            rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width_px, height_px)
-        except:
-            rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=width_px, minheight=height_px)
+        # TODO: make it work when annotations are outside BG bounds
+        print(f"Processing page {page_num}. ", end="")
+        print(f"FG: {fg_exists}. BG: {bg_exists}. ", end="")
+        print(f"Size: {width_px:.1f}px x {height_px:.1f}px = {width_mm:.1f}mm x {height_mm:.1f}mm.")
 
+        # convert foreground (FG) notes to .svg
+        # if there are no FG notes (as for an unannotated PDF page), make a blank .svg
+        pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
+        if fg_exists:
+            pagerm = page_path
+            colored_annotations = True
+            try:
+                rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width_px, height_px)
+            except:
+                rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=width_px, minheight=height_px)
+        else:
+            with open(pagesvg, "w") as file:
+                file.write(f'<svg width="{width_px}" height="{height_px}"></svg>\n') # blank .svg
+
+        # convert FG from .svg to .pdf
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
         command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_mm, height_mm, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
         pagepdf_list.append(pagepdf)
 
-    # put all the pages together
+        # overlay FG on BG
+        if bg_exists:
+            # merge PDFs
+            page_outfile = pagepdf.removesuffix('.pdf') + '_merged.pdf'
+            command = 'qpdf "%s" --pages . %i -- --overlay "%s" -- "%s"' % (bg_pdf_path, bg_page_num+1, pagepdf, page_outfile)
+            returncode, out, err = run(command, False)
+            assert(returncode == 0), command
+
+            # then overwrite the "foreground" file
+            command = 'mv "%s" "%s"' % (page_outfile, pagepdf)
+            returncode, out, err = run(command, False)
+            assert(returncode == 0), command
+
+    # put all individual pages together into one document
     command = 'pdfunite %s "%s"' % (' '.join(pagepdf_list), outfile)
     returncode, out, err = run(command, False)
-    assert(returncode == 0), command
-
-    # if a background PDF exists, render the foreground annotations on top of it
-    if os.path.exists(bg_pdf_path):
-        fg_pdf_path = outfile # what we just rendered above
-        outfile_merged = outfile.removesuffix('.pdf') + '_merged.pdf'
-        command = 'qpdf "%s" --overlay "%s" -- "%s"' % (bg_pdf_path, fg_pdf_path, outfile_merged)
-        returncode, out, err = run(command, False)
-        assert(returncode == 0), command
-
-        # overwrite outfile (foreground only) with outfile_merged (foreground + background)
-        command = 'mv "%s" "%s"' % (outfile_merged, outfile)
-        returncode, out, err = run(command, False)
-        assert(returncode == 0), command
+    assert(returncode == 0), command + out + err
 
 
 def convert_all(rootdir, outdir, debug):
