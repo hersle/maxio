@@ -214,6 +214,16 @@ def convert_file(infile, outfile, rootdir, debug):
     elif content['formatVersion'] == 2:
         page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
+    bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
+    bg_exists = os.path.exists(bg_pdf_path)
+    if bg_exists:
+        command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF size without shell command
+        returncode, out, err = run(command, False)
+        assert(returncode == 0), command
+        bg_w_h_pairs = [float(size) for size in out.split()]
+        bg_page_widths = [bg_w_h_pairs[i] for i in range(0, len(bg_w_h_pairs)) if i % 2 == 0]
+        bg_page_heights = [bg_w_h_pairs[i] for i in range(0, len(bg_w_h_pairs)) if i % 2 == 1]
+
     for page_num, page_uuid in enumerate(page_uuid_list):
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
 
@@ -222,8 +232,7 @@ def convert_file(infile, outfile, rootdir, debug):
         # a background (BG) document (like an annotated PDF file),
         # or both
         fg_exists = os.path.exists(page_path)
-        bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
-        bg_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
+        bg_page_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
 
         # determine document size based on background (BG)
         # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
@@ -231,14 +240,10 @@ def convert_file(infile, outfile, rootdir, debug):
         # BG exists:         obtain BG document's physical size and convert it to RM pixels
         px_per_mm_x = 1404 / 157 # for unextended standard notes
         px_per_mm_y = 1872 / 210 # for unextended standard notes
-        if bg_exists:
-            command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF size without shell command
-            returncode, out, err = run(command, False)
-            assert(returncode == 0), command
-            w_h_pairs = [float(size) for size in out.split()]
-            bg_page_num = content['cPages']['pages'][page_num]['redir']['value']
-            width_mm = w_h_pairs[2*bg_page_num+0] / 72 * 25.4 # convert to mm
-            height_mm = w_h_pairs[2*bg_page_num+1] / 72 * 25.4 # # convert to mm
+        if bg_page_exists:
+            bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
+            width_mm = bg_page_widths[bg_page_num] / 72 * 25.4 # convert to mm
+            height_mm = bg_page_heights[bg_page_num] / 72 * 25.4 # # convert to mm
         else:
             width_mm = 157
             height_mm = 210
@@ -247,7 +252,7 @@ def convert_file(infile, outfile, rootdir, debug):
 
         # TODO: make it work when annotations are outside BG bounds
         print(f"Processing page {page_num}. ", end="")
-        print(f"FG: {fg_exists}. BG: {bg_exists}. ", end="")
+        print(f"FG: {fg_exists}. BG: {bg_page_exists}. ", end="")
         print(f"Size: {width_px:.1f}px x {height_px:.1f}px = {width_mm:.1f}mm x {height_mm:.1f}mm.")
 
         # convert foreground (FG) notes to .svg
@@ -272,7 +277,7 @@ def convert_file(infile, outfile, rootdir, debug):
         pagepdf_list.append(pagepdf)
 
         # overlay FG on BG
-        if bg_exists:
+        if bg_page_exists:
             # merge PDFs
             page_outfile = pagepdf.removesuffix('.pdf') + '_merged.pdf'
             command = 'qpdf "%s" --pages . %i -- --overlay "%s" -- "%s"' % (bg_pdf_path, bg_page_num+1, pagepdf, page_outfile)
