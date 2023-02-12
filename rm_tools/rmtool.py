@@ -237,46 +237,69 @@ def convert_file(infile, outfile, rootdir, debug):
         if bg_page_exists:
             bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
             bg_page = bg.pages[bg_page_num]
-            width_mm = float(bg_page.mediabox.width) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
-            height_mm = float(bg_page.mediabox.height) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
-            bg_fg_page = bg_page
+            bg_width_mm = float(bg_page.mediabox.width) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
+            bg_height_mm = float(bg_page.mediabox.height) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
         else:
-            width_mm = 157
-            height_mm = 210
-            bg_fg_page = PyPDF2.PageObject.create_blank_page(width=width_mm * 72 / 25.4, height=height_mm * 72 / 25.4)
+            bg_width_mm = 157
+            bg_height_mm = 210
+            bg_page = None
         px_per_mm_x = 1404 / 157 # for unextended standard notes
         px_per_mm_y = 1872 / 210 # for unextended standard notes
-        width_px = width_mm * px_per_mm_x
-        height_px = height_mm * px_per_mm_y
+        bg_width_px = bg_width_mm * px_per_mm_x
+        bg_height_px = bg_height_mm * px_per_mm_y
 
         # TODO: make it work when annotations are outside BG bounds
         print(f"Processing page {page_num}. ", end="")
         print(f"FG: {fg_exists}. BG: {bg_page_exists}. ", end="")
-        print(f"Size: {width_px:.1f}px x {height_px:.1f}px = {width_mm:.1f}mm x {height_mm:.1f}mm.")
+        print(f"Size: {bg_width_px:.1f}px x {bg_height_px:.1f}px = {bg_width_mm:.1f}mm x {bg_height_mm:.1f}mm.")
 
         # convert foreground (FG) notes to .svg
         # if there are no FG notes (as for an unannotated PDF page), make a blank .svg
         pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
+        bg_dx_px = 0 # how much to shift background depends on extent of foreground notes
+        bg_dy_px = 0
         if fg_exists:
             pagerm = page_path
             colored_annotations = True
             try:
-                rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, width_px, height_px)
+                rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, bg_width_px, bg_height_px)
+                fg_width_px = bg_width_px
+                fg_height_px = bg_height_px
             except:
-                rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=width_px, minheight=height_px)
+                page_info = rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=bg_width_px, minheight=bg_height_px)
+                fg_width_px = page_info.width
+                fg_height_px = page_info.height
+                bg_dx_px = page_info.xpos_delta - bg_width_px/2 # see rmscene rm2svg.py: get_dimensions()
+                bg_dy_px = page_info.ypos_delta
         else:
+            fg_width_px = bg_width_px
+            fg_height_px = bg_height_px
             with open(pagesvg, "w") as file:
-                file.write(f'<svg width="{width_px}" height="{height_px}"></svg>\n') # blank .svg
+                file.write(f'<svg width="{fg_width_px}" height="{fg_height_px}"></svg>\n') # blank .svg
+
+        fg_width_mm = fg_width_px / px_per_mm_x
+        fg_height_mm = fg_height_px / px_per_mm_y
 
         # convert FG from .svg to .pdf
         pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
-        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_mm, height_mm, pagesvg, pagepdf)
+        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (fg_width_mm, fg_height_mm, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
 
-        # overlay FG on BG
+        bg_fg_page = PyPDF2.PageObject.create_blank_page(width=fg_width_mm * 72 / 25.4, height=fg_height_mm * 72 / 25.4)
+
+        # 1) add background
+        if bg_page_exists:
+            bg_dx_mm = bg_dx_px / px_per_mm_x
+            bg_dy_mm = bg_dy_px / px_per_mm_y
+            trans = PyPDF2.Transformation().translate(tx=bg_dx_mm * 72 / 25.4, ty=bg_dy_mm * 72 / 25.4)
+            bg_fg_page.merge_page(bg_page)
+            bg_fg_page.add_transformation(trans)
+
+        # 2) add foreground
         fg_page = PyPDF2.PdfReader(pagepdf).pages[0]
         bg_fg_page.merge_page(fg_page)
+
         bg_fg.add_page(bg_fg_page)
 
     with open(outfile, "wb") as file:
