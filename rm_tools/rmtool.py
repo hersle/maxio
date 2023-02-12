@@ -17,6 +17,7 @@ test_dir = os.path.abspath(dirname)
 sys.path.append(test_dir)
 
 import rm2svg
+import PyPDF2
 
 # try to add the rmscene repo
 VERSION_6_SUPPORT = False
@@ -215,14 +216,9 @@ def convert_file(infile, outfile, rootdir, debug):
         page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
     bg_pdf_path = os.path.join(rootdir, uuid + '.pdf')
-    bg_exists = os.path.exists(bg_pdf_path)
-    if bg_exists:
-        command = f'identify -format "%w %h " "{bg_pdf_path}"' # TODO: get PDF size without shell command
-        returncode, out, err = run(command, False)
-        assert(returncode == 0), command
-        bg_w_h_pairs = [float(size) for size in out.split()]
-        bg_page_widths = [bg_w_h_pairs[i] for i in range(0, len(bg_w_h_pairs)) if i % 2 == 0]
-        bg_page_heights = [bg_w_h_pairs[i] for i in range(0, len(bg_w_h_pairs)) if i % 2 == 1]
+    bg = PyPDF2.PdfReader(bg_pdf_path) if os.path.exists(bg_pdf_path) else None
+
+    bg_fg = PyPDF2.PdfWriter()
 
     for page_num, page_uuid in enumerate(page_uuid_list):
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
@@ -238,15 +234,18 @@ def convert_file(infile, outfile, rootdir, debug):
         # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
         #                    for unexported notes; scale up with this pixel density if extended
         # BG exists:         obtain BG document's physical size and convert it to RM pixels
-        px_per_mm_x = 1404 / 157 # for unextended standard notes
-        px_per_mm_y = 1872 / 210 # for unextended standard notes
         if bg_page_exists:
             bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
-            width_mm = bg_page_widths[bg_page_num] / 72 * 25.4 # convert to mm
-            height_mm = bg_page_heights[bg_page_num] / 72 * 25.4 # # convert to mm
+            bg_page = bg.pages[bg_page_num]
+            width_mm = float(bg_page.mediabox.width) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
+            height_mm = float(bg_page.mediabox.height) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
+            bg_fg_page = bg_page
         else:
             width_mm = 157
             height_mm = 210
+            bg_fg_page = PyPDF2.PageObject.create_blank_page(width=width_mm * 72 / 25.4, height=height_mm * 72 / 25.4)
+        px_per_mm_x = 1404 / 157 # for unextended standard notes
+        px_per_mm_y = 1872 / 210 # for unextended standard notes
         width_px = width_mm * px_per_mm_x
         height_px = height_mm * px_per_mm_y
 
@@ -274,25 +273,14 @@ def convert_file(infile, outfile, rootdir, debug):
         command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (width_mm, height_mm, pagesvg, pagepdf)
         returncode, out, err = run(command, False)
         assert(returncode == 0), command
-        pagepdf_list.append(pagepdf)
 
         # overlay FG on BG
-        if bg_page_exists:
-            # merge PDFs
-            page_outfile = pagepdf.removesuffix('.pdf') + '_merged.pdf'
-            command = 'qpdf "%s" --pages . %i -- --overlay "%s" -- "%s"' % (bg_pdf_path, bg_page_num+1, pagepdf, page_outfile)
-            returncode, out, err = run(command, False)
-            assert(returncode == 0), command
+        fg_page = PyPDF2.PdfReader(pagepdf).pages[0]
+        bg_fg_page.merge_page(fg_page)
+        bg_fg.add_page(bg_fg_page)
 
-            # then overwrite the "foreground" file
-            command = 'mv "%s" "%s"' % (page_outfile, pagepdf)
-            returncode, out, err = run(command, False)
-            assert(returncode == 0), command
-
-    # put all individual pages together into one document
-    command = 'pdfunite %s "%s"' % (' '.join(pagepdf_list), outfile)
-    returncode, out, err = run(command, False)
-    assert(returncode == 0), command + out + err
+    with open(outfile, "wb") as file:
+        bg_fg.write(file)
 
 
 def convert_all(rootdir, outdir, debug):
