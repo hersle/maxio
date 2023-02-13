@@ -239,7 +239,7 @@ def convert_file(infile, outfile, rootdir, debug):
         # foreground (FG) notes (like a "pure" RM notebook),
         # a background (BG) document (like an annotated PDF file),
         # or both
-        fg_exists = os.path.exists(page_path)
+        fg_page_exists = os.path.exists(page_path)
         if content['formatVersion'] == 1:
             bg_page_exists = os.path.exists(bg_pdf_path) and content['redirectionPageMap'][page_num] >= 0 # TODO: what is redirectionPageMap value for an unannotated page?
         elif content['formatVersion'] == 2:
@@ -269,7 +269,7 @@ def convert_file(infile, outfile, rootdir, debug):
             bg_height_mm = bg_height_px / px_per_mm_y
 
         print(f"Processing page {page_num}. ", end="")
-        print(f"FG: {fg_exists}. BG: {bg_page_exists}. ", end="")
+        print(f"FG: {fg_page_exists}. BG: {bg_page_exists}. ", end="")
         print(f"Size: {bg_width_px:.1f}px x {bg_height_px:.1f}px = {bg_width_mm:.1f}mm x {bg_height_mm:.1f}mm.")
 
         # convert foreground (FG) notes to .svg
@@ -277,35 +277,54 @@ def convert_file(infile, outfile, rootdir, debug):
         pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
         bg_dx_px = 0 # how much to shift background depends on extent of foreground notes
         bg_dy_px = 0
-        if fg_exists:
+        if fg_page_exists:
             pagerm = page_path
-            colored_annotations = True
+
+            # determine version
+            with open(pagerm, 'rb') as file:
+                head_fmt = 'reMarkable .lines file, version=x'
+                head = file.read(len(head_fmt)).decode()
+                x = head[-1] if head[:-1] == head_fmt[:-1] else None
+
             try:
-                rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, bg_width_px, bg_height_px)
-                fg_width_px = bg_width_px
-                fg_height_px = bg_height_px
-            except:
-                page_info = rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=bg_width_px, minheight=bg_height_px)
-                fg_width_px = page_info.width
-                fg_height_px = page_info.height
-                bg_dx_px = page_info.xpos_delta - bg_width_px/2 # see rmscene rm2svg.py: get_dimensions()
-                bg_dy_px = page_info.ypos_delta
-        else:
+                if x.isdecimal() and int(x) == 6:
+                    # v6 renderer
+                    page_info = rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=bg_width_px, minheight=bg_height_px)
+                    fg_width_px = page_info.width
+                    fg_height_px = page_info.height
+                    bg_dx_px = page_info.xpos_delta - bg_width_px/2 # see rmscene rm2svg.py: get_dimensions()
+                    bg_dy_px = page_info.ypos_delta
+                elif x.isdecimal() and int(x) < 6:
+                    # pre-v6 renderer
+                    colored_annotations = True
+                    rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, bg_width_px, bg_height_px)
+                    fg_width_px = bg_width_px
+                    fg_height_px = bg_height_px
+                else:
+                    raise 'Unknown reMarkable .lines version: {x}'
+
+                fg_width_mm = fg_width_px / px_per_mm_x
+                fg_height_mm = fg_height_px / px_per_mm_y
+
+                # convert FG from .svg to .pdf
+                # TODO: revert to inkscape, now that I'm using PyPDF2 to merge anyway?
+                pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
+                command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (fg_width_mm, fg_height_mm, pagesvg, pagepdf)
+                returncode, out, err = run(command, False)
+                assert(returncode == 0), command
+            except Exception as e:
+                print(f'WARNING: could not render foreground - skipping it! Exception:\n{e}')
+                fg_page_exists = False # ensure no attempt is made to render it later
+
+        if not fg_page_exists:
             fg_width_px = bg_width_px
             fg_height_px = bg_height_px
-            with open(pagesvg, "w") as file:
-                file.write(f'<svg width="{fg_width_px}" height="{fg_height_px}"></svg>\n') # blank .svg
-
-        fg_width_mm = fg_width_px / px_per_mm_x
-        fg_height_mm = fg_height_px / px_per_mm_y
-
-        # convert FG from .svg to .pdf
-        pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
-        command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (fg_width_mm, fg_height_mm, pagesvg, pagepdf)
-        returncode, out, err = run(command, False)
-        assert(returncode == 0), command
+            fg_width_mm = fg_width_px / px_per_mm_x
+            fg_height_mm = fg_height_px / px_per_mm_y
 
         bg_fg_page = PyPDF2.PageObject.create_blank_page(width=fg_width_mm * 72 / 25.4, height=fg_height_mm * 72 / 25.4)
+
+        # TODO: may be possible to optimize rendering heavily (e.g. use BG directly if FG doesn't exist)
 
         # 1) add background
         if bg_page_exists:
@@ -316,8 +335,9 @@ def convert_file(infile, outfile, rootdir, debug):
             bg_fg_page.add_transformation(trans)
 
         # 2) add foreground
-        fg_page = PyPDF2.PdfReader(pagepdf).pages[0]
-        bg_fg_page.merge_page(fg_page)
+        if fg_page_exists:
+            fg_page = PyPDF2.PdfReader(pagepdf).pages[0]
+            bg_fg_page.merge_page(fg_page)
 
         bg_fg.add_page(bg_fg_page)
 
