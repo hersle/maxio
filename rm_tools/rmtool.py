@@ -92,12 +92,24 @@ def get_repo_info(rootdir, debug):
     cur_uuid_list = [rootnode.uuid]
     cur_node = [rootnode]
     prev_node = None
+
+    # define a file to be trashed if it *or its parent* is trashed
+    # this "extended" definition prevents an infinite loop due to
+    # files that are not trashed, but whose parent is trashed (in the unextended definition)
+    def trashed(uuid, metadata):
+        if metadata['parent'] == 'trash':
+            return True
+        for uuid2, metadata2 in node_list:
+            if uuid2 == metadata['parent']:
+                return trashed(uuid2, metadata2)
+        return False
+
     while node_list:
         new_cur_uuid_list = []
         new_cur_node = []
         new_node_list = []
         for uuid, metadata in node_list:
-            if metadata['parent'] == 'trash':
+            if trashed(uuid, metadata):
                 # ignore it
                 pass
             elif metadata['parent'] in cur_uuid_list:
