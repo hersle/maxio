@@ -240,7 +240,10 @@ def convert_file(infile, outfile, rootdir, debug):
         # a background (BG) document (like an annotated PDF file),
         # or both
         fg_exists = os.path.exists(page_path)
-        bg_page_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
+        if content['formatVersion'] == 1:
+            bg_page_exists = os.path.exists(bg_pdf_path) and content['redirectionPageMap'][page_num] >= 0 # TODO: what is redirectionPageMap value for an unannotated page?
+        elif content['formatVersion'] == 2:
+            bg_page_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
 
         # determine document size based on background (BG)
         # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
@@ -249,7 +252,10 @@ def convert_file(infile, outfile, rootdir, debug):
         px_per_mm_x = 1404 / (445 * 25.4 / 72) # for unextended standard notes
         px_per_mm_y = 1872 / (594 * 25.4 / 72) # for unextended standard notes
         if bg_page_exists:
-            bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
+            if content['formatVersion'] == 1:
+                bg_page_num = content['redirectionPageMap'][page_num] # looks like this points to BG PDF page number
+            elif content['formatVersion'] == 2:
+                bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
             bg_page = bg.pages[bg_page_num]
             bg_width_mm = float(bg_page.mediabox.width) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
             bg_height_mm = float(bg_page.mediabox.height) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
