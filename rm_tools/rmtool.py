@@ -234,21 +234,22 @@ def convert_file(infile, outfile, rootdir, debug):
         # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
         #                    for unexported notes; scale up with this pixel density if extended
         # BG exists:         obtain BG document's physical size and convert it to RM pixels
+        px_per_mm_x = 1404 / (445 * 25.4 / 72) # for unextended standard notes
+        px_per_mm_y = 1872 / (594 * 25.4 / 72) # for unextended standard notes
         if bg_page_exists:
             bg_page_num = content['cPages']['pages'][page_num]['redir']['value'] # looks like this points to BG PDF page number
             bg_page = bg.pages[bg_page_num]
             bg_width_mm = float(bg_page.mediabox.width) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
             bg_height_mm = float(bg_page.mediabox.height) * 25.4 / 72 # mediaBox in user space units (1/72 inch)
+            bg_width_px = bg_width_mm * px_per_mm_x
+            bg_height_px = bg_height_mm * px_per_mm_y
         else:
-            bg_width_mm = 157
-            bg_height_mm = 210
             bg_page = None
-        px_per_mm_x = 1404 / 157 # for unextended standard notes
-        px_per_mm_y = 1872 / 210 # for unextended standard notes
-        bg_width_px = bg_width_mm * px_per_mm_x
-        bg_height_px = bg_height_mm * px_per_mm_y
+            bg_width_px = 1404
+            bg_height_px = 1872
+            bg_width_mm = bg_width_px / px_per_mm_x
+            bg_height_mm = bg_height_px / px_per_mm_y
 
-        # TODO: make it work when annotations are outside BG bounds
         print(f"Processing page {page_num}. ", end="")
         print(f"FG: {fg_exists}. BG: {bg_page_exists}. ", end="")
         print(f"Size: {bg_width_px:.1f}px x {bg_height_px:.1f}px = {bg_width_mm:.1f}mm x {bg_height_mm:.1f}mm.")
