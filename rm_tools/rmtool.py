@@ -235,10 +235,8 @@ def convert_file(infile, outfile, rootdir, debug):
     for page_num, page_uuid in enumerate(page_uuid_list):
         page_path = os.path.join(rootdir, uuid, page_uuid + '.rm')
 
-        # determine whether page has
-        # foreground (FG) notes (like a "pure" RM notebook),
-        # a background (BG) document (like an annotated PDF file),
-        # or both
+        # determine whether page has foreground (FG) notes (like a "pure" RM notebook),
+        # a background (BG) document (like an annotated PDF file), or both
         fg_page_exists = os.path.exists(page_path)
         if content['formatVersion'] == 1:
             bg_page_exists = os.path.exists(bg_pdf_path) and content['redirectionPageMap'][page_num] >= 0 # TODO: what is redirectionPageMap value for an unannotated page?
@@ -246,9 +244,9 @@ def convert_file(infile, outfile, rootdir, debug):
             bg_page_exists = os.path.exists(bg_pdf_path) and 'redir' in content['cPages']['pages'][page_num]
 
         # determine document size based on background (BG)
-        # BG does not exist: 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
-        #                    for unexported notes; scale up with this pixel density if extended
-        # BG exists:         obtain BG document's physical size and convert it to RM pixels
+        # if BG does not exist, default to 1404px x 1872px (RM screen size) = 157mm x 210mm (exported PDF)
+        # for unexported notes, and scale up with corresponding pixel density later if the notes are extended
+        # if BG exists, obtain BG document's physical size and convert it to RM pixels
         px_per_mm_x = 1404 / (445 * 25.4 / 72) # for unextended standard notes
         px_per_mm_y = 1872 / (594 * 25.4 / 72) # for unextended standard notes
         if bg_page_exists:
@@ -268,12 +266,7 @@ def convert_file(infile, outfile, rootdir, debug):
             bg_width_mm = bg_width_px / px_per_mm_x
             bg_height_mm = bg_height_px / px_per_mm_y
 
-        print(f"Processing page {page_num}. ", end="")
-        print(f"FG: {fg_page_exists}. BG: {bg_page_exists}. ", end="")
-        print(f"Size: {bg_width_px:.1f}px x {bg_height_px:.1f}px = {bg_width_mm:.1f}mm x {bg_height_mm:.1f}mm.")
-
         # convert foreground (FG) notes to .svg
-        # if there are no FG notes (as for an unannotated PDF page), make a blank .svg
         pagesvg = os.path.join(tmpdir, page_uuid + '.svg')
         bg_dx_px = 0 # how much to shift background depends on extent of foreground notes
         bg_dy_px = 0
@@ -282,51 +275,59 @@ def convert_file(infile, outfile, rootdir, debug):
 
             # determine version
             with open(pagerm, 'rb') as file:
-                head_fmt = 'reMarkable .lines file, version=x'
+                head_fmt = 'reMarkable .lines file, version=v'
                 head = file.read(len(head_fmt)).decode()
-                x = head[-1] if head[:-1] == head_fmt[:-1] else None
+                v = head[-1] if head[:-1] == head_fmt[:-1] else None
 
             try:
-                if x.isdecimal() and int(x) == 6:
+                if v in ('6'):
                     # v6 renderer
                     page_info = rm2svgv6.rm2svg(pagerm, pagesvg, minwidth=bg_width_px, minheight=bg_height_px)
                     fg_width_px = page_info.width
                     fg_height_px = page_info.height
                     bg_dx_px = page_info.xpos_delta - bg_width_px/2 # see rmscene rm2svg.py: get_dimensions()
                     bg_dy_px = page_info.ypos_delta
-                elif x.isdecimal() and int(x) < 6:
+                elif v in ('1', '2', '3', '4', '5'):
                     # pre-v6 renderer
-                    colored_annotations = True
-                    rm2svg.rm2svg(pagerm, pagesvg, colored_annotations, bg_width_px, bg_height_px)
+                    rm2svg.rm2svg(pagerm, pagesvg, True, bg_width_px, bg_height_px)
                     fg_width_px = bg_width_px
                     fg_height_px = bg_height_px
                 else:
-                    raise 'Unknown reMarkable .lines version: {x}'
+                    raise 'Unknown reMarkable .lines version: {v}'
 
                 fg_width_mm = fg_width_px / px_per_mm_x
                 fg_height_mm = fg_height_px / px_per_mm_y
 
                 # convert FG from .svg to .pdf
-                # TODO: revert to inkscape, now that I'm using PyPDF2 to merge anyway?
+                # TODO: revert to inkscape, now that I'm using PyPDF2 to merge anyway (but need to handle width)?
                 pagepdf = os.path.join(tmpdir, page_uuid + '.pdf')
                 command = 'rsvg-convert --format=pdf --width=%fmm --height=%fmm "%s" > "%s"' % (fg_width_mm, fg_height_mm, pagesvg, pagepdf)
                 returncode, out, err = run(command, False)
                 assert(returncode == 0), command
             except Exception as e:
-                print(f'WARNING: could not render foreground - skipping it! Exception:\n{e}')
+                print(f'WARNING: could not render foreground - skipping it! Exception:\n{str(e)}')
                 fg_page_exists = False # ensure no attempt is made to render it later
 
+        # if foreground does not exist (or it failed to render above),
+        # then pretend it has the same size as the background
         if not fg_page_exists:
             fg_width_px = bg_width_px
             fg_height_px = bg_height_px
             fg_width_mm = fg_width_px / px_per_mm_x
             fg_height_mm = fg_height_px / px_per_mm_y
 
+        if debug > 0:
+            print(f'....', end='') # indent
+            print(f'page {page_num+1}/{len(page_uuid_list)}', end=', ') # page number
+            print('+'.join((['BG'] if bg_page_exists else []) + (['FG'] if fg_page_exists else [])), end=', ') # "BG" / "FG" / "BG+FG"
+            print(f'{fg_width_px:.1f}px x {fg_height_px:.1f}px = {fg_width_mm:.1f}mm x {fg_height_mm:.1f}mm.') # size
+
+        # TODO: can probably optimize rendering!
+
+        # 1) begin with blank page
         bg_fg_page = PyPDF2.PageObject.create_blank_page(width=fg_width_mm * 72 / 25.4, height=fg_height_mm * 72 / 25.4)
 
-        # TODO: may be possible to optimize rendering heavily (e.g. use BG directly if FG doesn't exist)
-
-        # 1) add background
+        # 2) draw background if it exists
         if bg_page_exists:
             bg_dx_mm = bg_dx_px / px_per_mm_x
             bg_dy_mm = bg_dy_px / px_per_mm_y
@@ -334,13 +335,15 @@ def convert_file(infile, outfile, rootdir, debug):
             bg_fg_page.merge_page(bg_page)
             bg_fg_page.add_transformation(trans)
 
-        # 2) add foreground
+        # 3) draw foreground if it exists
         if fg_page_exists:
             fg_page = PyPDF2.PdfReader(pagepdf).pages[0]
             bg_fg_page.merge_page(fg_page)
 
+        # 4) add page to PDF
         bg_fg.add_page(bg_fg_page)
 
+    # finally, write PDF from memory to file
     with open(outfile, "wb") as file:
         bg_fg.write(file)
 
