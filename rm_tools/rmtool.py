@@ -211,9 +211,14 @@ def convert_file(infile, outfile, rootdir, width, height, debug):
     pagepdf_list = []
 
     # get page list
-    if content['formatVersion'] == 1:
+    try:
+        formatVersion = content['formatVersion']
+    except KeyError:
+        formatVersion = 1
+
+    if formatVersion == 1:
         page_uuid_list = content['pages']
-    elif content['formatVersion'] == 2:
+    elif formatVersion == 2:
         page_uuid_list = [page['id'] for page in content['cPages']['pages'] if 'deleted' not in page]
 
     for page_uuid in page_uuid_list:
